@@ -21,7 +21,6 @@
     };
 } forEach vehicles;
 
-
 CIVILIAN setFriend [INDEPENDENT, 0];
 
 WEST setFriend [CIVILIAN, 1];

@@ -11,6 +11,7 @@ class CommonCivilian {};
 #include "itsAebian\Loadouts\China.hpp"
 #include "itsAebian\Loadouts\Generic.hpp"
 #include "itsAebian\Loadouts\Germany.hpp"
+#include "itsAebian\Loadouts\Police.hpp"
 #include "itsAebian\Loadouts\Russia.hpp"
 
 };
