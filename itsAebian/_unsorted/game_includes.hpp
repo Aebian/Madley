@@ -1,0 +1,11 @@
+class RscPicture;
+class RscFrame;
+class RscText;
+class RscListbox;
+class RscControlsGroup;
+class RscCombo;
+class RscButton;
+class RscStructuredText;
+class RscButtonMenu;
+class IGUIBack;
+class RscEdit;

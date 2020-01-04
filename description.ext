@@ -1,0 +1,57 @@
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 450; //max # of players the mission supports
+};
+
+author = "Natascha & Aebian";
+onLoadName = "TheLab - Angel";
+dev= "Aebian";
+
+loadScreen = "a3\missions_f_tacops\data\img\campaign3_ca.paa";
+onLoadMission = "I can't see your wings but girl you're my Angel...";
+overviewText = "TheLab - Angel";
+
+
+
+#include "itsAebian\CodeLock\dialog\kicl_defines.hpp"
+#include "itsAebian\CodeLock\dialog\kicl_control.hpp"
+
+#include "Poppy\CfgPoppy.hpp"
+
+  class CfgFunctions {
+
+      #include "Poppy\CfgFunctions.hpp"
+                    };
+
+#include "CfgLoadouts.hpp"
+
+class CfgSounds
+  {
+  	sounds[] = {};
+  	class emp
+  	{
+  		name = "";
+  		sound[] = {"itsAebian\destroyer\emp.ogg", 1, 1};
+  		titles[] = {};
+  	};
+  	class stargate_alarm
+    		{
+    			name = "Stargate Alarm";
+    			sound[] = {"itsAebian\resources\sda.ogg", 20, 1, 100};
+    			titles[] = {};
+    		};
+  };
+
+
+class CfgUnitInsignia
+  {
+    class InfernoSquad
+    {
+      displayName = "Inferno Squad";
+      author = "Knight Industries";
+      texture = "itsAebian\resources\inferno_squad.paa";
+      textureVehicle = "";
+    };
+  };

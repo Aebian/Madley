@@ -1,0 +1,48 @@
+{
+  "ki:the-os": {
+    "name": "Operating System",
+    "type": "text",
+    "required": true
+  },
+  "ki:browser": {
+    "name": "Browser",
+    "type": "text",
+    "required": false
+  },
+  "ki:reproduce": {
+    "name": "Reproducibility",
+    "type": "bool"
+  },
+    "ki:reproyes": {
+    "name": "Steps To Reproduce",
+    "type": "remarkup"
+  },
+  "ki:severity": {
+    "name": "Severity",
+    "type": "select",
+    "options": {
+      "ki:severity-00": "Feature",
+      "ki:severity-01": "Tweak",
+      "ki:severity-02": "Minor",
+      "ki:severity-03": "Major",
+      "ki:severity-04": "Crash",
+      "ki:severity-05": "Block"
+    }
+},
+    "ki:gendetails": {
+    "name": "General Details",
+    "type": "header"
+  },
+    "ki:addinfo": {
+    "name": "Additional Info",
+    "type": "header"
+  },
+    "ki:intdevdetails": {
+    "name": "Internal Priority",
+    "type": "header"
+  },
+      "ki:users-pmo": {
+    "name": "Give Project Manager privileges to",
+    "type": "users"
+  }
+}
