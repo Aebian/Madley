@@ -2,12 +2,14 @@
     author: @Aebian
     description: Airsupport script for my test mission.
     returns: nothing
-    // [Vulture21CR, Vulture21, 3600, "KION", US_HeliPad01,"OnStatCampEast","US_PilotWait01", Engineer01, "US_EngineerWait01"] execVM "itsAebian\KI_AISUP.sqf";
+	[Vulture21CR, Vulture21, 3600, "KION", US_HeliPad01,"OnStatCampMiddle","CIRCLE","US_PilotWait01", Engineer01, "US_EngineerWait01"] execVM "itsAebian\KI_AISUP.sqf"; 
+	[Vulture22CR, Vulture22, 1800, "KION", US_HeliPad02,"OnStatCampMiddle","CIRCLE_L","US_PilotWait02", Engineer02, "US_EngineerWait02"] execVM "itsAebian\KI_AISUP.sqf";
+
     */
 
- params["_group", "_vehicle", "_gametime", "_switch", "_helipad", "_prepos","_waitpos", "_engineer", "_engpos"];
+ params["_group", "_vehicle", "_gametime", "_switch", "_helipad", "_prepos", "_loiterType", "_waitpos", "_engineer", "_engpos"];
 
-    (units _group) params ["_leader","_gunner"];
+    (units _group) params ["_gunner", "_pilot"];
 
     if (isNil {_group getVariable "status"} ) then
 		
@@ -25,27 +27,33 @@
 
 	 		{ // On station thingy
 
-		 	_leader assignAsDriver _vehicle;
+		 	_pilot assignAsDriver _vehicle;
 		 	_gunner assignAsGunner _vehicle;
 
 		 	sleep 2;
-		 	[_leader, _gunner] orderGetIn true;
+		 	[_pilot, _gunner] orderGetIn true;
 
-		 	_leader setCombatMode "RED";
-			_leader setBehaviour "COMBAT";
+		 	_pilot setCombatMode "RED";
+			_pilot setBehaviour "COMBAT";
 
 			_gunner setCombatMode "RED";
 			_gunner setBehaviour "COMBAT";
 
 		 	sleep 15;
 		 	_onguard = _group addWaypoint [(getMarkerPos _prepos), 0];
+			_onguard setWaypointType "LOITER";
 
-			_onguard setWaypointType "GUARD";
+			[_group, 0] setWaypointLoiterType _loiterType;
+			[_group, 0] setWaypointLoiterRadius 800;
+			[_group, 0] setWaypointSpeed "LIMITED";
+
 		 	_group setVariable ["status", "inAction"];
 
+		 	[_group, 0] setWaypointSpeed "LIMITED";
 		 	diag_log format ["%1, %2, %3", groupId _group, "on station, game time", _gametime ];
+		 	[format ["%1, %2", groupId _group, "is on station for close air support, out." ]] remoteExecCall ["sideChat"];
+		 	
 		 	sleep _gametime;
-
 		 	_group setVariable ["status", "RTB"];
 		 	diag_log format ["%1, %2", groupId _group, "has bingo fuel, RTB" ];
 
@@ -63,33 +71,31 @@
 
 	 			deleteWaypoint [_group, 0];
 
-	 			_leader setBehaviour "CARELESS";
+	 			_pilot setBehaviour "CARELESS";
 	 			_gunner setBehaviour "CARELESS";
 
 	 			_helipadPos = (getPos _helipad);
 	 			_onrtb = _group addWaypoint [_helipadPos, 0];
 	 			
-	 			[format ["%1, %2", groupId _group, "is RTB, good luck soldiers!" ]] remoteExecCall ["systemChat"];
-
-	 			_onrtb setWaypointType "GETOUT";
+	 			[format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
 
 	 			sleep 20;
 
 	 			deleteWaypoint [_group, 0];
 
-	 			_leader land "LAND";
-	 			_leader landAt _helipad;
+	 			_pilot land "LAND";
+	 			_pilot landAt _helipad;
 
 
-			 	unassignVehicle _leader;
+			 	unassignVehicle _pilot;
 				unassignVehicle _gunner;
 
 			 	if ((count crew _vehicle < 1)) then
 
 				{
 
-					_leader setCombatMode "BLUE";
-					_leader setBehaviour "SAFE";
+					_pilot setCombatMode "BLUE";
+					_pilot setBehaviour "SAFE";
 
 					 _gunner setCombatMode "BLUE";
 					 _gunner setBehaviour "SAFE";

@@ -6,12 +6,12 @@ class Header
 };
 
 author = "Natascha & Aebian";
-onLoadName = "TheLab - Angel";
+onLoadName = "TheLab - Madley";
 dev= "Aebian";
 
 loadScreen = "a3\missions_f_tacops\data\img\campaign3_ca.paa";
 onLoadMission = "I can't see your wings but girl you're my Angel...";
-overviewText = "TheLab - Angel";
+overviewText = "TheLab - Madley";
 
 
 
@@ -52,6 +52,14 @@ class CfgUnitInsignia
       displayName = "Inferno Squad";
       author = "Knight Industries";
       texture = "itsAebian\resources\inferno_squad.paa";
+      textureVehicle = "";
+    };
+
+    class Stargate03
+    {
+      displayName = "Team - SG3";
+      author = "Knight Industries";
+      texture = "itsAebian\resources\stargate_03.paa";
       textureVehicle = "";
     };
   };

@@ -38,4 +38,6 @@ CIVILIAN setFriend [WEST, 1];
 
  [CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
 
+ [CIAAccess_01, (nearestBuilding CIAAccess_01), 735900] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
+
  ["Madley loaded!"] remoteExecCall ["systemChat"];

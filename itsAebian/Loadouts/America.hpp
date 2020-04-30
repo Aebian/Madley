@@ -416,6 +416,37 @@ class US_AIRFORCE_JPLT : CommonAmerica { // Airforce Jet Pilot
 };	
 
 
+class US_AIRFORCE_STARGATE03_TL : CommonAmerica { // Airforce Stargate 03 Team-Lead
+
+	uniform[] = { "rhs_uniform_acu_oefcp" };
+	vest[] = { "rhsusf_spcs_ocp_squadleader" };
+	backpack[] = { "" };
+	primary[] = { "SMG_03C_TR_black", "rhsusf_acc_RM05", "50Rnd_570x28_SMG_03" };
+	secondary[] = { "rhsusf_weap_m9", "rhsusf_mag_15Rnd_9x19_JHP" };
+	launcher[] = { "" };
+	magazines[] = { "rhsusf_mag_15Rnd_9x19_JHP",3, "50Rnd_570x28_SMG_03", 11 };
+	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_tourniquet",2,"rhs_mag_m18_purple",2  };
+	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
+	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
+	compass[] = { "ItemCompass" };
+	goggles[] = { "rhsusf_shemagh2_gogg_tan" };
+	gps[] = { "B_UavTerminal" };
+	headgear[] = { "H_Watchcap_camo" };
+	map[] = { "ItemMap" };
+	nvgs[] = { "" };
+	watch[] = { "ChemicalDetector_01_watch_F" };
+	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"", 0]";
+};	
+
+class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL { // Airforce Stargate 03 Member
+
+	vest[] = { "rhsusf_spcs_ocp_rifleman_alt" };
+	headgear[] = { "H_Watchcap_khk" };
+	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"", 0]";
+
+};
+
+
 class US_NAVY_ADM : CommonAmerica { // Admiral
 
 	uniform[] = { "FUTARM_U_BASIC_MT" };
