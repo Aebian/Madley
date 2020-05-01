@@ -84,7 +84,6 @@ class RU_VDV_CREW : CommonRussia { // VDV [Vehicle Crew]
 
 class RU_VDV_CREW_CM : RU_VDV_CREW { // VDV [Vehicle Crew Commander]
 
-	uniform[] = { "rhs_uniform_vdv_emr" };
 	vest[] = { "rhs_6b23_crewofficer" };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 
@@ -427,6 +426,25 @@ class RU_VDV_ATC : CommonRussia {  // VDV [Air Traffic Controller]
 
 };
 
+class RU_MSV_Rifleman : RU_VDV_RFL_BASE { // MSV [Rifleman] (Private 1st Class)
+
+ uniform[] = { "rhs_uniform_flora" };
+ launcher[] = { "rhs_weap_rpg26" };
+
+};
+
+class RU_MSV_CREW : RU_VDV_CREW { // MSV [Vehicle Crew Commander]
+
+	uniform[] = { "rhs_uniform_flora" };
+};
+
+class RU_MSV_CREW_CM : RU_MSV_CREW { // MSV [Vehicle Crew Commander]
+
+	vest[] = { "rhs_6b23_crewofficer" };
+	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
+
+};
+
 
 class RU_VVS_HPLT : CommonRussia { // VVS [Helicopter Pilot]
 
@@ -570,7 +588,7 @@ class RU_SPC_MED : CommonRussia { // спецназ [Medic]
 	secondary[] = { "rhs_weap_pya" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_45Rnd_545X39_7U1_AK",6,"rhs_mag_9x19_17",2,"SmokeShellYellow",4 };
-	items[] += { "W_Defibrillator","ACE_packingBandage",26,"ACE_quikclot",26,"ACE_elasticBandage",26,"ACE_bloodIV",12,"ACE_epinephrine",19,"ACE_morphine",16,"ACE_atropine",6,"ACE_surgicalKit","ACE_tourniquet",10 };
+	items[] += {"ACE_packingBandage",26,"ACE_quikclot",26,"ACE_elasticBandage",26,"ACE_bloodIV",12,"ACE_epinephrine",19,"ACE_morphine",16,"ACE_atropine",6,"ACE_surgicalKit","ACE_tourniquet",10 };
 	binoculars[] = { "" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhs_ess_black" };
