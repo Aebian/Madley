@@ -133,6 +133,15 @@ magazines[] = { "rhsusf_200Rnd_556x45_soft_pouch", 3, "rhsusf_mag_7x45acp_MHP", 
 
 };
 
+class US_ARMY_RANGER_ARM_NEW : US_ARMY_RANGER_RFL {
+
+vest[] = { "rhsusf_mbav_mg" };
+primary[] = { "MMG_02_sand_F", "bipod_01_F_blk", "rhsusf_acc_anpeq15side", "optic_ERCO_snd_F", "130Rnd_338_Mag" };
+magazines[] = { "130Rnd_338_Mag", 5, "rhsusf_mag_7x45acp_MHP", 2 };
+backpack[] = { "B_Kitbag_tan" };
+
+};
+
 class US_ARMY_RANGER_MED : US_ARMY_RANGER_RFL { // US Army Ranger (Medic)
 
 vest[] = { "rhsusf_mbav_medic" };
@@ -364,6 +373,15 @@ class US_ARMY_HGUN : US_ARMY_PLT { // Army Helicopter Gunner with HGU-65
 
 	primary[] = { "rhs_weap_mk18_KAC_wd", "rhsusf_acc_anpeq15A", "rhsusf_acc_eotech_552_wd", "rhs_mag_30Rnd_556x45_M855A1_Stanag" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,"rhsusf_mag_7x45acp_MHP",3 };
+	goggles[] = { "rhsusf_shemagh2_od" };
+	headgear[] = { "rhsusf_hgu56p_visor_mask" };
+
+};
+
+class US_ARMY_HGUN_FLIR : US_ARMY_PLT {
+
+	primary[] = { "MMG_02_sand_F", "bipod_01_F_blk", "rhsusf_acc_anpeq15side", "rhsusf_acc_anpas13gv1", "130Rnd_338_Mag" };
+	magazines[] = { "130Rnd_338_Mag",1,"rhsusf_mag_7x45acp_MHP",2 };
 	goggles[] = { "rhsusf_shemagh2_od" };
 	headgear[] = { "rhsusf_hgu56p_visor_mask" };
 
