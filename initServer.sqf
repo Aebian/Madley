@@ -3,19 +3,24 @@
  */
 
  {
-    if  ((typeOf _x) isKindOf ["rhsusf_m1a1tank_base", configFile >> "CfgVehicles"]) then {
+    if   (_x isKindOf "Tank_F" &&
+        !(_x isKindOf "APC_Wheeled_01_base_F") &&
+        !(_x isKindOf "APC_Tracked_01_base_F") &&
+
+        !(_x isKindOf "APC_Wheeled_02_base_F") &&
+        !(_x isKindOf "APC_Tracked_02_base_F") &&
+
+        !(_x isKindOf "APC_Wheeled_03_base_F") &&
+        !(_x isKindOf "APC_Tracked_03_base_F") &&
+        
+        !(_x isKindOf "LT_01_base_F")) then {
 
         _x addEventHandler ["Fired", {
-            _wep = _this select 1;
+            params ["_veh", "_wep"];
             if (_wep isKindOf ["CannonCore", configFile >> "CfgWeapons"]) then {
-                _veh = _this select 0;
-                _vel = velocity _veh;
-                _dir = _veh weaponDirection _wep;
-                _veh setVelocity [
-                    (_vel select 0) + (_dir select 0) * -3.5,
-                    (_vel select 1) + (_dir select 1) * -3.5,
-                    (_vel select 2) + (_dir select 2) * -3.5
-                ];
+                private _vel = velocity _veh;
+                private _dir = _veh weaponDirection _wep;
+                _veh setVelocity (_vel vectorAdd (_dir vectorMultiply -3.0));
             };
         }];
     };
