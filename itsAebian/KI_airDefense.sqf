@@ -13,14 +13,6 @@ params[ "_cond", "_guns"];
 	if (_cond isEqualTo "ACTIVE") then { // Enable DEFENSE
 
 		{ _x setCombatMode "RED" } forEach _guns; 
-		{ _x setCombatMode "RED" } forEach _guns; 
-
-		{ _x setCombatMode "RED" } forEach _guns; 
-		{ _x setCombatMode "RED" } forEach _guns; 
-		{ _x setCombatMode "RED" } forEach _guns; 
-
-		{ _x setCombatMode "RED" } forEach _guns; 
-		{ _x setCombatMode "RED" } forEach _guns; 
 
 		{ diag_log format ["%1, %2", _x, "has been enabled" ] } forEach _guns;
 
@@ -32,14 +24,6 @@ else
 
 	if (_cond isEqualTo "SILENT") then { // Disable DEFENSE	
 
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-
-	{ _x setCombatMode "BLUE" } forEach _guns; 
 	{ _x setCombatMode "BLUE" } forEach _guns; 
 	
 	{ diag_log format ["%1, %2", _x, "has been disabled" ] } forEach _guns;

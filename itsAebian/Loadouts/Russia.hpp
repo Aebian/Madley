@@ -86,6 +86,8 @@ class RU_VDV_CREW_CM : RU_VDV_CREW { // VDV [Vehicle Crew Commander]
 
 	vest[] = { "rhs_6b23_crewofficer" };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
+	secondary[] = { "rhs_weap_pya" };
+	magazines[] += { "rhs_mag_9x19_17",2 };
 
 };
 
@@ -299,7 +301,7 @@ magazines[] = { "rhs_45Rnd_545X39_7U1_AK", 5,"rhs_100Rnd_762x54mmR_7N26",3};
 
 };
 
-class RU_VDV_RFL_AA : CommonRussia { // VDV [Rifleman Anti-Air]
+class RU_VDV_DES_RFL_AA : CommonRussia { // VDV [Rifleman Anti-Air]
 
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
@@ -435,14 +437,15 @@ class RU_MSV_Rifleman : RU_VDV_RFL_BASE { // MSV [Rifleman] (Private 1st Class)
 
 class RU_MSV_CREW : RU_VDV_CREW { // MSV [Vehicle Crew Commander]
 
-	uniform[] = { "rhs_uniform_flora" };
+	uniform[] = { "rhs_uniform_msv_emr" };
 };
 
 class RU_MSV_CREW_CM : RU_MSV_CREW { // MSV [Vehicle Crew Commander]
 
 	vest[] = { "rhs_6b23_crewofficer" };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
-
+	secondary[] = { "rhs_weap_pya" };
+	magazines[] += { "rhs_mag_9x19_17",2 };
 };
 
 

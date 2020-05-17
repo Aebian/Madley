@@ -267,28 +267,6 @@ comment "Removes the M260 rocket pods and ammo on a AH-6M-L so that only the Min
 {vehicleName removeMagazineTurret [_x, [-1]]} forEach ["rhs_pod_empty","rhs_pod_empty","rhs_pod_FFAR_7","rhs_pod_FFAR_7","RHS_14Rnd_M151_Magazine_MELB"];
 {vehicleName removeWeaponTurret [_x, [-1]]} forEach ["RHS_M260_MELB"];
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Add Maincanon Backblast for M1A1 / M1A2";
-{
-    if  ((typeOf _x) isKindOf ["rhsusf_m1a1tank_base", configFile >> "CfgVehicles"]) then {
-
-        _x addEventHandler ["Fired", {
-            _wep = _this select 1;
-            if (_wep isKindOf ["CannonCore", configFile >> "CfgWeapons"]) then {
-                _veh = _this select 0;
-                _vel = velocity _veh;
-                _dir = _veh weaponDirection _wep;
-                _veh setVelocity [
-                    (_vel select 0) + (_dir select 0) * -5,
-                    (_vel select 1) + (_dir select 1) * -5,
-                    (_vel select 2) + (_dir select 2) * -5
-                ];
-            };
-        }];
-    };
-} forEach vehicles;
-/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
 
 // ACE3 - Specific Codes \\
 comment "Define unit as ACE Medic // 0 = no medic; 1 = medic; 2 = doctor;";

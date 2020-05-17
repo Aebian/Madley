@@ -2,29 +2,7 @@
     The initServer.sqf
  */
 
- {
-    if   (_x isKindOf "Tank_F" &&
-        !(_x isKindOf "APC_Wheeled_01_base_F") &&
-        !(_x isKindOf "APC_Tracked_01_base_F") &&
-
-        !(_x isKindOf "APC_Wheeled_02_base_F") &&
-        !(_x isKindOf "APC_Tracked_02_base_F") &&
-
-        !(_x isKindOf "APC_Wheeled_03_base_F") &&
-        !(_x isKindOf "APC_Tracked_03_base_F") &&
-        
-        !(_x isKindOf "LT_01_base_F")) then {
-
-        _x addEventHandler ["Fired", {
-            params ["_veh", "_wep"];
-            if (_wep isKindOf ["CannonCore", configFile >> "CfgWeapons"]) then {
-                private _vel = velocity _veh;
-                private _dir = _veh weaponDirection _wep;
-                _veh setVelocity (_vel vectorAdd (_dir vectorMultiply -3.0));
-            };
-        }];
-    };
-} forEach vehicles;
+[] execVM "itsAebian\KI_CanonBlast.sqf"; 
 
 CIVILIAN setFriend [INDEPENDENT, 0];
 

@@ -57,7 +57,7 @@ class US_ARMY_PL : US_ARMY_DEFAULT_UCP { // Army [Platoon Leader]
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_spcs_ucp_squadleader" };
 	backpack[] = { "" };
-	primary[] = { "rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d" };
+	primary[] = { "rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d", "rhs_mag_30Rnd_556x45_Mk262_Stanag" };
 	secondary[] = { "rhsusf_weap_m9" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk262_Stanag",8,"rhsusf_mag_15Rnd_9x19_JHP",2 };
@@ -108,7 +108,7 @@ class US_ARMY_RANGER_LEAD : US_ARMY_PL { // Army [Element Leader]
 	uniform[] = { "rhs_uniform_g3_mc" };
 	vest[] = { "rhsusf_mbav_light" };
 	backpack[] = { "rhsusf_assault_eagleaiii_ocp" };
-	primary[] = { "rhs_weap_SCARH_FDE_CQC", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_acc_grip2_tan" };
+	primary[] = { "rhs_weap_SCARH_FDE_CQC", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_acc_grip2_tan" , "rhs_mag_20Rnd_SCAR_762x51_m61_ap" };
 	secondary[] = { "hgun_Pistol_heavy_01_F", "acc_flashlight_pistol" };
 	magazines[] = { "rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7, "11Rnd_45ACP_Mag", 3, "Laserbatteries" };
 	items[] += { "ACE_EarPlugs",1 };
