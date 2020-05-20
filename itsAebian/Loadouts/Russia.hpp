@@ -168,7 +168,7 @@ class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE { // VDV [Rifleman GP-25] (Private 1
 	primary[] = { "rhs_weap_ak74m_fullplum_gp25","rhs_acc_dtk" };
 	launcher[] = { "rhs_weap_rshg2" };
 	magazines[] = { "rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",14,"rhs_VG40SZ",4,"SmokeShellGreen",2 };
-	items[] += { "ACE_packingBandage",2,"ACE_quikclot",2,"ACE_elasticBandage",2,"ACE_fieldDressing",2, "rhs_mag_rgo",3 };
+	items[] += { "ACE_packingBandage",2,"ACE_quikclot",2,"ACE_elasticBandage",2,"ACE_fieldDressing",2, "rhs_mag_rgo",1 };
 	binoculars[] = { "" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhs_ess_black" };
@@ -246,7 +246,7 @@ class RU_VDV_Grenadier : CommonRussia { // VDV [Grenadier (RPG-7)]
 	primary[] = { "rhs_weap_ak74m_fullplum","rhs_acc_dtk" };
 	launcher[] = { "rhs_weap_rpg7","rhs_acc_pgo7v" };
 	magazines[] = { "rhs_45Rnd_545X39_7U1_AK",4,"rhs_mag_9x19_17",2,"rhs_rpg7_PG7VL_mag",3,"rhs_rpg7_OG7V_mag",2};
-	items[] += { "ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_morphine",1,"ACE_epinephrine",1, "rhs_mag_rgo",2 };
+	items[] += { "ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_morphine",1,"ACE_epinephrine",1 };
 	binoculars[] = { "" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhs_ess_black" };
