@@ -10,12 +10,3 @@ Temp file for debugging external scripts.
 WEST setFriend [EAST, 0];
 sleep 20;
 EAST setFriend [WEST, 0];   
-
-
-
-
-
-
-
-
-

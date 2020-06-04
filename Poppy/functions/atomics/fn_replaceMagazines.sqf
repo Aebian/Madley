@@ -22,9 +22,9 @@ for "_i" from 0 to (_arrayCount - 1) do {
             for "_j" from 1 to _itemCount do {
                 switch (true) do {
                     case !(_unit canAdd _currentItem):              { GVAR(overflowItems) pushBack _currentItem };
-                    case (_unit canAddItemToUniform _currentItem):  { _unit addItemToUniform _currentItem };
                     case (_unit canAddItemToVest _currentItem):     { _unit addItemToVest _currentItem };
                     case (_unit canAddItemToBackpack _currentItem): { _unit addItemToBackpack _currentItem };
+                    case (_unit canAddItemToUniform _currentItem):  { _unit addItemToUniform _currentItem };
                 };
             };
         };
@@ -37,9 +37,9 @@ for "_i" from 0 to (_arrayCount - 1) do {
         } else {
             switch (true) do {
                 case !(_unit canAdd _currentItem):              { GVAR(overflowItems) pushBack _currentItem };
-                case (_unit canAddItemToUniform _currentItem):  { _unit addItemToUniform _currentItem };
                 case (_unit canAddItemToVest _currentItem):     { _unit addItemToVest _currentItem };
                 case (_unit canAddItemToBackpack _currentItem): { _unit addItemToBackpack _currentItem };
+                case (_unit canAddItemToUniform _currentItem):  { _unit addItemToUniform _currentItem };
             };
         };
     };

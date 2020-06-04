@@ -11,7 +11,7 @@ GVAR(groupIDsSynched) = false;
 if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "InitPost", {
         params ["_unit"];
-        if (!local _unit) exitWith {};
+        if ((!local _unit) || (_unit isKindOf "VirtualMan_F")) exitWith {};
 
         if (_unit == player) then {
             private _loadout = [_unit] call FUNC(selectLoadout);
