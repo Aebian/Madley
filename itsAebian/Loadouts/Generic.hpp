@@ -122,7 +122,7 @@ class Inferno_HW : Inferno_TL { // Inferno Squad Heavy-Weapon Soldier
 	primary[] = { "arifle_RPK12_F","muzzle_snds_B", "optic_Hamr", "rhs_75Rnd_762x39mm_tracer"};
 	secondary[] = { "hgun_Pistol_heavy_01_green_F", "muzzle_snds_acp", "optic_MRD_black", "11Rnd_45ACP_Mag" };
 	launcher[] = { "" };
-	magazines[] = { "11Rnd_45ACP_Mag",2, "rhs_75Rnd_762x39mm_tracer",6 };
+	magazines[] = { "11Rnd_45ACP_Mag",2, "rhs_75Rnd_762x39mm_tracer",5 };
 	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";
 
 };

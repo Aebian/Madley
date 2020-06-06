@@ -282,7 +282,7 @@ comment "Define vehicle as repair facility";
 vehicleName setVariable ['ace_isRepairFacility',1, true];
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Full heal of a player trough ACE3";
-[player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+[player] call ace_medical_treatment_fnc_fullHealLocal;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Get ACE Full Arsenal"
 [objectName, true, true] call ace_arsenal_fnc_initBox;
