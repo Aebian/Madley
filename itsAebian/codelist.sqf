@@ -3,6 +3,7 @@
 	description: Codelist for ArmA Series
 	returns: depends but useful commands
 	created: 2010-02-05
+	updated: 2020-08-03
 */
 
 // Returns & Definitions \\

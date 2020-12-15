@@ -53,6 +53,3 @@ vehicle player removeWeaponGlobal "RHS_M260_MELB";
 
 
 //////////////////////////////////
-
-
-

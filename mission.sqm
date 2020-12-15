@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14216;
+		nextID=14964;
 	};
 	class Camera
 	{
-		pos[]={4093.8345,71.096161,10182.134};
-		dir[]={0.49444634,-0.32110035,0.80781531};
-		up[]={0.16770753,0.94699991,0.27399984};
-		aside[]={0.85298127,1.3161916e-006,-0.52209067};
+		pos[]={4126.9136,77.472893,10401.46};
+		dir[]={-0.82066631,-0.27784252,-0.49952158};
+		up[]={-0.23749062,0.96058297,-0.14455611};
+		aside[]={-0.51999193,9.7980956e-007,0.85430318};
 	};
 };
 binarizationWanted=0;
@@ -255,7 +255,7 @@ class AddonsMetaData
 		class Item0
 		{
 			className="A3_Props_F_Enoch";
-			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			name="Arma 3 Enoch - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -2164,7 +2164,7 @@ class Mission
 									};
 									id=656;
 									type="PortableHelipadLight_01_yellow_F";
-									atlOffset=2.7505341;
+									atlOffset=2.7505264;
 								};
 								class Item2
 								{
@@ -2773,7 +2773,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Reception";
-											state=1;
 											class Entities
 											{
 												items=23;
@@ -3285,7 +3284,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Food & Drinks";
-											state=1;
 											class Entities
 											{
 												items=8;
@@ -3444,7 +3442,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Lights";
-											state=1;
 											class Entities
 											{
 												items=2;
@@ -3612,7 +3609,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Station Alpha";
-											state=1;
 											class Entities
 											{
 												items=8;
@@ -3768,7 +3764,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Meds Shelf";
-											state=1;
 											class Entities
 											{
 												items=14;
@@ -4049,7 +4044,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Meds";
-											state=1;
 											class Entities
 											{
 												items=1;
@@ -4121,7 +4115,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Outside Reception";
-											state=1;
 											class Entities
 											{
 												items=2;
@@ -4171,7 +4164,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Seat & Safety Equipment";
-											state=1;
 											class Entities
 											{
 												items=3;
@@ -4236,7 +4228,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Window Cover";
-											state=1;
 											class Entities
 											{
 												items=6;
@@ -4493,7 +4484,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Window Cover";
-											state=1;
 											class Entities
 											{
 												items=6;
@@ -4739,7 +4729,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Suplies";
-											state=1;
 											class Entities
 											{
 												items=34;
@@ -5428,7 +5417,6 @@ class Mission
 										{
 											dataType="Layer";
 											name="Room Misc";
-											state=1;
 											class Entities
 											{
 												items=4;
@@ -8755,7 +8743,7 @@ class Mission
 							};
 							id=1434;
 							type="rhsusf_M977A4_REPAIR_BKIT_usarmy_wd";
-							atlOffset=-0.0028839111;
+							atlOffset=-0.0028915405;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20228,7 +20216,7 @@ class Mission
 							};
 							id=2109;
 							type="Land_Ammobox_rounds_F";
-							atlOffset=0.060997009;
+							atlOffset=0.061004639;
 						};
 						class Item1
 						{
@@ -20262,7 +20250,7 @@ class Mission
 							};
 							id=2111;
 							type="Land_Ammobox_rounds_F";
-							atlOffset=0.061004639;
+							atlOffset=0.061012268;
 						};
 						class Item3
 						{
@@ -20279,7 +20267,6 @@ class Mission
 							};
 							id=2112;
 							type="Land_Ammobox_rounds_F";
-							atlOffset=0.062095642;
 						};
 						class Item4
 						{
@@ -20328,6 +20315,7 @@ class Mission
 							};
 							id=2119;
 							type="Box_Syndicate_WpsLaunch_F";
+							atlOffset=3.0517578e-005;
 						};
 						class Item7
 						{
@@ -21929,7 +21917,7 @@ class Mission
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
 								reportOwnPosition=1;
-								pylons="rhs_mag_ATAS_AH64_2;rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_ATAS_AH64_2;;";
+								pylons="rhs_mag_ATAS_AH64_2;rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_AGM114L_4[0];rhs_mag_ATAS_AH64_2;rhsusf_M130_CMFlare_Chaff_Magazine_x2;";
 							};
 							id=1394;
 							type="RHS_AH64DGrey";
@@ -34288,6 +34276,25 @@ class Mission
 							{
 								class Attribute0
 								{
+									property="ammoBox";
+									expression="[_this,_value] call bis_fnc_initAmmoBox;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+										};
+									};
+								};
+								class Attribute1
+								{
 									property="VehicleCustomization";
 									expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 									class Value
@@ -34590,45 +34597,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute1
-								{
-									property="DoorB";
-									expression="_this animateDoor ['DoorB',_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ammoBox";
-									expression="[_this,_value] call bis_fnc_initAmmoBox;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-										};
-									};
-								};
-								nAttributes=3;
+								nAttributes=2;
 							};
 						};
 						class Item2
@@ -74055,7 +74024,7 @@ class Mission
 							};
 							id=4736;
 							type="I_E_Heli_light_03_unarmed_F";
-							atlOffset=0.0010528564;
+							atlOffset=1.5258789e-005;
 						};
 						class Item1
 						{
@@ -74126,7 +74095,7 @@ class Mission
 						};
 					};
 					id=5141;
-					atlOffset=0.035720825;
+					atlOffset=0.03565979;
 				};
 				class Item15
 				{
@@ -78553,7 +78522,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10898.533,71.515297,957.97949};
+				position[]={10898.534,71.515297,957.97943};
 				angles[]={0,0.32637659,0.0031939524};
 			};
 			areaSize[]={1,-1,1};
@@ -78748,7 +78717,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10898.532,71.515289,957.9707};
+				position[]={10898.533,71.515297,957.97076};
 			};
 			areaSize[]={1,-1,1};
 			id=5304;
@@ -81627,7 +81596,7 @@ class Mission
 				angles[]={0,2.3495324,0};
 			};
 			side="West";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				reportRemoteTargets=1;
@@ -85777,7 +85746,7 @@ class Mission
 				angles[]={6.2800021,4.6516466,0.038379833};
 			};
 			side="West";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				reportRemoteTargets=1;
