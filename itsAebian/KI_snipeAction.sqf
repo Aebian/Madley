@@ -1,9 +1,9 @@
 /*
             author: @Aebian
-            description: snipe of units 
+            description: snipe of units at long distances
             returns: death to enemies
             created: 2020-12-14
-			// [ViperS, thisList, 5, 0] execVM "itsAebian\KI_snipeAction.sqf";
+		    // [ViperS, thisList, 5, 0] execVM "itsAebian\KI_snipeAction.sqf";
 */
 
 
@@ -67,7 +67,7 @@ switch (_cond) do
 			{
 				_sniper  setVariable ["KI_snipeAction_cfSwitch", 0, true];	
 			}
-			
+
 		};
 
 		_sniper enableAI "AIMINGERROR";
