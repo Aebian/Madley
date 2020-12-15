@@ -3,7 +3,7 @@
             description: snipe of units 
             returns: death to enemies
             created: 2020-12-14
-			// [ViperS, thislist, 5, 0] execVM "itsAebian\KI_snipeAction.sqf"
+			// [ViperS, thisList, 5, 0] execVM "itsAebian\KI_snipeAction.sqf";
 */
 
 
@@ -16,10 +16,13 @@ _cond = _sniper getVariable ["KI_snipeAction_cfSwitch", objNull];
 
 switch (_cond) do 
 {
-	case isNil:
 	case 0:
+    default
 	{
-		_sniper  setVariable ["KI_snipeAction_Target", (_targets call BIS_fnc_selectRandom), true];
+
+		_visTargets = _targets select {([objNull, "VIEW"] checkVisibility [eyePos _sniper, eyePos _x] > 0.8)};
+
+		_sniper  setVariable ["KI_snipeAction_Target", (_visTargets call BIS_fnc_selectRandom), true];
 		_sniper disableAI "AIMINGERROR";
 		{
 			_sniper setSkill [_x,1];
@@ -33,16 +36,17 @@ switch (_cond) do
 
 		_sniper  setVariable ["KI_snipeAction_cfSwitch", 1, true];	
 
+		[_sniper, _targets, _shots, _delay] execVM "itsAebian\KI_snipeAction.sqf";
+
 	};
 
 	case 1:
 	{
 		_bulletMagnet = _sniper getVariable ["KI_snipeAction_Target", objNull];
 
-		if (alive _bulletMagnet)
+		if (alive _bulletMagnet) then
 		{
-
-		_sniper reveal [_bulletMagnet,4];
+		_sniper reveal [_bulletMagnet, 4];
 		_sniper doWatch _bulletMagnet;
 		_sniper doTarget _bulletMagnet;
 
@@ -58,6 +62,12 @@ switch (_cond) do
 		for "_i" from 1 to _shots do {
 			_sniper forceWeaponFire [currentWeapon _sniper,"Single"];
 			sleep _delay;
+			
+			if (!alive _bulletMagnet) then 
+			{
+				_sniper  setVariable ["KI_snipeAction_cfSwitch", 0, true];	
+			}
+			
 		};
 
 		_sniper enableAI "AIMINGERROR";
