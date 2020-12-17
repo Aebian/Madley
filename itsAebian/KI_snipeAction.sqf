@@ -12,7 +12,7 @@ params [
 	"_direction","_angleDelta"
 ];
 
-_cond = _sniper getVariable ["KI_snipeAction_cfSwitch", objNull];
+(_sniper getVariable ["KI_snipeAction_cfSwitch", objNull]) params ["_cond"];
 
 switch (_cond) do 
 {
@@ -42,7 +42,7 @@ switch (_cond) do
 
 	case 1:
 	{
-		_bulletMagnet = _sniper getVariable ["KI_snipeAction_Target", objNull];
+		 (_sniper getVariable ["KI_snipeAction_Target", objNull]) params ["_bulletMagnet"];
 
 		if (alive _bulletMagnet) then
 		{

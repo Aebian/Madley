@@ -21620,8 +21620,8 @@ class Mission
 											{
 												name="BaseTrigger";
 												condition="call{thisList findIf {[west, side _x] call BIS_fnc_sideIsEnemy && (count thisList) > 20 || (_x isKindOf ""Tank_F"") && [west, side _x] call BIS_fnc_sideIsEnemy} !=-1}";
-												onActivation="call{ [Vulture21CR, Vulture21, 1800, ""KION"", US_HeliPad01,""OnStatCampMiddle"",""CIRCLE"",""US_PilotWait01"", Engineer01, ""US_EngineerWait01""] execVM ""itsAebian\KI_AISUP.sqf"";  " \n " [Vulture22CR, Vulture22, 900, ""KION"", US_HeliPad02,""OnStatCampMiddle"",""CIRCLE_L"",""US_PilotWait02"", Engineer02, ""US_EngineerWait02""] execVM ""itsAebian\KI_AISUP.sqf"";}";
-												onDeactivation="call{ [Vulture21CR, Vulture21, 1800, ""KIOFF"", US_HeliPad01,""OnStatCampMiddle"",""CIRCLE"",""US_PilotWait01"", Engineer01, ""US_EngineerWait01""] execVM ""itsAebian\KI_AISUP.sqf"";  " \n " [Vulture22CR, Vulture22, 900, ""KIOFF"", US_HeliPad02,""OnStatCampMiddle"",""CIRCLE_L"",""US_PilotWait02"", Engineer02, ""US_EngineerWait02""] execVM ""itsAebian\KI_AISUP.sqf"";}";
+												onActivation="call{ [Vulture21CR, Vulture21, 1800, ""KION"", US_HeliPad01,""OnStatCampMiddle"",""CIRCLE"",""US_PilotWait01"", Engineer01, ""US_EngineerWait01""] execVM ""itsAebian\KI_AirSupport.sqf"";  " \n " [Vulture22CR, Vulture22, 900, ""KION"", US_HeliPad02,""OnStatCampMiddle"",""CIRCLE_L"",""US_PilotWait02"", Engineer02, ""US_EngineerWait02""] execVM ""itsAebian\KI_AirSupport.sqf"";}";
+												onDeactivation="call{ [Vulture21CR, Vulture21, 1800, ""KIOFF"", US_HeliPad01,""OnStatCampMiddle"",""CIRCLE"",""US_PilotWait01"", Engineer01, ""US_EngineerWait01""] execVM ""itsAebian\KI_AirSupport.sqf"";  " \n " [Vulture22CR, Vulture22, 900, ""KIOFF"", US_HeliPad02,""OnStatCampMiddle"",""CIRCLE_L"",""US_PilotWait02"", Engineer02, ""US_EngineerWait02""] execVM ""itsAebian\KI_AirSupport.sqf"";}";
 												sizeA=800;
 												sizeB=600;
 												timeout[]={20,20,20};
