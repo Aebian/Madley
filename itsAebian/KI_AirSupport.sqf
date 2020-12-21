@@ -86,7 +86,6 @@ switch (_cond) do
 
          deleteWaypoint [_group, 0];
         _rtbpoint = _group addWaypoint [(_vehicle getVariable ["KI_airSupport_heliPad", objNull]), 0];
-        _rtbpoint setWaypointType "LAND";
 
         [format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ];
@@ -106,7 +105,7 @@ switch (_cond) do
 		unassignVehicle _gunner;
 
 		[_pilot, _gunner] orderGetIn false;
-         _group move ((_group getVariable ["KI_airSupport_WaitingArea"]));
+         _group move (_group getVariable ["KI_airSupport_WaitingArea"]);
 
         _group setVariable ["KI_airSupport_cfSwitch", "SVC"];
         diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
