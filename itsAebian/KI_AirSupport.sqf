@@ -1,123 +1,130 @@
 /*
     author: @Aebian
-    description: Airsupport script for my test mission.
+    description: AirSupport script for TIC (complete re-write).
     returns: nothing
-	[Vulture21CR, Vulture21, 3600, "KION", US_HeliPad01,"OnStatCampMiddle","SAD","US_PilotWait01", Engineer01, "US_EngineerWait01"] execVM "itsAebian\KI_AirSupport.sqf"; 
-	[Vulture22CR, Vulture22, 1800, "KION", US_HeliPad02,"OnStatCampMiddle","SAD,"US_PilotWait02", Engineer02, "US_EngineerWait02"] execVM "itsAebian\KI_AirSupport.sqf";
+	created: 2020-12-19
+	[Vulture21CR, Vulture21VHC, 600, [7660.26,11162.2,2.86102e-005]] execVM "itsAebian\KI_AirSupport.sqf";
+*/
 
-    */
+params["_group", "_vehicle", "_gametime", "_target"];
 
- params["_group", "_vehicle", "_gametime", "_switch", "_helipad", "_prepos", "_WPdesc", "_waitpos", "_engineer", "_engpos"];
+(_group getVariable ["KI_airSupport_cfSwitch", "RFT"]) params ["_cond"];
 
-    (units _group) params ["_gunner", "_pilot"];
+(units _group) params ["_gunner", "_pilot"];
 
-    if (isNil {_group getVariable "status"} ) then
-		
-		{
+switch (_cond) do 
+{
 
-		 _group setVariable ["status", "free"];
+    case "RFT":
+    {
+        _group setVariable ["KI_airSupport_WaitingArea", (getPos _gunner)];
 
-		};
+        _pilot assignAsDriver _vehicle;
+		_gunner assignAsGunner _vehicle;
 
-		sleep 10;
+        _vehicle setVariable ["KI_airSupport_heliPad", nearestObject [_vehicle, ("Helipad_base_F")]];
 
-(_group getVariable "status") params ["_getstatus"];
+        _group setVariable ["KI_airSupport_cfSwitch", "IAO"];
 
-	if (_switch isEqualTo "KION" && _getstatus isEqualTo "free") then 
+        [_group, _vehicle, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
+    };
 
-	 		{ // On station thingy
+    case "IAO": 
+    {
+    
+    	[_pilot, _gunner] orderGetIn true;
 
-		 	_pilot assignAsDriver _vehicle;
-		 	_gunner assignAsGunner _vehicle;
+		_pilot setCombatMode "RED";
+		_pilot setBehaviour "COMBAT";
 
-		 	sleep 2;
-		 	[_pilot, _gunner] orderGetIn true;
+		_gunner setCombatMode "RED";
+		_gunner setBehaviour "COMBAT";
 
-		 	_pilot setCombatMode "RED";
-			_pilot setBehaviour "COMBAT";
+        switch (typeName _target) do
+        {
+            case "ARRAY":
+            {
 
-			_gunner setCombatMode "RED";
-			_gunner setBehaviour "COMBAT";
+                _onguard = _group addWaypoint [_target, 0];
+                _onguard setWaypointType "SAD";
+                [_group, 0] setWaypointSpeed "NORMAL";
 
-		 	sleep 15;
-		 	_onguard = _group addWaypoint [(getMarkerPos _prepos), 0];
-			_onguard setWaypointType "SAD";
-			[_group, 0] setWaypointSpeed "LIMITED";
+            };
 
-		 	_group setVariable ["status", "inAction"];
+            case "STRING":
+            {
+                _onguard = _group addWaypoint [(getMarkerPos _target), 0];
+                _onguard setWaypointType "SAD";
+                [_group, 0] setWaypointSpeed "NORMAL";
+            };
 
-		 	[_group, 0] setWaypointSpeed "LIMITED";
-		 	diag_log format ["%1, %2, %3", groupId _group, "on station, game time", _gametime ];
-		 	[format ["%1, %2", groupId _group, "is on station for close air support, out." ]] remoteExecCall ["sideChat"];
-		 	
-		 	sleep _gametime;
-		 	_group setVariable ["status", "RTB"];
-		 	diag_log format ["%1, %2", groupId _group, "has bingo fuel, RTB" ];
+            case "OBJECT": 
+            {
+                _onguard = _group addWaypoint [(getPos _target), 0];
+                _onguard setWaypointType "SAD";
+                [_group, 0] setWaypointSpeed "NORMAL";
 
-		 	[_group, _vehicle, "KIOFF", _helipad, _prepos, _waitpos, _engineer, _engpos] execVM "itsAebian\KI_AirSupport.sqf";
+            };
+        };
 
-	 		} 
+        [format ["%1, %2", groupId _group, "is en route for close air support, out." ]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2", groupId _group, "is en route for close air support, out." ];
+        
+        sleep _gametime;
+        
+        _group setVariable ["KI_airSupport_cfSwitch", "RTB"];
+        [_group, _vehicle, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
 
-	else 
+    };
 
-	 	{ // RTB
+    case "RTB":
+    {
+        deleteWaypoint [_group, 0];
 
-		 if (_switch isEqualTo "KIOFF" && (_getstatus isEqualTo "RTB")) then 
+	 	_pilot setBehaviour "CARELESS";
+	 	_gunner setBehaviour "CARELESS";
 
-	 		{
+         deleteWaypoint [_group, 0];
+        _rtbpoint = _group addWaypoint [(_vehicle getVariable ["KI_airSupport_heliPad", objNull]), 0];
+        _rtbpoint setWaypointType "LAND";
 
-	 			deleteWaypoint [_group, 0];
+        [format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ];
 
-	 			_pilot setBehaviour "CARELESS";
-	 			_gunner setBehaviour "CARELESS";
+        _pilot land "LAND";
+	 	_pilot landAt (_vehicle getVariable ["KI_airSupport_heliPad", objNull]);
 
-	 			_helipadPos = (getPos _helipad);
-	 			_onrtb = _group addWaypoint [_helipadPos, 0];
-	 			
-	 			[format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
+        waitUntil {(getPos _vehicle select 2) < 2 AND (speed _vehicle) < 1};
 
-	 			sleep 20;
+        _pilot setCombatMode "BLUE";
+		_pilot setBehaviour "SAFE";
 
-	 			deleteWaypoint [_group, 0];
+		_gunner setCombatMode "BLUE";
+		_gunner setBehaviour "SAFE";
 
-	 			_pilot land "LAND";
-	 			_pilot landAt _helipad;
+        unassignVehicle _pilot;
+		unassignVehicle _gunner;
 
+		[_pilot, _gunner] orderGetIn false;
+         _group move ((_group getVariable ["KI_airSupport_WaitingArea"]));
 
-			 	unassignVehicle _pilot;
-				unassignVehicle _gunner;
+        _group setVariable ["KI_airSupport_cfSwitch", "SVC"];
+        diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
 
-				[_pilot, _gunner] orderGetIn false;
-
-			 	if ((count crew _vehicle < 1)) then
-
-				{
-
-					_pilot setCombatMode "BLUE";
-					_pilot setBehaviour "SAFE";
-
-					 _gunner setCombatMode "BLUE";
-					 _gunner setBehaviour "SAFE";
-
-				 	 _group move (getMarkerPos _waitpos);
-				 	_group setVariable ["status", "readyFix"];
-
-				 	diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
-
-				 	_engineer move position _vehicle;
-					_engineer action ["repairVehicle", _vehicle];
-
-					sleep 250;
-					_engineer move (getMarkerPos _engpos);
+        [_group, _vehicle, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
 
 
-				 	sleep 40;
-				 	_group setVariable ["status", "free"];
+    };
 
-				 	diag_log format ["%1, %2", groupId _group, "ready for service" ];
+    case "SVC":
+    {
+        sleep 300;
+        _vehicle setDamage 0;
+        _vehicle setAmmo 1;
 
-				 }
-
-			}
+        _group setVariable ["KI_airSupport_cfSwitch", "RTF"];
+        diag_log format ["%1, %2", groupId _group, "ready for tasking" ];
+        
+    };
 
 }
