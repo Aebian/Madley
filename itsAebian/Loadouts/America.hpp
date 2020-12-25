@@ -338,10 +338,10 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 	vest[] = { "rhsusf_iotv_ucp" };
 	backpack[] = { "" };
 	primary[] = { "rhsusf_weap_MP7A2_aor1", "rhsusf_acc_anpeq15A", "optic_Yorris", "rhsusf_mag_40Rnd_46x30_FMJ" };
-	secondary[] = { "rhsusf_weap_m1911a1" };
+	secondary[] = { "" };
 	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",5,"rhsusf_mag_7x45acp_MHP",3 };
-	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_tourniquet",2,"rhs_mag_m18_purple",2  };
+	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",4};
+	items[] += { "ACE_packingBandage",3,"ACE_quikclot",3, "ACE_tourniquet",4,"rhs_mag_m18_purple",1  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
 	compass[] = { "ItemCompass" };
