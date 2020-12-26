@@ -2,7 +2,7 @@
     author: @Aebian
     description: Canon back blast for armored vehicles excluding autocanon below 40mm.
     returns: nothing
-	[] execVM "itsAebian\KI_CanonBlast.sqf"; 
+	[] execVM "itsAebian\KI_canonBlast.sqf"; 
     */ 
  
  {
