@@ -12,7 +12,7 @@ params [
 	"_direction","_angleDelta"
 ];
 
-(_sniper getVariable ["KI_snipeAction_cfSwitch", objNull]) params ["_cond"];
+(_sniper getVariable ["KI_snipeAction_cfSwitch", 0]) params ["_cond"];
 
 switch (_cond) do 
 {

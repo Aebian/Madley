@@ -17,10 +17,8 @@ CIVILIAN setFriend [WEST, 1];
  curGrpE =  createGroup EAST; theCurator  = curGrpE createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
  theCurator setCuratorEditingAreaType true; theCurator addCuratorEditableObjects [entities "all",true];
 
-["SILENT", [US_SAM_BATTERY_01, US_SAM_BATTERY_02, US_SAM_AAA_01]] execVM "itsAebian\KI_airDefense.sqf";
+[A_wallUS, "cscreenfeed", [4024.6,5412.24,940.87], obj49, 161.5, 2] execVM "itsAebian\KI_uavOps.sqf";
 
- [CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
-
- [CIAAccess_01, (nearestBuilding CIAAccess_01), 735900] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
+[CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
 
  ["Madley loaded!"] remoteExecCall ["systemChat"];

@@ -1,1 +1,1 @@
-#include "assets\briefing.sqf"
+#include "itsAebian\resources\briefing.sqf"

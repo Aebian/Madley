@@ -161,6 +161,7 @@ preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]
 class US_ARMY_RANGER_MED_NG : US_ARMY_RANGER_MED { // US Army Ranger (Medic, No-Gun [Main])
 
 primary[] = { "" };
+goggles[] = { "" };
 postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
 
 };
@@ -316,7 +317,7 @@ class US_ARMY_SPC_LDF : US_ARMY_DEFAULT_UCP { // Army Special WDL Guy
 	primary[] = { "arifle_MSBS65_camo_F", "muzzle_snds_65_TI_blk_F", "optic_Hamr", "acc_pointer_IR" };
 	secondary[] = { "hgun_Pistol_heavy_01_green_F", "optic_MRD_black" };
 	launcher[] = { "" };
-	magazines[] = { "30Rnd_65x39_caseless_msbs_mag",9,"rhsusf_mag_7x45acp_MHP",3 };
+	magazines[] = { "30Rnd_65x39_caseless_msbs_mag",9,"11Rnd_45ACP_Mag",3 };
 	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_EarPlugs",1,"MineDetector",1  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
@@ -331,6 +332,15 @@ class US_ARMY_SPC_LDF : US_ARMY_DEFAULT_UCP { // Army Special WDL Guy
 	postLoadout = "(unitbackPack (_this select 0)) additemCargo [""30Rnd_65x39_caseless_msbs_mag"",6];(unitbackPack (_this select 0)) additemCargo [""HandGrenade"",2];(unitbackPack (_this select 0)) additemCargo [""11Rnd_45ACP_Mag"",4];(unitbackPack (_this select 0)) additemCargo [""ACE_CableTie"",4];(unitbackPack (_this select 0)) additemCargo [""ACE_Clacker"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_DefusalKit"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_wirecutter"",1];";
 
 };
+
+class US_ARMY_SPC_ACI : US_ARMY_SPC_LDF { // Army Counter Intelligence
+
+	backpack[] = { "" };
+	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "optic_Hamr", "acc_pointer_IR" };
+	magazines[] = { "rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
+	gps[] = { "B_UavTerminal" };
+
+} 
 
 class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 
