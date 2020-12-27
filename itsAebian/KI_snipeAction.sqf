@@ -17,7 +17,6 @@ params [
 switch (_cond) do 
 {
 	case 0:
-    default
 	{
 
 		_visTargets = _targets select {([objNull, "VIEW"] checkVisibility [eyePos _sniper, eyePos _x] > 0.8)};

@@ -88,7 +88,7 @@ comment "Open Ghosthawk doors";
 vehicleName animateDoor ['door_R', 1];
 vehicleName animateDoor ['door_L', 1];
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Animation on a AI unit also in isMultiplayer"
+comment "Animation on a AI unit also in isMultiplayer";
 0 = this spawn {waitUntil {time > 0};  
 [_this, "Acts_Kore_TalkingOverRadio_loop"] remoteExecCall ["switchMove"]; 
 _animEH = _this addEventHandler ["AnimDone", {(_this select 0) switchMove (_this select 1)}];  
@@ -200,10 +200,10 @@ vehicleName removeWeaponTurret ["Laserdesignator_mounted",[0]];
 vehicleName addWeapon "LMG_Zafir_F"; vehicleName addMagazines ["150Rnd_762x54_Box_Tracer", 6];
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Delete vehicle (wreck, crate) the player is looking at in MP";
-if (name player == "Aebian") then {deleteVehicle cursorTarget;}
+if (name player == "Aebian") then {deleteVehicle cursorTarget};
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Add Item to player (MP)";
-if (name player == "Aebian") then {player addWeapon "launch_I_Titan_F";}
+if (name player == "Aebian") then {player addWeapon "launch_I_Titan_F"};
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Set base texture of a vehicle";
 vehicleName setObjectTextureGlobal [0, "itsAebian\images\CH146_0.paa"];
@@ -225,7 +225,7 @@ comment "Returns the attachTo coordinates of objects you 'placed' in 3DEN that a
 attachPos = (get3DENSelected "object" select 0) worldToModel (getPosATL (get3DENSelected "object" select 1)); copyToClipboard (str (attachPos));
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Returns direction of selected 3DEN object from 0 to 360";
-dirPos = (get3DENSelected "object" select 0); copyToClipboard (str (dirPos)); worldToModel (getDir)
+dirPos = (get3DENSelected "object" select 0); copyToClipboard (getDir(str (dirPos)) worldToModel _x);
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -249,10 +249,10 @@ comment "AI will prepare the SCUD and will fire the missile to target";
 comment "Detonate Tochka-U Nuke without launch vehicle. 100 is the radius you can change";
 [objectName,100] call rhs_fnc_ss21_nuke;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Animate back-door on FMTV Command Post Variant // Open = 1 | Closed = 0"
+comment "Animate back-door on FMTV Command Post Variant // Open = 1 | Closed = 0";
 vehicleName animate ["DoorB", 1]; 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Animate back-ladder on FMTV Command Post Variant // Hide = 0 | Show = 1"
+comment "Animate back-ladder on FMTV Command Post Variant // Hide = 0 | Show = 1";
 vehicleName animate ["hide_steps", 1]; 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Turn off the RHS Decals (could save some performance)";
@@ -285,7 +285,7 @@ vehicleName setVariable ['ace_isRepairFacility',1, true];
 comment "Full heal of a player trough ACE3";
 [player] call ace_medical_treatment_fnc_fullHealLocal;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Get ACE Full Arsenal"
+comment "Get ACE Full Arsenal";
 [objectName, true, true] call ace_arsenal_fnc_initBox;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Change G Effects of player";
@@ -297,7 +297,7 @@ comment "Block a vehicles engine (like a EMP would do) ";
 comment "Do specific action when soldier use specific medicine";
 ["ace_medical_treatmentAdvanced_medicationLocal", {
   params ["_patient", "_medication"];
-  if (_medication == "Atropine") then { ... };
+  if (_medication == "Atropine") then {  };
 }] call CBA_fnc_addEventhandler;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 

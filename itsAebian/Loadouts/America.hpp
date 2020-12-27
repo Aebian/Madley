@@ -291,7 +291,7 @@ class US_ARMY_SPC_SPOTTER : US_ARMY_DEFAULT_UCP { // Army Special Scout Spotter
 	uniform[] = { "rhs_uniform_g3_m81" };
 	vest[] = { "rhsusf_spcs_ocp_sniper" };
 	backpack[] = { "rhssaf_kitbag_smb" };
-	primary[] = { "rhs_weap_mk18_KAC_wd", "rhsusf_acc_nt4_tan", "rhs_acc_perst1ik_ris", "optic_Hamr_khk_F", "rhsusf_acc_grip2_wd"};
+	primary[] = { "rhs_weap_mk18_KAC_wd", "rhsusf_acc_nt4_tan", "rhs_acc_perst1ik_ris", "optic_Hamr_khk_F", "rhsusf_acc_grip2_wd" };
 	secondary[] = { "rhsusf_weap_m1911a1" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 9, "rhsusf_mag_7x45acp_MHP", 3 };
@@ -335,12 +335,12 @@ class US_ARMY_SPC_LDF : US_ARMY_DEFAULT_UCP { // Army Special WDL Guy
 
 class US_ARMY_SPC_ACI : US_ARMY_SPC_LDF { // Army Counter Intelligence
 
-	backpack[] = { "" };
+	backpack[] = { };
 	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "optic_Hamr", "acc_pointer_IR" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
 	gps[] = { "B_UavTerminal" };
 
-} 
+}; 
 
 class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 
@@ -350,7 +350,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 	primary[] = { "rhsusf_weap_MP7A2_aor1", "rhsusf_acc_anpeq15A", "optic_Yorris", "rhsusf_mag_40Rnd_46x30_FMJ" };
 	secondary[] = { "" };
 	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",4};
+	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",3};
 	items[] += { "ACE_packingBandage",3,"ACE_quikclot",3, "ACE_tourniquet",4,"rhs_mag_m18_purple",1  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
@@ -444,7 +444,7 @@ class US_AIRFORCE_SECF_LEAD : US_ARMY_DEFAULT_UCP { // Airforce Security Forces 
 
 };
 
-class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Lead
+class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Rifleman
 
 	uniform[] = { "rhs_uniform_abu" };
 	vest[] = { "rhsusf_iotv_ucp_Rifleman" };
@@ -466,7 +466,7 @@ class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP { // Airforce Security Forces L
 
 };
 
-class US_AIRFORCE_SECF_SNP : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Lead
+class US_AIRFORCE_SECF_SNP : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Sniper
 
 	uniform[] = { "rhs_uniform_abu" };
 	vest[] = { "rhsusf_iotv_ucp_SAW" };
@@ -737,7 +737,6 @@ class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 	map[] = { "" };
 	watch[] = { "ACE_Altimeter" };
 
-
 };
 
 class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-Tank]
@@ -756,7 +755,6 @@ class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-
 	map[] = { "" };
 	watch[] = { "ACE_Altimeter" };
 
-
 };
 
 class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
@@ -774,7 +772,6 @@ class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 	gps[] = { "" };
 	map[] = { "" };
 	watch[] = { "ACE_Altimeter" };
-
 
 };
 
@@ -894,7 +891,6 @@ class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
 
 };
-
 
 class US_NAVY_JPLT : CommonAmerica { // Navy [Jet Pilot]
 

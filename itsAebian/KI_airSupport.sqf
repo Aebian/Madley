@@ -6,7 +6,7 @@
 	[Vulture21CR, Vulture21VHC, 600, [7660.26,11162.2,2.86102e-005]] execVM "itsAebian\KI_airSupport.sqf";
 */
 
-params["_group", "_aircraft", "_gametime", "_target"];
+params["_group", "_aircraft", "_gameTime", "_targetRAW"];
 
 (_group getVariable ["KI_airSupport_cfSwitch", "RFT"]) params ["_cond"];
 
@@ -15,11 +15,15 @@ params["_group", "_aircraft", "_gametime", "_target"];
 if (!alive _aircraft) exitWith // Break if no aircraft left
 {
     diag_log format ["%1, %2", groupId _group, "have lost the aircraft." ];
+    _group setVariable ["KI_airSupport_cfSwitch", "RTB"];
+
+    [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
 };
 
 if ({ alive _x } count units _group == 0) exitWith // Break if soliders died
 {
 diag_log format ["%1, %2", groupId _group, "is KIA." ];
+_group setVariable ["KI_airSupport_cfSwitch", "KIA"];
 };
 
 switch (_cond) do 
@@ -37,7 +41,7 @@ switch (_cond) do
 
         _group setVariable ["KI_airSupport_cfSwitch", "IAO"];
 
-        [_group, _aircraft, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
     };
 
     case "IAO": // Insert to AO
@@ -48,38 +52,79 @@ switch (_cond) do
 		_group setCombatMode "RED";
 	    _group setBehaviour "COMBAT";
 
-        switch (typeName _target) do
+        _target = objNull;
+
+        switch (typeName _targetRAW) do
         {
             case "ARRAY":
             {
-                _group setVariable ["KI_airSupport_TargetArea", _target];
+                _target =  _targetRAW;
             };
 
             case "STRING":
             {
-                _group setVariable ["KI_airSupport_TargetArea", (getMarkerPos _target)];
+                _target = (getMarkerPos _targetRAW);
             };
 
             case "OBJECT": 
             {
-            _group setVariable ["KI_airSupport_TargetArea", (getPos _target)];
+            _target = (getPos _targetRAW);
             };
         };
 
-        _onguard = _group addWaypoint [(_group getVariable ["KI_airSupport_TargetArea", objNull]), 1, 1, "Target Area"];
-        _onguard setWaypointType "SAD";
+        _onTarget = _group addWaypoint [_target, 1, 1, "Target Area"];
+        _onTarget setWaypointType "SAD";
         [_group, 0] setWaypointSpeed "NORMAL";
 
         [format ["%1, %2", groupId _group, "is en route for close air support, out." ]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2", groupId _group, "is en route for close air support, out." ];
-        
-        sleep _gametime;
-        
-        _group setVariable ["KI_airSupport_cfSwitch", "RTB"];
-        deleteWaypoint [_group, 1];
-        
-        [_group, _aircraft, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
 
+        waitUntil {(_aircraft distance _target) < 1500};
+
+        [format ["%1, %2", groupId _group, "arrived at the AO." ]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2", groupId _group, "arrived at the AO." ];
+        
+        params["_enemies", "_visTargets", "_bulletMagnet"];
+
+        private _playTime = diag_tickTime + _gameTime;
+
+        while {diag_tickTime < _playTime} do 
+        {
+            sleep 1;
+            _enemies = allUnits select {side group _x getFriend side _group < 0.6 && {_x distance _target < 1500}};
+            _visTargets = _enemies select {([objNull, "VIEW"] checkVisibility [eyePos (gunner _aircraft), eyePos _x] > 0.3)};
+
+            _bulletMagnet = _visTargets call BIS_fnc_selectRandom;
+
+            if (!(count _visTargets == 0)) then {
+
+                if (alive _bulletMagnet) then
+                {
+                    (gunner _aircraft) doWatch _bulletMagnet;
+                    (gunner _aircraft) doTarget _bulletMagnet;
+                };
+
+            } 
+            else 
+            {
+                {
+                    _x doWatch objNull;
+                    _x doTarget objNull;
+                    _x commandWatch objNull;
+                } forEach units _group;
+            };
+        };
+
+        _group setVariable ["KI_airSupport_cfSwitch", "RTB"];    
+        deleteWaypoint [_group, 1];
+
+        {
+            _x doWatch objNull;
+            _x doTarget objNull;
+            _x commandWatch objNull;
+        } forEach units _group;
+
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
     };
 
     case "RTB": // Returning to Base
@@ -102,7 +147,7 @@ switch (_cond) do
             _x disableAI "CHECKVISIBLE";
         } forEach units _group;
 
-        _rtbpoint = _group addWaypoint [(_aircraft getVariable ["KI_airSupport_heliPad", objNull]), 1, 1, "Return to Base"];
+        _rtbPoint = _group addWaypoint [(_aircraft getVariable ["KI_airSupport_heliPad", objNull]), 1, 1, "Return to Base"];
 
         [format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ];
@@ -110,8 +155,8 @@ switch (_cond) do
 	 	_aircraft landAt (_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
         waitUntil {_aircraft distance (_aircraft getVariable ["KI_airSupport_heliPad", objNull]) < 150};
 
-        _group setFormDir (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
         _aircraft land "LAND";
+        _group setFormDir (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
 
         _group setCombatMode "BLUE";
 		_group setBehaviour "SAFE";
@@ -134,7 +179,7 @@ switch (_cond) do
         _group setVariable ["KI_airSupport_cfSwitch", "SVC"];
         diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
 
-        [_group, _aircraft, _gametime, _target] execVM "itsAebian\KI_AirSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
 
 
     };
@@ -152,4 +197,4 @@ switch (_cond) do
         
     };
 
-}
+};
