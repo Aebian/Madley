@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2818;
+		nextID=2832;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1576;
+		nextID=1764;
 	};
 	class Camera
 	{
-		pos[]={858.73462,53.93,12147.755};
-		dir[]={-0.92975348,-0.35576186,-0.094886839};
-		up[]={-0.35393175,0.93457335,-0.036122415};
-		aside[]={-0.10153001,6.0808088e-007,0.99483913};
+		pos[]={-733.67133,218.72827,10206.55};
+		dir[]={0.0088510932,-0.99767524,-0.068604752};
+		up[]={0.12764895,0.068980627,-0.98941696};
+		aside[]={-0.99184346,2.3347093e-006,-0.12796178};
 	};
 };
 binarizationWanted=0;
@@ -1276,7 +1276,7 @@ class Mission
 					name="Personell";
 					class Entities
 					{
-						items=23;
+						items=24;
 						class Item0
 						{
 							dataType="Group";
@@ -6866,9 +6866,236 @@ class Mission
 							id=1815;
 							atlOffset=98.51535;
 						};
+						class Item23
+						{
+							dataType="Layer";
+							name="Control Tower";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Group";
+									side="West";
+									class Entities
+									{
+										items=1;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={830.02002,44.127438,12122.76};
+												angles[]={0,6.1123524,0};
+											};
+											side="West";
+											flags=7;
+											class Attributes
+											{
+												skill=1;
+												rank="SERGEANT";
+												init="call{removeBackpack this; removeAllWeapons this;}";
+												class Inventory
+												{
+													class uniform
+													{
+														typeName="rhs_uniform_acu_ucp";
+														isBackpack=0;
+													};
+													class vest
+													{
+														typeName="rhsusf_iotv_ucp_Rifleman";
+														isBackpack=0;
+													};
+													map="ItemMap";
+													compass="ItemCompass";
+													watch="ItemWatch";
+													radio="ItemRadio";
+													headgear="rhsusf_patrolcap_ucp";
+												};
+											};
+											id=2780;
+											type="rhsusf_army_ucp_driver";
+											atlOffset=0.093231201;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="Male07ENG";
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"SCALAR"
+																};
+															};
+															value=0.97000003;
+														};
+													};
+												};
+												nAttributes=2;
+											};
+										};
+									};
+									class Attributes
+									{
+									};
+									id=2779;
+									atlOffset=0.093231201;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="groupID";
+											expression="[_this, _value] call CBA_fnc_setCallsign";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Madley Ground";
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+								class Item1
+								{
+									dataType="Group";
+									side="West";
+									class Entities
+									{
+										items=1;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={831.60901,44.134438,12122.587};
+												angles[]={0,5.965064,0};
+											};
+											side="West";
+											flags=7;
+											class Attributes
+											{
+												skill=1;
+												rank="CAPTAIN";
+												init="call{removeAllWeapons this;}";
+											};
+											id=2782;
+											type="rhsusf_airforce_pilot";
+											atlOffset=0.10023117;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"SCALAR"
+																};
+															};
+															value=0.98000002;
+														};
+													};
+												};
+												nAttributes=2;
+											};
+										};
+									};
+									class Attributes
+									{
+									};
+									id=2781;
+									atlOffset=0.10023117;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="groupID";
+											expression="[_this, _value] call CBA_fnc_setCallsign";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Madley Tower";
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+							};
+							id=2778;
+							atlOffset=0.096733093;
+						};
 					};
 					id=250;
-					atlOffset=117.95139;
+					atlOffset=127.20333;
 				};
 				class Item1
 				{
@@ -26780,8 +27007,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={832.15302,45.08017,12119.935};
-												angles[]={0,5.6520915,0};
+												position[]={829.0929,45.086952,12120.201};
+												angles[]={0,0.90564889,0};
 											};
 											side="Empty";
 											flags=4;
@@ -26791,7 +27018,7 @@ class Mission
 											};
 											id=2776;
 											type="Land_TripodScreen_01_large_F";
-											atlOffset=0.004234314;
+											atlOffset=0.011016846;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -26868,7 +27095,7 @@ class Mission
 										};
 									};
 									id=2770;
-									atlOffset=0.37870407;
+									atlOffset=0.3791275;
 								};
 								class Item2
 								{
@@ -26990,7 +27217,7 @@ class Mission
 								};
 							};
 							id=2731;
-							atlOffset=5.157589;
+							atlOffset=5.1576958;
 						};
 						class Item7
 						{
@@ -27078,7 +27305,7 @@ class Mission
 						};
 					};
 					id=1044;
-					atlOffset=3.2079544;
+					atlOffset=3.2069035;
 				};
 				class Item6
 				{
@@ -27111,7 +27338,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={709.32251,39.928421,12108.546};
+								position[]={709.14862,39.90535,12108.644};
 								angles[]={0,2.6903789,0};
 							};
 							side="West";
@@ -27123,7 +27350,7 @@ class Mission
 							};
 							id=1729;
 							type="B_W_Static_Designator_01_F";
-							atlOffset=10.02191;
+							atlOffset=9.9988384;
 						};
 						class Item2
 						{
@@ -27163,7 +27390,7 @@ class Mission
 						};
 					};
 					id=1737;
-					atlOffset=4.7011166;
+					atlOffset=4.6982327;
 				};
 				class Item7
 				{
@@ -28248,7 +28475,7 @@ class Mission
 				};
 			};
 			id=20;
-			atlOffset=35.267513;
+			atlOffset=35.288078;
 		};
 		class Item2
 		{
@@ -30348,8 +30575,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={830.23889,47.360283,12119.858};
-						angles[]={0,4.7402849,0};
+						position[]={832.36072,44.042175,12119.97};
+						angles[]={0,4.3270721,0};
 					};
 					side="West";
 					flags=6;
@@ -30449,7 +30676,7 @@ class Mission
 					};
 					id=1723;
 					type="rhsusf_army_ucp_arb_grenadier";
-					atlOffset=0.066249847;
+					atlOffset=0.0079689026;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30498,7 +30725,7 @@ class Mission
 			{
 			};
 			id=1721;
-			atlOffset=0.066249847;
+			atlOffset=0.0079689026;
 		};
 		class Item25
 		{
@@ -30563,7 +30790,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={709.32251,39.422375,12108.596};
+						position[]={709.14862,39.399303,12108.693};
 						angles[]={0,2.6903789,0};
 					};
 					side="West";
@@ -30573,7 +30800,7 @@ class Mission
 					};
 					id=1730;
 					type="B_UAV_AI";
-					atlOffset=10.02191;
+					atlOffset=9.9988384;
 				};
 			};
 			class Attributes
@@ -30602,7 +30829,7 @@ class Mission
 				};
 			};
 			id=1728;
-			atlOffset=10.02191;
+			atlOffset=9.9988384;
 		};
 		class Item27
 		{
@@ -48100,251 +48327,6 @@ class Mission
 		};
 		class Item42
 		{
-			dataType="Layer";
-			name="Camp Madley";
-			id=2730;
-			atlOffset=96.5;
-		};
-		class Item43
-		{
-			dataType="Layer";
-			name="Camp Madley Personnel ";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Control Tower";
-					class Entities
-					{
-						items=2;
-						class Item0
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={830.02002,44.127438,12122.76};
-										angles[]={0,6.1123524,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										skill=1;
-										rank="SERGEANT";
-										init="call{removeBackpack this; removeAllWeapons this;}";
-										class Inventory
-										{
-											class uniform
-											{
-												typeName="rhs_uniform_acu_ucp";
-												isBackpack=0;
-											};
-											class vest
-											{
-												typeName="rhsusf_iotv_ucp_Rifleman";
-												isBackpack=0;
-											};
-											map="ItemMap";
-											compass="ItemCompass";
-											watch="ItemWatch";
-											radio="ItemRadio";
-											headgear="rhsusf_patrolcap_ucp";
-										};
-									};
-									id=2780;
-									type="rhsusf_army_ucp_driver";
-									atlOffset=0.093231201;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male07ENG";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.97000003;
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=2779;
-							atlOffset=0.093231201;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Madley Ground";
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item1
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={831.60901,44.134438,12122.587};
-										angles[]={0,5.965064,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										skill=1;
-										rank="CAPTAIN";
-										init="call{removeAllWeapons this;}";
-									};
-									id=2782;
-									type="rhsusf_airforce_pilot";
-									atlOffset=0.10023117;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male12ENG";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=2781;
-							atlOffset=0.10023117;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Madley Tower";
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-					};
-					id=2778;
-					atlOffset=0.096733093;
-				};
-			};
-			id=2777;
-			atlOffset=0.096733093;
-		};
-		class Item44
-		{
 			dataType="Group";
 			side="East";
 			class Entities
@@ -48486,6 +48468,188 @@ class Mission
 			{
 			};
 			id=2809;
+		};
+		class Item43
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-768.87036,97.864426,10173.939};
+						angles[]={0,3.0732803,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						name="US_ChinookD";
+					};
+					id=2828;
+					type="rhsusf_army_ocp_helipilot";
+					atlOffset=193.89297;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-768.87036,97.864426,10173.939};
+						angles[]={0,3.0732803,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+					};
+					id=2829;
+					type="rhsusf_army_ocp_helipilot";
+					atlOffset=193.89297;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-768.87036,97.864426,10173.939};
+						angles[]={0,3.0732803,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						name="US_ChinookG";
+					};
+					id=2830;
+					type="rhsusf_army_ocp_helipilot";
+					atlOffset=193.89297;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-768.87036,97.864426,10173.939};
+						angles[]={0,3.0732803,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+					};
+					id=2831;
+					type="rhsusf_army_ocp_helipilot";
+					atlOffset=193.89297;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=2828;
+						item1=2827;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=2829;
+						item1=2827;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=2830;
+						item1=2827;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=2831;
+						item1=2827;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
+			id=2826;
+			atlOffset=193.89297;
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={-768.87036,101.59126,10173.795};
+				angles[]={0,3.0732803,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				init="call{this setVariable [""KI_airSupport_heliPad"", Vulture21Square];" \n "this setVariable [""KI_airSupport_heliHeading"", 89.034];}";
+				name="US_Chinook";
+				reportOwnPosition=1;
+			};
+			id=2827;
+			type="RHS_CH_47F_light";
+			atlOffset=193.89297;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

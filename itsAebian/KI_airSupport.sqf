@@ -90,8 +90,10 @@ switch (_cond) do
 
         while {diag_tickTime < _playTime} do 
         {
+            scopeName "attackLoop";
             sleep 1;
-            _enemies = allUnits select {side group _x getFriend side _group < 0.6 && {_x distance _target < 1500}};
+
+            _enemies = allUnits select {side group _x getFriend side _group < 0.6 && (alive _x) && {_x distance _target < 1500}};
             _visTargets = _enemies select {([objNull, "VIEW"] checkVisibility [eyePos (gunner _aircraft), eyePos _x] > 0.3)};
 
             _bulletMagnet = _visTargets call BIS_fnc_selectRandom;
@@ -113,22 +115,44 @@ switch (_cond) do
                     _x commandWatch objNull;
                 } forEach units _group;
             };
+
+            if (count _enemies == 0) then 
+            {
+                [format ["%1, %2", groupId _group, "destroyed all targets around specified location and is RTB, good luck, out." ]] remoteExecCall ["sideChat"];
+                diag_log format ["%1, %2", groupId _group, "destroyed all targets around specified location and is RTB, good luck, out." ];
+                breakOut  "attackLoop"
+                
+            };
+
+        };
+
+        if (!(diag_tickTime < _playTime)) then 
+        {
+        [format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ];
         };
 
         _group setVariable ["KI_airSupport_cfSwitch", "RTB"];    
         deleteWaypoint [_group, 1];
-
-        {
-            _x doWatch objNull;
-            _x doTarget objNull;
-            _x commandWatch objNull;
-        } forEach units _group;
 
         [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
     };
 
     case "RTB": // Returning to Base
     {
+	 	_group setBehaviour "CARELESS";
+        {
+            _x disableAI "AUTOCOMBAT";
+            _x disableAI "AUTOTARGET";
+            _x disableAI "CHECKVISIBLE";
+        } forEach units _group;
+        
+        {
+            _x doWatch objNull;
+            _x doTarget objNull;
+            _x commandWatch objNull;
+        } forEach units _group;
+
         private _weapons = _aircraft weaponsTurret [-1];
         {
         if ("cmdispenser" in toLowerANSI _x || "CMFlareLauncher" in toLowerANSI _x) exitWith
@@ -141,22 +165,31 @@ switch (_cond) do
         
         } forEach _weapons;
 
-	 	_group setBehaviour "CARELESS";
-        {
-            _x disableAI "AUTOCOMBAT";
-            _x disableAI "CHECKVISIBLE";
-        } forEach units _group;
+        _heliPad = getPos(_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
+        _originalHeading = (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
 
-        _rtbPoint = _group addWaypoint [(_aircraft getVariable ["KI_airSupport_heliPad", objNull]), 1, 1, "Return to Base"];
-
-        [format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ]] remoteExecCall ["sideChat"];
-        diag_log format ["%1, %2", groupId _group, "is RTB, good luck soldiers, out." ];
-
-	 	_aircraft landAt (_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
-        waitUntil {_aircraft distance (_aircraft getVariable ["KI_airSupport_heliPad", objNull]) < 150};
+        _rtbPoint = _group addWaypoint [_heliPad, 1, 1, "Return to Base"];
+        waitUntil {_aircraft distance _heliPad < 150};
 
         _aircraft land "LAND";
-        _group setFormDir (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
+        waitUntil {_aircraft distance _heliPad < 5};
+		
+		_aircraftRight = true;
+
+        if (_originalHeading < 180) then {
+            _aircraftRight = false;
+        };
+        _aircraftAdjust = true;
+        while {_aircraftAdjust} do {
+            if (_aircraftRight) then {
+                _aircraft setDir ((getDir _aircraft) + 1.2);
+            } else {
+                _aircraft setDir ((getDir _aircraft) - 1.2);
+            };
+            sleep 0.01;
+            if ((round (getDir _aircraft)) == (round _originalHeading)) then {_aircraftAdjust = false};
+        
+        };
 
         _group setCombatMode "BLUE";
 		_group setBehaviour "SAFE";
@@ -165,6 +198,7 @@ switch (_cond) do
 
         {
             _x enableAI "AUTOCOMBAT";
+            _x enableAI "AUTOTARGET";
             _x enableAI "CHECKVISIBLE";
         } forEach units _group;
 
@@ -188,13 +222,23 @@ switch (_cond) do
     {
         _group setVariable ["KI_airSupport_cfSwitch", "DND"];
         sleep 300;
+
         _aircraft setDamage 0;
         _aircraft setFuel 1;
+        
         _aircraft setAmmo 1;
+        {_x setDamage 0} forEach units _group;
 
         _group setVariable ["KI_airSupport_cfSwitch", "RTF"];
         diag_log format ["%1, %2", groupId _group, "ready for tasking" ];
         
+    };
+
+    case "DND": // Unavailable
+    {
+        [format ["%1, %2", groupId _group, "is currently unavailable for tasking. Ask the command center for another aircraft on standby." ]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2", groupId _group, "is currently unavailable for tasking. Ask the command center for another aircraft on standby." ];
+
     };
 
 };
