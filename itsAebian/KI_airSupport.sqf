@@ -153,6 +153,12 @@ switch (_cond) do
             _x commandWatch objNull;
         } forEach units _group;
 
+        _heliPad = getPos(_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
+        _originalHeading = (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
+
+        _rtbPoint = _group addWaypoint [_heliPad, 1, 1, "Return to Base"];
+        sleep 2;
+
         private _weapons = _aircraft weaponsTurret [-1];
         {
         if ("cmdispenser" in toLowerANSI _x || "CMFlareLauncher" in toLowerANSI _x) exitWith
@@ -165,27 +171,28 @@ switch (_cond) do
         
         } forEach _weapons;
 
-        _heliPad = getPos(_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
-        _originalHeading = (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
-
-        _rtbPoint = _group addWaypoint [_heliPad, 1, 1, "Return to Base"];
         waitUntil {_aircraft distance _heliPad < 150};
-
         _aircraft land "LAND";
-        waitUntil {_aircraft distance _heliPad < 5};
-		
+
+        waitUntil {_aircraft distance _heliPad < 8};
 		_aircraftRight = true;
 
-        if (_originalHeading < 180) then {
+        if (_originalHeading > 180) then 
+        {
             _aircraftRight = false;
         };
+
         _aircraftAdjust = true;
-        while {_aircraftAdjust} do {
-            if (_aircraftRight) then {
+        while {_aircraftAdjust} do 
+        {
+            if (_aircraftRight) then 
+            {
                 _aircraft setDir ((getDir _aircraft) + 1.2);
-            } else {
+            } else 
+            {
                 _aircraft setDir ((getDir _aircraft) - 1.2);
             };
+
             sleep 0.01;
             if ((round (getDir _aircraft)) == (round _originalHeading)) then {_aircraftAdjust = false};
         
