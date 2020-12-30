@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={734.8963,39.562901,12175.695};
-		dir[]={0.033660341,-0.25334215,-0.96691418};
-		up[]={0.0088200374,0.96732616,-0.25332922};
-		aside[]={-0.9994871,-1.2080782e-006,-0.034796316};
+		pos[]={1026.7554,179.27945,12347.074};
+		dir[]={-0.68719208,-0.41652066,-0.59542155};
+		up[]={-0.31487694,0.9090637,-0.27282852};
+		aside[]={-0.65490252,-1.9599684e-006,0.75583893};
 	};
 };
 binarizationWanted=0;
@@ -12796,7 +12796,7 @@ class Mission
 						};
 					};
 					id=403;
-					atlOffset=-0.21787643;
+					atlOffset=-0.21787071;
 				};
 				class Item4
 				{
@@ -50366,7 +50366,7 @@ class Mission
 				};
 			};
 			id=2826;
-			atlOffset=121.3561;
+			atlOffset=121.35718;
 		};
 		class Item42
 		{
@@ -50386,7 +50386,7 @@ class Mission
 			};
 			id=2827;
 			type="RHS_CH_47F_light";
-			atlOffset=121.3561;
+			atlOffset=121.35718;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50587,8 +50587,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={677.07599,74.049438,12321.401};
-						angles[]={0,3.1805658,0};
+						position[]={87.079834,45.111702,11331.841};
+						angles[]={0,0.78918302,0};
 					};
 					side="West";
 					flags=2;
@@ -50598,15 +50598,15 @@ class Mission
 					};
 					id=2987;
 					type="rhsusf_army_ucp_ah64_pilot";
-					atlOffset=45.127998;
+					atlOffset=139.93982;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={677.07599,74.049438,12321.401};
-						angles[]={0,3.1805658,0};
+						position[]={87.079834,45.111702,11331.841};
+						angles[]={0,0.78918302,0};
 					};
 					side="West";
 					class Attributes
@@ -50615,7 +50615,7 @@ class Mission
 					};
 					id=2988;
 					type="rhsusf_army_ucp_ah64_pilot";
-					atlOffset=45.127998;
+					atlOffset=139.93982;
 				};
 			};
 			class Attributes
@@ -50655,15 +50655,15 @@ class Mission
 				};
 			};
 			id=2985;
-			atlOffset=45.127998;
+			atlOffset=139.93982;
 		};
 		class Item47
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={677.07599,76.413971,12321.339};
-				angles[]={0,3.1805658,0};
+				position[]={87.079834,47.47617,11331.813};
+				angles[]={0,0.78918302,0};
 			};
 			side="West";
 			flags=2;
@@ -50677,7 +50677,7 @@ class Mission
 			};
 			id=2986;
 			type="RHS_AH64D_wd";
-			atlOffset=45.127998;
+			atlOffset=139.93982;
 			class CustomAttributes
 			{
 				class Attribute0
