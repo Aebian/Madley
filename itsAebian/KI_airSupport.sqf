@@ -98,8 +98,8 @@ switch (_cond) do
 
             _bulletMagnet = _visTargets call BIS_fnc_selectRandom;
 
-            if (!(count _visTargets == 0)) then {
-
+            if (!(count _visTargets == 0)) then 
+            {
                 if (alive _bulletMagnet) then
                 {
                     (gunner _aircraft) doWatch _bulletMagnet;
@@ -126,17 +126,15 @@ switch (_cond) do
 
             private _aircraftWeapons = _aircraft weaponsTurret [0];
             {
-                if ("gatling_30mm_base" in toLowerANSI _x) exitWith 
+                if ( _x isKindOf ["CannonCore" ,configFile >> "CfgWeapons"] ) then 
                 {
-                    if ((_aircraft ammo _x) < 100) then 
+                    if ((_aircraft ammo _x) < 1300) then 
                     {
-
                         [format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ]] remoteExecCall ["sideChat"];
                         diag_log format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ];
                         breakOut  "attackLoop" 
-                    }
-
-                } 
+                    }; 
+                }
 
             } forEach _aircraftWeapons;
 
@@ -144,8 +142,8 @@ switch (_cond) do
 
         if (!(diag_tickTime < _playTime)) then 
         {
-        [format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ]] remoteExecCall ["sideChat"];
-        diag_log format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ];
+            [format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ]] remoteExecCall ["sideChat"];
+            diag_log format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ];
         };
 
         _group setVariable ["KI_airSupport_cfSwitch", "RTB"];    

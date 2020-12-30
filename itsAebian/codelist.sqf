@@ -239,8 +239,8 @@ comment"Fold mainrotor @AH-1Z // 0 = unfold | 1 = fold";
 comment "Will create a Light inside a C-130J";
 Light = createMine ["placed_chemlight_yellow", position player, [], 0];
 Light2 = createMine ["placed_chemlight_yellow", position player, [], 0];
-Light setVectorUp [0,0,-1]; Light attachTo [C130, [0, 6, 2.5] ];
-Light2 setVectorUp [0,0,-1]; Light2 attachTo [C130, [0, 4, 2.5] ];
+Light setVectorUp [0,0,-1]; Light attachTo [vehicleName, [0, 6, 2.5] ];
+Light2 setVectorUp [0,0,-1]; Light2 attachTo [vehicleName, [0, 4, 2.5] ];
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "AI will prepare the SCUD and will fire the missile to target";
 [vehicleName,1] spawn rhs_fnc_ss21_AI_prepare;
