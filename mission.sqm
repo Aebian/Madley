@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=3000;
+		nextID=3011;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2348;
+		nextID=2446;
 	};
 	class Camera
 	{
-		pos[]={737.80872,34.741802,12104.93};
-		dir[]={-0.26778987,-0.20803861,0.94081569};
-		up[]={-0.057102218,0.97799742,0.20061997};
-		aside[]={0.96183956,-1.0563526e-006,0.27377486};
+		pos[]={736.64252,29.731134,12243.95};
+		dir[]={-0.02580959,-0.40798739,-0.91263688};
+		up[]={-0.011538185,0.91291678,-0.40798321};
+		aside[]={-0.99960953,1.4348188e-008,0.028269274};
 	};
 };
 binarizationWanted=0;
@@ -156,6 +156,7 @@ addons[]=
 	"A3_Soft_F_Exp_Truck_01",
 	"A3_Supplies_F_Heli_Slingload",
 	"A3_Static_F_Enoch_Designator_01",
+	"A3_Structures_F_Orange_VR_Helpers",
 	"A3_Props_F_Enoch_Infrastructure_Traffic",
 	"A3_Structures_F_Exp_Infrastructure_Pavements",
 	"A3_Structures_F_Enoch_Infrastructure_Pavements",
@@ -1188,7 +1189,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=43;
+		items=45;
 		class Item0
 		{
 			dataType="Logic";
@@ -29914,7 +29915,7 @@ class Mission
 							name="Base Cameras";
 							class Entities
 							{
-								items=4;
+								items=6;
 								class Item0
 								{
 									dataType="Object";
@@ -29948,9 +29949,9 @@ class Mission
 									flags=2;
 									class Attributes
 									{
+										init="call{this attachTo [CAMHELPER_01,[0,0,0]];}";
 										name="US_BCAM01";
 										description="Camera 01 - Gate Area";
-										disableSimulation=1;
 										reportRemoteTargets=1;
 										reportOwnPosition=1;
 									};
@@ -30000,13 +30001,72 @@ class Mission
 									type="B_W_Static_Designator_01_F";
 									atlOffset=2.5247803;
 								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={709.17358,39.887264,12108.668};
+									};
+									side="Empty";
+									class Attributes
+									{
+										name="CAMHELPER_01";
+									};
+									id=3004;
+									type="Sign_Sphere25cm_Geometry_F";
+									atlOffset=10.488237;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={736.80756,29.427486,12242.85};
+										angles[]={-0,3.1673946,0};
+									};
+									side="West";
+									flags=6;
+									class Attributes
+									{
+										name="US_BCAM05";
+										description="Camera 05 - Gate Inner Area";
+										reportRemoteTargets=1;
+										reportOwnPosition=1;
+									};
+									id=3007;
+									type="B_W_Static_Designator_01_F";
+								};
 							};
 							id=1737;
-							atlOffset=4.8132496;
+							atlOffset=3.9451275;
 						};
 					};
 					id=1783;
-					atlOffset=58.858253;
+					atlOffset=58.2509;
 				};
 				class Item8
 				{
@@ -30462,7 +30522,7 @@ class Mission
 								{
 									dataType="Trigger";
 									position[]={737.12128,28.92,12122.631};
-									angle=4.7745743;
+									angle=4.7745738;
 									class Attributes
 									{
 										name="PegasusGateTrg";
@@ -30967,7 +31027,7 @@ class Mission
 				};
 			};
 			id=20;
-			atlOffset=8.5974865;
+			atlOffset=7.8671188;
 		};
 		class Item2
 		{
@@ -32773,7 +32833,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={709.14899,39.399441,12108.693};
+						position[]={709.14899,39.399437,12108.693};
 						angles[]={0,2.6903727,0};
 					};
 					side="West";
@@ -32784,7 +32844,7 @@ class Mission
 					};
 					id=1730;
 					type="B_UAV_AI";
-					atlOffset=9.9989758;
+					atlOffset=9.9989719;
 				};
 			};
 			class Attributes
@@ -50622,6 +50682,73 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item43
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={736.80756,28.921438,12242.899};
+						angles[]={-0,3.1673946,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						name="US_BCAM03G_1";
+					};
+					id=3006;
+					type="B_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=3006;
+						item1=3007;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3005;
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={737.07269,28.92,12238.854};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3010;
+			type="Land_ClutterCutter_large_F";
 		};
 	};
 	class Connections
