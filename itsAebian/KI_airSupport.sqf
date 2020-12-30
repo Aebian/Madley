@@ -128,7 +128,7 @@ switch (_cond) do
             {
                 if ( _x isKindOf ["CannonCore" ,configFile >> "CfgWeapons"] ) then 
                 {
-                    if ((_aircraft ammo _x) < 1300) then 
+                    if ((_aircraft ammo _x) < 120) then 
                     {
                         [format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ]] remoteExecCall ["sideChat"];
                         diag_log format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ];
