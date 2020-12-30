@@ -81,8 +81,8 @@ switch (_cond) do
 
         waitUntil {(_aircraft distance _target) < 1500};
 
-        [format ["%1, %2", groupId _group, "arrived at the AO." ]] remoteExecCall ["sideChat"];
-        diag_log format ["%1, %2", groupId _group, "arrived at the AO." ];
+        [format ["%1, %2, %3", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2, %3", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString];
         
         params["_enemies", "_visTargets", "_bulletMagnet"];
 
@@ -124,6 +124,22 @@ switch (_cond) do
                 
             };
 
+            private _aircraftWeapons = _aircraft weaponsTurret [0];
+            {
+                if ("gatling_30mm_base" in toLowerANSI _x) exitWith 
+                {
+                    if ((_aircraft ammo _x) < 100) then 
+                    {
+
+                        [format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ]] remoteExecCall ["sideChat"];
+                        diag_log format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ];
+                        breakOut  "attackLoop" 
+                    }
+
+                } 
+
+            } forEach _aircraftWeapons;
+
         };
 
         if (!(diag_tickTime < _playTime)) then 
@@ -144,6 +160,7 @@ switch (_cond) do
         {
             _x disableAI "AUTOCOMBAT";
             _x disableAI "AUTOTARGET";
+            _x disableAI "TARGET";
             _x disableAI "CHECKVISIBLE";
         } forEach units _group;
         
@@ -153,7 +170,7 @@ switch (_cond) do
             _x commandWatch objNull;
         } forEach units _group;
 
-        _heliPad = getPos(_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
+        _heliPad = (_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
         _originalHeading = (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
 
         _rtbPoint = _group addWaypoint [_heliPad, 1, 1, "Return to Base"];
@@ -161,11 +178,12 @@ switch (_cond) do
 
         private _weapons = _aircraft weaponsTurret [-1];
         {
-        if ("cmdispenser" in toLowerANSI _x || "CMFlareLauncher" in toLowerANSI _x) exitWith
-        {
-            for "_fire" from 1 to 4 do {
-            _pilot forceWeaponFire [_x, "AIBurst"];
-            sleep 1;
+            if ("cmdispenser" in toLowerANSI _x || "CMFlareLauncher" in toLowerANSI _x) exitWith
+            {
+                _dispenserMode = (getArray(configFile >> "CfgWeapons" >> _x >> "modes") select 0);
+                for "_fire" from 1 to 4 do {
+                (_pilot) forceWeaponFire [_x, _dispenserMode];
+                sleep 1;
             };
         };
         
@@ -174,10 +192,10 @@ switch (_cond) do
         waitUntil {_aircraft distance _heliPad < 150};
         _aircraft land "LAND";
 
-        waitUntil {_aircraft distance _heliPad < 8};
+         waitUntil {_aircraft distance (getPos _heliPad) < 7};
 		_aircraftRight = true;
 
-        if (_originalHeading > 180) then 
+        if (_originalHeading < 180) then 
         {
             _aircraftRight = false;
         };
@@ -187,25 +205,26 @@ switch (_cond) do
         {
             if (_aircraftRight) then 
             {
-                _aircraft setDir ((getDir _aircraft) + 1.2);
+                _aircraft setDir ((getDir _aircraft) + 1);
             } else 
             {
-                _aircraft setDir ((getDir _aircraft) - 1.2);
+                _aircraft setDir ((getDir _aircraft) - 1);
             };
 
             sleep 0.01;
             if ((round (getDir _aircraft)) == (round _originalHeading)) then {_aircraftAdjust = false};
         
         };
-
+       
         _group setCombatMode "BLUE";
 		_group setBehaviour "SAFE";
 
-        waitUntil {_aircraft distance (_aircraft getVariable ["KI_airSupport_heliPad", objNull]) < 5.5 && isEngineOn _aircraft == false};
+        waitUntil {_aircraft distance (_aircraft getVariable ["KI_airSupport_heliPad", objNull]) < 5 && isEngineOn _aircraft == false};
 
         {
             _x enableAI "AUTOCOMBAT";
             _x enableAI "AUTOTARGET";
+            _x enableAI "TARGET";
             _x enableAI "CHECKVISIBLE";
         } forEach units _group;
 

@@ -309,38 +309,32 @@ class US_ARMY_SPC_SPOTTER : US_ARMY_DEFAULT_UCP { // Army Special Scout Spotter
 	
 };
 
-class US_ARMY_SPC_LDF : US_ARMY_DEFAULT_UCP { // Army Special WDL Guy
+class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP { // Army Counter Intelligence
 
 	uniform[] = { "rhs_uniform_g3_rgr" };
-	vest[] = { "V_CarrierRigKBT_01_light_EAF_F" };
-	backpack[] = { "rhssaf_kitbag_digital" };
-	primary[] = { "arifle_MSBS65_camo_F", "muzzle_snds_65_TI_blk_F", "optic_Hamr", "acc_pointer_IR" };
+	vest[] = {"rhs_6b2_lifchik"};
+	backpack[] = { };
+	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "optic_Hamr", "acc_pointer_IR" };
 	secondary[] = { "hgun_Pistol_heavy_01_green_F", "optic_MRD_black" };
-	launcher[] = { "" };
-	magazines[] = { "30Rnd_65x39_caseless_msbs_mag",9,"11Rnd_45ACP_Mag",3 };
+	magazines[] = { "rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
 	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_EarPlugs",1,"MineDetector",1  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhsusf_shemagh2_gogg_od" };
-	gps[] = { "ItemGPS" };
-	headgear[] = { "rhsusf_mich_bare_norotos_arc_alt" };
+	gps[] = { "B_UavTerminal" };
+	headgear[] = {"rhsusf_opscore_paint_pelt_nsw_cam"};
 	map[] = { "ItemMap" };
 	nvgs[] = { "rhsusf_ANPVS_14" };
 	watch[] = { "ACE_Altimeter" };
-    preLoadout = "[(_this select 0),"""",""male02rus""] call BIS_fnc_setIdentity;(_this select 0) setVariable [""ACE_GForceCoef"", 0];(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];(_this select 0) setVariable [""ACE_IsEngineer"", 2, true];";
-	postLoadout = "(unitbackPack (_this select 0)) additemCargo [""30Rnd_65x39_caseless_msbs_mag"",6];(unitbackPack (_this select 0)) additemCargo [""HandGrenade"",2];(unitbackPack (_this select 0)) additemCargo [""11Rnd_45ACP_Mag"",4];(unitbackPack (_this select 0)) additemCargo [""ACE_CableTie"",4];(unitbackPack (_this select 0)) additemCargo [""ACE_Clacker"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_DefusalKit"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_wirecutter"",1];";
-
-};
-
-class US_ARMY_SPC_ACI : US_ARMY_SPC_LDF { // Army Counter Intelligence
-
-	backpack[] = { };
-	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "optic_Hamr", "acc_pointer_IR" };
-	magazines[] = { "rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
-	gps[] = { "B_UavTerminal" };
+	preLoadout = "[(_this select 0),"""",""male02rus""] call BIS_fnc_setIdentity;(_this select 0) setVariable [""ACE_GForceCoef"", 0];(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];(_this select 0) setVariable [""ACE_IsEngineer"", 2, true];";
 
 }; 
+
+class US_ARMY_SPC_ACI_148 : US_ARMY_SPC_ACI { // Army Counter Intelligence (with 148-Vest)
+
+	backpack[] = {"rhs_r148"};
+}
 
 class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 
@@ -688,7 +682,7 @@ class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD { // Marines [Automatic Riflema
 class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_teamleader" };
+	vest[] = { "rhsusf_spc_light" };
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_hk416d10_m320", "rhsusf_acc_rotex5_tan", "rhsusf_acc_anpeq16a", "rhsusf_acc_eotech_552_d", "rhs_mag_30Rnd_556x45_Mk262_Stanag" };
 	launcher[] = { "" };
@@ -706,12 +700,12 @@ class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
 class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier M32]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_teamleader" };
+	vest[] = { "rhsusf_spc_light" };
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_m32", "rhsusf_acc_anpeq15side_bk", "rhsusf_mag_6Rnd_M397_HET" };
 	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_6Rnd_M397_HET",6,"rhsusf_mag_15Rnd_9x19_JHP",2 };
-	items[] += { "ACE_quikclot", 3,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2,"rhs_mag_m18_green",1};
+	magazines[] = { "rhsusf_mag_6Rnd_M397_HET",5,"rhsusf_mag_15Rnd_9x19_JHP",2 };
+	items[] += { "ACE_quikclot", 3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1};
 	binoculars[] = { "" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "" };
@@ -777,9 +771,9 @@ class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 
 class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD { // Marines [Weapon Squad Leader]
 
-	uniform[] = { "rhs_uniform_g3_m81" };
-	vest[] = { "V_PlateCarrierSpec_rgr" };
-	backpack[] = { "B_TacticalPack_oli" };
+	uniform[] = { "rhs_uniform_FROG01_wd" };
+	vest[] = { "rhsusf_spc_squadleader" };
+	backpack[] = { "rhsusf_falconii_mc" };
 	primary[] = { "rhs_weap_hk416d145","rhsusf_acc_anpeq15side","optic_ERCO_blk_F","rhs_acc_grip_ffg2" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_Stanag",22,"rhsusf_mag_15Rnd_9x19_JHP",2 };
@@ -797,9 +791,9 @@ class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD { // Marines [Weapon Squad Lead
 
 class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunner]
 
-	uniform[] = { "rhs_uniform_g3_m81" };
-	vest[] = { "V_PlateCarrierSpec_tna_F" };
-	backpack[] = { "rhssaf_kitbag_smb" };
+	uniform[] = { "rhs_uniform_FROG01_wd" };
+	vest[] = { "rhsusf_spc_iar" };
+	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "MMG_01_tan_F","rhsusf_acc_EOTECH","bipod_01_F_snd" };
 	launcher[] = { "" };
 	magazines[] = { "150Rnd_93x64_Mag",4,"rhsusf_mag_15Rnd_9x19_JHP",2 };
@@ -808,7 +802,6 @@ class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunn
 	compass[] = { "ItemCompass" };
 	goggles[] = { "ffaa_Glasses" };
 	gps[] = { "" };
-	headgear[] = { "ffaa_moe_casco_02_2_b" };
 	map[] = { "ItemMap" };
 	watch[] = { "ACE_Altimeter" };
 
@@ -816,9 +809,9 @@ class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunn
 
 class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant Heavy Machine Gunner]
 
-	uniform[] = { "rhs_uniform_g3_m81" };
-	vest[] = { "V_PlateCarrierSpec_tna_F" };
-	backpack[] = { "rhssaf_kitbag_smb" };
+	uniform[] = { "rhs_uniform_FROG01_wd" };
+	vest[] = { "rhsusf_spc_iar" };
+	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "rhs_weap_mk18_KAC_wd","optic_ERCO_khk_F" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_Stanag",12,"rhsusf_mag_15Rnd_9x19_JHP",3,"150Rnd_93x64_Mag",3 };
@@ -827,7 +820,6 @@ class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant Heavy M
 	compass[] = { "ItemCompass" };
 	goggles[] = { "ffaa_Glasses" };
 	gps[] = { "" };
-	headgear[] = { "ffaa_moe_casco_02_2_b" };
 	map[] = { "ItemMap" };
 	watch[] = { "ACE_Altimeter" };
 
@@ -835,9 +827,9 @@ class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant Heavy M
 
 class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist]
 
-	uniform[] = { "rhs_uniform_g3_m81" };
-	vest[] = { "V_PlateCarrierSpec_tna_F" };
-	backpack[] = { "rhssaf_kitbag_smb" };
+	uniform[] = { "rhs_uniform_FROG01_wd" };
+	vest[] = { "rhsusf_spc_light" };
+	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "rhs_weap_mk18_KAC_wd","optic_ERCO_khk_F" };
 	launcher[] = { "launch_O_Titan_short_ghex_F" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_Stanag",7,"rhsusf_mag_15Rnd_9x19_JHP",3,"Titan_AT",3 };
@@ -846,7 +838,6 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist
 	compass[] = { "ItemCompass" };
 	goggles[] = { "ffaa_Glasses" };
 	gps[] = { "" };
-	headgear[] = { "ffaa_moe_casco_02_2_b" };
 	map[] = { "ItemMap" };	
 	watch[] = { "ACE_Altimeter" };
 
@@ -854,9 +845,9 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist
 
 class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant AT Specialist]
 
-	uniform[] = { "rhs_uniform_g3_m81" };
-	vest[] = { "V_PlateCarrierSpec_tna_F" };
-	backpack[] = { "rhssaf_kitbag_smb" };
+	uniform[] = { "rhs_uniform_FROG01_wd" };
+	vest[] = { "rhsusf_spc_light" };
+	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "rhs_weap_mk18_KAC_wd","optic_ERCO_khk_F" };
 	launcher[] = { "" };
 	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_Stanag",6,"rhsusf_mag_15Rnd_9x19_JHP",3,"Titan_AT",2 };
@@ -865,7 +856,6 @@ class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant
 	compass[] = { "ItemCompass" };
 	goggles[] = { "ffaa_Glasses" };
 	gps[] = { "" };
-	headgear[] = { "ffaa_moe_casco_02_2_b" };
 	map[] = { "ItemMap" };
 	watch[] = { "ACE_Altimeter" };
 
@@ -875,10 +865,10 @@ class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
 
 	backpack[] = { "" };
 	primary[] = { "rhsusf_weap_MP7A2_aor1", "rhsusf_acc_anpeq15A", "optic_Yorris", "rhsusf_mag_40Rnd_46x30_FMJ" };
-	secondary[] = { "rhsusf_weap_m1911a1" };
+	secondary[] = { "" };
 	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",5,"rhsusf_mag_7x45acp_MHP",3 };
-	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_tourniquet",2,"rhs_mag_m18_purple",2  };
+	magazines[] = { "rhsusf_mag_40Rnd_46x30_FMJ",4 };
+	items[] += { "ACE_packingBandage",4,"ACE_quikclot",4, "ACE_tourniquet",2,"rhs_mag_m18_purple",2  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = { "rhsusf_bino_lerca_1200_tan" };
 	compass[] = { "ItemCompass" };
