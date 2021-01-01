@@ -2,6 +2,9 @@
    init.sqf
  */
 
+CIVILIAN setFriend [INDEPENDENT, 0];
+INDEPENDENT setFriend [CIVILIAN, 0];
+
 WEST setFriend [CIVILIAN, 1];
 CIVILIAN setFriend [WEST, 1];
 

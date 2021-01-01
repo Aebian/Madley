@@ -1,9 +1,9 @@
 /*
             author: @Aebian
-            description: spawn targetSoldier on enemies
-            returns: nothing
+            description: spawn targetSoldier on enemie unit/vehicle
+            returns: LaserTarget the player or his AI can lock-on to.
             created: 2019-09-04
-            //[LDF_RADAR_01, LDF_SAM_01] execVM "itsAebian\additional_target.sqf"
+            //[LDF_RADAR_01, LDF_SAM_01] execVM "itsAebian\KI_additionalTarget.sqf"
 */
 
 

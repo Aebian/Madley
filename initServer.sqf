@@ -4,7 +4,10 @@
 
 [] execVM "itsAebian\KI_CanonBlast.sqf"; 
 
+ace_medical_selections = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
+
 CIVILIAN setFriend [INDEPENDENT, 0];
+INDEPENDENT setFriend [CIVILIAN, 0];
 
 WEST setFriend [CIVILIAN, 1];
 CIVILIAN setFriend [WEST, 1];
@@ -20,5 +23,8 @@ CIVILIAN setFriend [WEST, 1];
 [A_wallUS, "cscreenfeed", [4024.6,5412.24,940.87], obj49, 161.5, 2] execVM "itsAebian\KI_uavOps.sqf";
 
 [CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
+
+[] execVM "itsAebian\KI_fn_MissionRun.sqf";
+
 
  ["Madley loaded!"] remoteExecCall ["systemChat"];

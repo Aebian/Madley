@@ -538,35 +538,6 @@ class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL { // Airforce Starg
 };
 
 
-class US_NAVY_ADM : CommonAmerica { // Admiral
-
-	uniform[] = { "FUTARM_U_BASIC_MT" };
-	vest[] = { "usm_vest_safety" };
-	backpack[] = { "" };
-	primary[] = { "" };
-	secondary[] = { "rhsusf_weap_m1911a1" };
-	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_7x45acp_MHP",2 };
-	items[] += {"ACE_quikclot",4,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2};
-	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
-	binoculars[] = { "rhs_pdu4" };
-	compass[] = { "ItemCompass" };
-	goggles[] = { "" };
-	gps[] = { "ItemGPS" };
-	headgear[] = { "FUTARM_H_MILCAP_MT" };
-	map[] = { "ItemMap" };
-	nvgs[] = { "" };
-	watch[] = { "ACE_Altimeter" };
-
-};
-
-
-class US_NAVY_RADM : US_NAVY_ADM { // Rear Admiral
-
-	gps[] = {"B_EasyTrack_Tablet"};
-
-};
-
 class US_MARINES_DEFAULT_FROGWD : CommonBlufor { // Base Loadout for US Marines (FROG-WD)
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
@@ -646,7 +617,7 @@ class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD { // Marines [Squad Leader]
 class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD { // Marines [Fire Team Leader]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_squadleader" };
+	vest[] = { "rhsusf_spc_teamleader" };
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_m27iar_grip","rhsusf_acc_ACOG2_USMC", "rhs_mag_30Rnd_556x45_Mk262_Stanag" };
 	launcher[] = { "" };
@@ -682,7 +653,7 @@ class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD { // Marines [Automatic Riflema
 class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
+	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_hk416d10_m320", "rhsusf_acc_rotex5_tan", "rhsusf_acc_anpeq16a", "rhsusf_acc_eotech_552_d", "rhs_mag_30Rnd_556x45_Mk262_Stanag" };
 	launcher[] = { "" };
@@ -700,12 +671,12 @@ class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
 class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier M32]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
-	backpack[] = { "" };
+	vest[] = { "rhsusf_spc_rifleman" };
+	backpack[] = { "rhsusf_falconii_gr_m32" };
 	primary[] = { "rhs_weap_m32", "rhsusf_acc_anpeq15side_bk", "rhsusf_mag_6Rnd_M397_HET" };
 	launcher[] = { "" };
-	magazines[] = { "rhsusf_mag_6Rnd_M397_HET",5,"rhsusf_mag_15Rnd_9x19_JHP",2 };
-	items[] += { "ACE_quikclot", 3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1};
+	magazines[] = { "rhsusf_mag_6Rnd_M397_HET",6,"rhsusf_mag_15Rnd_9x19_JHP",2 };
+	items[] += { "ACE_quikclot", 4,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",4,"rhs_mag_m18_green",4};
 	binoculars[] = { "" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "" };
@@ -718,7 +689,7 @@ class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier M32]
 class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
+	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "rhsusf_assault_eagleaiii_coy" };
 	primary[] = { "rhs_weap_hk416d10_LMT","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d" };
 	launcher[] = { "" };
@@ -736,7 +707,7 @@ class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-Tank]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
+	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "rhs_weap_hk416d10_LMT","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d" };
 	launcher[] = { "rhs_weap_maaws", "rhs_optic_maaws", "rhs_mag_maaws_HEAT" };
@@ -754,7 +725,7 @@ class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-
 class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
+	vest[] = { "rhsusf_spc_marksman" };
 	backpack[] = { "rhsusf_assault_eagleaiii_coy" };
 	primary[] = { "rhs_weap_m14_rail_wd","rhsusf_acc_anpeq15side","rhsusf_acc_su230a_mrds_c" };
 	launcher[] = { "" };
@@ -792,7 +763,7 @@ class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD { // Marines [Weapon Squad Lead
 class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunner]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_iar" };
+	vest[] = { "rhsusf_spc_mg" };
 	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "MMG_01_tan_F","rhsusf_acc_EOTECH","bipod_01_F_snd" };
 	launcher[] = { "" };
@@ -846,7 +817,7 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist
 class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant AT Specialist]
 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
-	vest[] = { "rhsusf_spc_light" };
+	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "B_Kitbag_cbr" };
 	primary[] = { "rhs_weap_mk18_KAC_wd","optic_ERCO_khk_F" };
 	launcher[] = { "" };
@@ -879,6 +850,36 @@ class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
 	nvgs[] = { "rhsusf_ANPVS_15" };
 	watch[] = { "ACE_Altimeter" };
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
+
+};
+
+
+class US_NAVY_ADM : CommonAmerica { // Admiral
+
+	uniform[] = { "FUTARM_U_BASIC_MT" };
+	vest[] = { "usm_vest_safety" };
+	backpack[] = { "" };
+	primary[] = { "" };
+	secondary[] = { "rhsusf_weap_m1911a1" };
+	launcher[] = { "" };
+	magazines[] = { "rhsusf_mag_7x45acp_MHP",2 };
+	items[] += {"ACE_quikclot",4,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2};
+	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
+	binoculars[] = { "rhs_pdu4" };
+	compass[] = { "ItemCompass" };
+	goggles[] = { "" };
+	gps[] = { "ItemGPS" };
+	headgear[] = { "FUTARM_H_MILCAP_MT" };
+	map[] = { "ItemMap" };
+	nvgs[] = { "" };
+	watch[] = { "ACE_Altimeter" };
+
+};
+
+
+class US_NAVY_RADM : US_NAVY_ADM { // Rear Admiral
+
+	gps[] = {"B_EasyTrack_Tablet"};
 
 };
 

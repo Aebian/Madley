@@ -36,10 +36,24 @@ class CfgSounds
   		sound[] = {"itsAebian\destroyer\emp.ogg", 1, 1};
   		titles[] = {};
   	};
-  	class stargate_alarm
+  	class stargateAlarm
     		{
     			name = "Stargate Alarm";
     			sound[] = {"itsAebian\resources\sda.ogg", 20, 1, 100};
+    			titles[] = {};
+    		};
+
+        class cobraSiren
+    		{
+    			name = "Cobra Siren";
+    			sound[] = {"itsAebian\resources\cobra_siren.ogg", 20, 1, 100};
+    			titles[] = {};
+    		};
+        
+        class IncomingIncoming
+    		{
+    			name = "Incoming Incoming";
+    			sound[] = {"itsAebian\resources\incoming_incoming.ogg", 20, 1, 100};
     			titles[] = {};
     		};
   };
