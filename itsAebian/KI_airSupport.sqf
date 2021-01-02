@@ -49,6 +49,9 @@ switch (_cond) do
     
     	[_pilot, _gunner] orderGetIn true;
 
+        waitUntil 
+        { {_x != (vehicle _x) } forEach units _group};
+
 		_group setCombatMode "RED";
 	    _group setBehaviour "COMBAT";
 
@@ -76,13 +79,15 @@ switch (_cond) do
         _onTarget setWaypointType "SAD";
         [_group, 0] setWaypointSpeed "NORMAL";
 
+        waitUntil {(getPosATL _aircraft) select 2 > 10};
+
         [format ["%1, %2", groupId _group, "is en route for close air support, out." ]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2", groupId _group, "is en route for close air support, out." ];
 
         waitUntil {(_aircraft distance _target) < 1500};
 
-        [format ["%1, %2, %3", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString]] remoteExecCall ["sideChat"];
-        diag_log format ["%1, %2, %3", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString];
+        [format ["%1, %2, %3 %4", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString, "mike(s)."]] remoteExecCall ["sideChat"];
+        diag_log format ["%1, %2, %3 %4", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString, "mike(s)."];
         
         params["_enemies", "_visTargets", "_bulletMagnet"];
 
@@ -128,7 +133,7 @@ switch (_cond) do
             {
                 if ( _x isKindOf ["CannonCore" ,configFile >> "CfgWeapons"] ) then 
                 {
-                    if ((_aircraft ammo _x) < 120) then 
+                    if ((_aircraft ammo _x) < 80) then 
                     {
                         [format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ]] remoteExecCall ["sideChat"];
                         diag_log format ["%1, %2", groupId _group, "is Winchester and is RTB, good luck, out." ];
