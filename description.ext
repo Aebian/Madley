@@ -13,23 +13,23 @@ loadScreen = "a3\missions_f_tacops\data\img\campaign3_ca.paa";
 onLoadMission = "I can't see your wings but girl you're my Angel...";
 overviewText = "TheLab - Madley";
 
-
+reviveMode = 1;
+reviveRequiredItems = 0;
 
 #include "itsAebian\CodeLock\dialog\kicl_defines.hpp"
 #include "itsAebian\CodeLock\dialog\kicl_control.hpp"
 
 #include "Poppy\CfgPoppy.hpp"
-
-  class CfgFunctions {
-
-      #include "Poppy\CfgFunctions.hpp"
-                    };
-
 #include "CfgLoadouts.hpp"
 
+class CfgFunctions 
+{
+	#include "Poppy\CfgFunctions.hpp"
+};
+
 class CfgSounds
-  {
-  	sounds[] = {};
+{
+	sounds[] = {};
   	class emp
   	{
   		name = "";
@@ -37,26 +37,26 @@ class CfgSounds
   		titles[] = {};
   	};
   	class stargateAlarm
-    		{
-    			name = "Stargate Alarm";
-    			sound[] = {"itsAebian\resources\sda.ogg", 20, 1, 100};
-    			titles[] = {};
-    		};
+    {
+    	name = "Stargate Alarm";
+    	sound[] = {"itsAebian\resources\sda.ogg", 20, 1, 100};
+    	titles[] = {};
+    };
 
-        class cobraSiren
-    		{
-    			name = "Cobra Siren";
-    			sound[] = {"itsAebian\resources\cobra_siren.ogg", 20, 1, 100};
-    			titles[] = {};
-    		};
+    class cobraSiren
+    {
+    	name = "Cobra Siren";
+    	sound[] = {"itsAebian\resources\cobra_siren.ogg", 20, 1, 100};
+    	titles[] = {};
+    };
         
-        class IncomingIncoming
-    		{
-    			name = "Incoming Incoming";
-    			sound[] = {"itsAebian\resources\incoming_incoming.ogg", 20, 1, 100};
-    			titles[] = {};
-    		};
-  };
+    class IncomingIncoming
+    {
+    	name = "Incoming Incoming";
+    	sound[] = {"itsAebian\resources\incoming_incoming.ogg", 20, 1, 100};
+    	titles[] = {};
+    };
+};
 
 
 class CfgUnitInsignia

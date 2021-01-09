@@ -49,6 +49,7 @@ class US_ARMY_DEFAULT_UCP_NG : US_ARMY_DEFAULT_UCP_NM { // US Army Soldier (Un-A
 
 primary[] = { "" };
 secondary[] = { "" };
+nvgs[] = { "" };
 
 };
 
