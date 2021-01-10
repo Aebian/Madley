@@ -1,5 +1,5 @@
-class CommonAmerica : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonAmerica : CommonBlufor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{ 
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -19,8 +19,8 @@ class CommonAmerica : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLo
 
 };
 
-class US_ARMY_DEFAULT_UCP : CommonBlufor { // Base Loadout for US Army
-
+class US_ARMY_DEFAULT_UCP : CommonBlufor // Base Loadout for US Army 
+{ 
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_iotv_ucp" };
 	backpack[] = { "" };
@@ -38,23 +38,23 @@ class US_ARMY_DEFAULT_UCP : CommonBlufor { // Base Loadout for US Army
 
 };
 
-class US_ARMY_DEFAULT_UCP_NM : US_ARMY_DEFAULT_UCP { // US Army Soldier (No-Main)
-
-primary[] = { "" };
-postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
-
-};
-
-class US_ARMY_DEFAULT_UCP_NG : US_ARMY_DEFAULT_UCP_NM { // US Army Soldier (Un-Armed)
-
-primary[] = { "" };
-secondary[] = { "" };
-nvgs[] = { "" };
+class US_ARMY_DEFAULT_UCP_NM : US_ARMY_DEFAULT_UCP // US Army Soldier (No-Main)
+{
+	primary[] = { "" };
+	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
 
 };
 
-class US_ARMY_PL : US_ARMY_DEFAULT_UCP { // Army [Platoon Leader]
+class US_ARMY_DEFAULT_UCP_NG : US_ARMY_DEFAULT_UCP_NM // US Army Soldier (Un-Armed) 
+{
+	primary[] = { "" };
+	secondary[] = { "" };
+	nvgs[] = { "" };
 
+};
+
+class US_ARMY_PL : US_ARMY_DEFAULT_UCP // Army [Platoon Leader]
+{
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_spcs_ucp_squadleader" };
 	backpack[] = { "" };
@@ -75,8 +75,8 @@ class US_ARMY_PL : US_ARMY_DEFAULT_UCP { // Army [Platoon Leader]
 
 };
 
-class US_ARMY_RANGER_CMDR : US_ARMY_DEFAULT_UCP { // US Ranger Commander
-
+class US_ARMY_RANGER_CMDR : US_ARMY_DEFAULT_UCP // US Ranger Commander
+{
 	uniform[] = { "rhs_uniform_g3_mc" };
 	vest[] = { "rhsusf_mbav_medic" };
 	backpack[] = { "" };
@@ -97,15 +97,15 @@ class US_ARMY_RANGER_CMDR : US_ARMY_DEFAULT_UCP { // US Ranger Commander
 
 };
 
-class US_ARMY_RANGER_CMDR_ALT : US_ARMY_RANGER_CMDR {
-
-primary[] = { "rhs_weap_m249_pip_L_vfg", "rhsusf_acc_saw_bipod", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_200Rnd_556x45_soft_pouch" };
-magazines[] += { "rhsusf_200Rnd_556x45_soft_pouch", 3 };
+class US_ARMY_RANGER_CMDR_ALT : US_ARMY_RANGER_CMDR 
+{
+	primary[] = { "rhs_weap_m249_pip_L_vfg", "rhsusf_acc_saw_bipod", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_200Rnd_556x45_soft_pouch" };
+	magazines[] += { "rhsusf_200Rnd_556x45_soft_pouch", 3 };
 
 };
 
-class US_ARMY_RANGER_LEAD : US_ARMY_PL { // Army [Element Leader]
-
+class US_ARMY_RANGER_LEAD : US_ARMY_PL // Army [Element Leader]
+{
 	uniform[] = { "rhs_uniform_g3_mc" };
 	vest[] = { "rhsusf_mbav_light" };
 	backpack[] = { "rhsusf_assault_eagleaiii_ocp" };
@@ -120,8 +120,8 @@ class US_ARMY_RANGER_LEAD : US_ARMY_PL { // Army [Element Leader]
 
 };
 
-class US_ARMY_RANGER_RFL : US_ARMY_RANGER_LEAD { // US Army Ranger (Rifleman)
-
+class US_ARMY_RANGER_RFL : US_ARMY_RANGER_LEAD // US Army Ranger (Rifleman)
+{
 	vest[] = { "rhsusf_mbav_rifleman" };
 	backpack[] = { "" };
 	magazines[] = { "rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7, "11Rnd_45ACP_Mag", 3 };
@@ -131,44 +131,43 @@ class US_ARMY_RANGER_RFL : US_ARMY_RANGER_LEAD { // US Army Ranger (Rifleman)
 
 };
 
-class US_ARMY_RANGER_ARM : US_ARMY_RANGER_RFL {
-
-vest[] = { "rhsusf_mbav_mg" };
-primary[] = { "rhs_weap_m249_pip_L_vfg", "rhsusf_acc_saw_bipod", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_200Rnd_556x45_soft_pouch" };
-magazines[] = { "rhsusf_200Rnd_556x45_soft_pouch", 3, "11Rnd_45ACP_Mag", 2 };
-
-};
-
-class US_ARMY_RANGER_ARM_NEW : US_ARMY_RANGER_ARM {
-
-primary[] = { "MMG_02_sand_F", "bipod_01_F_blk", "rhsusf_acc_anpeq15side", "optic_ERCO_snd_F", "130Rnd_338_Mag" };
-magazines[] = { "130Rnd_338_Mag", 4, "11Rnd_45ACP_Mag", 2 };
-backpack[] = { "B_Kitbag_tan" };
+class US_ARMY_RANGER_ARM : US_ARMY_RANGER_RFL 
+{
+	vest[] = { "rhsusf_mbav_mg" };
+	primary[] = { "rhs_weap_m249_pip_L_vfg", "rhsusf_acc_saw_bipod", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552_d", "rhsusf_200Rnd_556x45_soft_pouch" };
+	magazines[] = { "rhsusf_200Rnd_556x45_soft_pouch", 3, "11Rnd_45ACP_Mag", 2 };
 
 };
 
-class US_ARMY_RANGER_MED : US_ARMY_RANGER_RFL { // US Army Ranger (Medic)
-
-vest[] = { "rhsusf_mbav_medic" };
-backpack[] = { "B_Kitbag_cbr" };
-primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "acc_pointer_IR", "rhsusf_acc_compm4", "rhsusf_acc_grip2_wd" };
-magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 7, "11Rnd_45ACP_Mag", 2 };
-items[] += { "ACE_surgicalKit","ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20, "ACE_bloodIV",10, "ACE_epinephrine",16, "ACE_morphine", 16, "ACE_tourniquet", 8, "rhs_mag_m18_green", 6 };
-preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+class US_ARMY_RANGER_ARM_NEW : US_ARMY_RANGER_ARM 
+{
+	primary[] = { "MMG_02_sand_F", "bipod_01_F_blk", "rhsusf_acc_anpeq15side", "optic_ERCO_snd_F", "130Rnd_338_Mag" };
+	magazines[] = { "130Rnd_338_Mag", 4, "11Rnd_45ACP_Mag", 2 };
+	backpack[] = { "B_Kitbag_tan" };
 
 };
 
-
-class US_ARMY_RANGER_MED_NG : US_ARMY_RANGER_MED { // US Army Ranger (Medic, No-Gun [Main])
-
-primary[] = { "" };
-goggles[] = { "" };
-postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
+class US_ARMY_RANGER_MED : US_ARMY_RANGER_RFL // US Army Ranger (Medic)
+{
+	vest[] = { "rhsusf_mbav_medic" };
+	backpack[] = { "B_Kitbag_cbr" };
+	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "acc_pointer_IR", "rhsusf_acc_compm4", "rhsusf_acc_grip2_wd" };
+	magazines[] = { "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 7, "11Rnd_45ACP_Mag", 2 };
+	items[] += { "ACE_surgicalKit","ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20, "ACE_bloodIV",10, "ACE_epinephrine",16, "ACE_morphine", 16, "ACE_tourniquet", 8, "rhs_mag_m18_green", 6 };
+	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 
 };
 
-class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL { // US Army Ranger (Marksman)
+class US_ARMY_RANGER_MED_NG : US_ARMY_RANGER_MED // US Army Ranger (Medic, No-Gun [Main])
+{
+	primary[] = { "" };
+	goggles[] = { "" };
+	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
 
+};
+
+class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL // US Army Ranger (Marksman)
+{
 	uniform[] = { "rhs_uniform_g3_mc" };
 	vest[] = { "rhsusf_mbav_rifleman" };
 	backpack[] = { "" };
@@ -180,8 +179,8 @@ class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL { // US Army Ranger (Marksman)
 
 };
 
-class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL { // US Army Ranger (Sniper)
-
+class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL // US Army Ranger (Sniper)
+{
 	uniform[] = { "rhs_uniform_g3_mc" };
 	vest[] = { "rhsusf_mbav_rifleman" };
 	backpack[] = { "" };
@@ -193,8 +192,8 @@ class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL { // US Army Ranger (Sniper)
 
 };
 
-class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP { // US Army Air Commander
-
+class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP // US Army Air Commander
+{
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_spcs_ucp" };
 	backpack[] = { "" };
@@ -217,8 +216,8 @@ class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP { // US Army Air Commander
 };
 
 
-class US_ARMY_VHC : US_ARMY_DEFAULT_UCP { // Vehicle Crew
-
+class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
+{
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_spcs_ucp_crewman" };
 	backpack[] = { "" };
@@ -241,8 +240,8 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP { // Vehicle Crew
 };
 
 
-class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP { // Army Special Scout Sniper
-
+class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP // Army Special Scout Sniper
+{ 
 	uniform[] = { "rhs_uniform_g3_m81" };
 	vest[] = { "rhsusf_spcs_ocp_sniper" };
 	backpack[] = { "ace_gunbag" };
@@ -264,8 +263,8 @@ class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP { // Army Special Scout Sniper
 };
 
 
-class US_ARMY_SPC_SNIPER_ALT : US_ARMY_DEFAULT_UCP { // Army Special Scout Sniper (Alternate)
-
+class US_ARMY_SPC_SNIPER_ALT : US_ARMY_DEFAULT_UCP  // Army Special Scout Sniper (Alternate)
+{
     uniform[] = { "rhs_uniform_g3_m81" };
     vest[] = { "rhsusf_spcs_ocp_sniper" };
     backpack[] = { "ace_gunbag" };
@@ -287,8 +286,8 @@ class US_ARMY_SPC_SNIPER_ALT : US_ARMY_DEFAULT_UCP { // Army Special Scout Snipe
 };
 
 
-class US_ARMY_SPC_SPOTTER : US_ARMY_DEFAULT_UCP { // Army Special Scout Spotter
-
+class US_ARMY_SPC_SPOTTER : US_ARMY_DEFAULT_UCP // Army Special Scout Spotter
+{ 
 	uniform[] = { "rhs_uniform_g3_m81" };
 	vest[] = { "rhsusf_spcs_ocp_sniper" };
 	backpack[] = { "rhssaf_kitbag_smb" };
@@ -310,13 +309,14 @@ class US_ARMY_SPC_SPOTTER : US_ARMY_DEFAULT_UCP { // Army Special Scout Spotter
 	
 };
 
-class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP { // Army Counter Intelligence
-
+class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP // Army Counter Intelligence
+{
 	uniform[] = { "rhs_uniform_g3_rgr" };
 	vest[] = {"rhs_6b2_lifchik"};
 	backpack[] = { };
 	primary[] = { "rhs_weap_mk18_KAC_wd", "muzzle_snds_m_khk_F", "optic_Hamr", "acc_pointer_IR" };
 	secondary[] = { "hgun_Pistol_heavy_01_green_F", "optic_MRD_black" };
+	launcher[] = {"rhs_weap_m72a7"};
 	magazines[] = { "rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
 	items[] += { "ACE_packingBandage",6,"ACE_quikclot",6, "ACE_EarPlugs",1,"MineDetector",1  };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
@@ -332,13 +332,13 @@ class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP { // Army Counter Intelligence
 
 }; 
 
-class US_ARMY_SPC_ACI_148 : US_ARMY_SPC_ACI { // Army Counter Intelligence (with 148-Vest)
-
+class US_ARMY_SPC_ACI_148 : US_ARMY_SPC_ACI // Army Counter Intelligence (with 148-Vest)
+{
 	backpack[] = {"rhs_r148"};
 }
 
-class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
-
+class US_ARMY_PLT : US_ARMY_DEFAULT_UCP // Army Pilot with HGU-65
+{
 	uniform[] = { "rhs_uniform_cu_ucp" };
 	vest[] = { "rhsusf_iotv_ucp" };
 	backpack[] = { "" };
@@ -352,7 +352,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhsusf_shemagh2_gogg_tan" };
 	gps[] = { "ItemGPS" };
-	headgear[] = { "rhsusf_hgu56p" };
+	headgear[] = { "rhsusf_hgu56p", "rhsusf_hgu56p_visor" };
 	map[] = { "ItemMap" };
 	nvgs[] = { "rhsusf_ANPVS_14" };
 	watch[] = { "ACE_Altimeter" };
@@ -360,15 +360,15 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP { // Army Pilot with HGU-65
 
 };
 
-class US_ARMY_PLT_MED : US_ARMY_PLT { // Army MEDAVAC Pilot
-
+class US_ARMY_PLT_MED : US_ARMY_PLT // Army MEDAVAC Pilot
+{
 	goggles[] = { "rhsusf_shemagh2_od" };
 	headgear[] = { "rhsusf_hgu56p_visor_tan" };
 
 };
 
-class US_ARMY_PLT_AH64 : US_ARMY_PLT { // Army Pilot with IHADSS (AH-64D Apache ready)
-
+class US_ARMY_PLT_AH64 : US_ARMY_PLT // Army Pilot with IHADSS (AH-64D Apache ready)
+{ 
 	goggles[] = { "rhsusf_shemagh2_od" };
 	headgear[] = { "rhsusf_ihadss" };
 	nvgs[] = { };
@@ -376,17 +376,17 @@ class US_ARMY_PLT_AH64 : US_ARMY_PLT { // Army Pilot with IHADSS (AH-64D Apache 
 };
 
 
-class US_ARMY_HGUN : US_ARMY_PLT { // Army Helicopter Gunner with HGU-65
-
+class US_ARMY_DOORGUNNER : US_ARMY_PLT // Army Helicopter Door Gunner with HGU-65
+{
 	primary[] = { "rhs_weap_mk18_KAC_wd", "rhsusf_acc_anpeq15A", "rhsusf_acc_eotech_552_wd", "rhs_mag_30Rnd_556x45_M855A1_Stanag" };
-	magazines[] = { "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,"rhsusf_mag_7x45acp_MHP",3 };
+	magazines[] = { "rhs_mag_30Rnd_556x45_M855A1_Stanag",4 };
 	goggles[] = { "rhsusf_shemagh2_od" };
-	headgear[] = { "rhsusf_hgu56p_visor_mask" };
+	headgear[] = { "rhsusf_hgu56p_visor_mask", "rhsusf_hgu56p_mask", "rhsusf_hgu56p_mask_mo", "rhsusf_hgu56p_mask_skull", "rhsusf_hgu56p_visor_mask_mo", "rhsusf_hgu56p_visor_mask_skull" };
 
 };
 
-class US_ARMY_HGUN_FLIR : US_ARMY_PLT {
-
+class US_ARMY_HGUN_FLIR : US_ARMY_PLT 
+{
 	primary[] = { "MMG_02_sand_F", "bipod_01_F_blk", "rhsusf_acc_anpeq15side", "rhsusf_acc_anpas13gv1", "130Rnd_338_Mag" };
 	magazines[] = { "130Rnd_338_Mag",1,"rhsusf_mag_7x45acp_MHP",2 };
 	goggles[] = { "rhsusf_shemagh2_od" };
@@ -394,8 +394,8 @@ class US_ARMY_HGUN_FLIR : US_ARMY_PLT {
 
 };
 
-class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP { // Army Jet Pilot
-
+class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP // Army Jet Pilot
+{
 	uniform[] = { "rhs_uniform_g3_rgr" };
 	vest[] = { "rhs_vydra_3m" };
 	backpack[] = { "rhs_d6_Parachute_backpack" };
@@ -417,8 +417,8 @@ class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP { // Army Jet Pilot
 
 };
 
-class US_AIRFORCE_SECF_LEAD : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Lead
-
+class US_AIRFORCE_SECF_LEAD : US_ARMY_DEFAULT_UCP // Airforce Security Forces Lead
+{
 	uniform[] = { "rhs_uniform_abu" };
 	vest[] = { "rhsusf_iotv_ucp_Squadleader" };
 	backpack[] = { "" };
@@ -439,8 +439,8 @@ class US_AIRFORCE_SECF_LEAD : US_ARMY_DEFAULT_UCP { // Airforce Security Forces 
 
 };
 
-class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Rifleman
-
+class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP // Airforce Security Forces Rifleman
+{
 	uniform[] = { "rhs_uniform_abu" };
 	vest[] = { "rhsusf_iotv_ucp_Rifleman" };
 	backpack[] = { "" };
@@ -461,8 +461,8 @@ class US_AIRFORCE_SECF_RFL : US_ARMY_DEFAULT_UCP { // Airforce Security Forces R
 
 };
 
-class US_AIRFORCE_SECF_SNP : US_ARMY_DEFAULT_UCP { // Airforce Security Forces Sniper
-
+class US_AIRFORCE_SECF_SNP : US_ARMY_DEFAULT_UCP // Airforce Security Forces Sniper
+{
 	uniform[] = { "rhs_uniform_abu" };
 	vest[] = { "rhsusf_iotv_ucp_SAW" };
 	backpack[] = { "" };
@@ -484,8 +484,8 @@ class US_AIRFORCE_SECF_SNP : US_ARMY_DEFAULT_UCP { // Airforce Security Forces S
 };
 
 
-class US_AIRFORCE_JPLT : CommonAmerica { // Airforce Jet Pilot
-
+class US_AIRFORCE_JPLT : CommonAmerica // Airforce Jet Pilot
+{
 	uniform[] = { "U_I_pilotCoveralls" };
 	vest[] = { "" };
 	backpack[] = { "B_Parachute" };
@@ -508,8 +508,8 @@ class US_AIRFORCE_JPLT : CommonAmerica { // Airforce Jet Pilot
 };	
 
 
-class US_AIRFORCE_STARGATE03_TL : CommonAmerica { // Airforce Stargate 03 Team-Lead
-
+class US_AIRFORCE_STARGATE03_TL : CommonAmerica // Airforce Stargate 03 Team-Lead
+{
 	uniform[] = { "rhs_uniform_acu_oefcp" };
 	vest[] = { "rhsusf_spcs_ocp_squadleader" };
 	backpack[] = { "" };
@@ -530,8 +530,8 @@ class US_AIRFORCE_STARGATE03_TL : CommonAmerica { // Airforce Stargate 03 Team-L
 	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"", 0]";
 };	
 
-class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL { // Airforce Stargate 03 Member
-
+class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL // Airforce Stargate 03 Member
+{
 	vest[] = { "rhsusf_spcs_ocp_rifleman_alt" };
 	headgear[] = { "H_Watchcap_khk" };
 	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"", 0]";
@@ -539,8 +539,8 @@ class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL { // Airforce Starg
 };
 
 
-class US_MARINES_DEFAULT_FROGWD : CommonBlufor { // Base Loadout for US Marines (FROG-WD)
-
+class US_MARINES_DEFAULT_FROGWD : CommonBlufor // Base Loadout for US Marines (FROG-WD)
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_crewman" };
 	backpack[] = { "" };
@@ -559,8 +559,8 @@ class US_MARINES_DEFAULT_FROGWD : CommonBlufor { // Base Loadout for US Marines 
 };
 
 
-class US_MARINES_PL : US_MARINES_DEFAULT_FROGWD { // Marines [Platoon Leader]
-
+class US_MARINES_PL : US_MARINES_DEFAULT_FROGWD // Marines [Platoon Leader]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_squadleader" };
 	backpack[] = { "" };
@@ -577,8 +577,8 @@ class US_MARINES_PL : US_MARINES_DEFAULT_FROGWD { // Marines [Platoon Leader]
 
 };
 
-class US_MARINES_JTAC : US_MARINES_DEFAULT_FROGWD { // Marines [Joint Terminal Attack Controller]
-
+class US_MARINES_JTAC : US_MARINES_DEFAULT_FROGWD // Marines [Joint Terminal Attack Controller]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_patchless_radio" };
 	backpack[] = { "rhsusf_assault_eagleaiii_coy" };
@@ -596,8 +596,8 @@ class US_MARINES_JTAC : US_MARINES_DEFAULT_FROGWD { // Marines [Joint Terminal A
 
 };
 
-class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD { // Marines [Squad Leader]
-
+class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD // Marines [Squad Leader]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_squadleader" };
 	backpack[] = { "" };
@@ -615,8 +615,8 @@ class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD { // Marines [Squad Leader]
 
 };
 
-class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD { // Marines [Fire Team Leader]
-
+class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD // Marines [Fire Team Leader]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_teamleader" };
 	backpack[] = { "" };
@@ -633,8 +633,8 @@ class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD { // Marines [Fire Team Leader]
 
 };
 
-class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD { // Marines [Automatic Rifleman]
-
+class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD // Marines [Automatic Rifleman]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_iar" };
 	backpack[] = { "" };
@@ -651,8 +651,8 @@ class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD { // Marines [Automatic Riflema
 
 };
 
-class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
-
+class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "" };
@@ -669,8 +669,8 @@ class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier]
 
 };
 
-class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier M32]
-
+class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier M32]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "rhsusf_falconii_gr_m32" };
@@ -687,8 +687,8 @@ class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD { // Marines [Grenadier M32]
 
 };
 
-class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
-
+class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "rhsusf_assault_eagleaiii_coy" };
@@ -705,8 +705,8 @@ class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 
 };
 
-class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-Tank]
-
+class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman Anti-Tank]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "B_Kitbag_cbr" };
@@ -723,8 +723,8 @@ class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman Anti-
 
 };
 
-class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
-
+class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_marksman" };
 	backpack[] = { "rhsusf_assault_eagleaiii_coy" };
@@ -741,8 +741,8 @@ class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD { // Marines [Rifleman]
 
 };
 
-class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD { // Marines [Weapon Squad Leader]
-
+class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD // Marines [Weapon Squad Leader]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_squadleader" };
 	backpack[] = { "rhsusf_falconii_mc" };
@@ -761,8 +761,8 @@ class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD { // Marines [Weapon Squad Lead
 
 };
 
-class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunner]
-
+class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD // Marines [Heavy Machine Gunner]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_mg" };
 	backpack[] = { "B_Kitbag_cbr" };
@@ -779,8 +779,8 @@ class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD { // Marines [Heavy Machine Gunn
 
 };
 
-class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant Heavy Machine Gunner]
-
+class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD // Marines [Assistant Heavy Machine Gunner]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_iar" };
 	backpack[] = { "B_Kitbag_cbr" };
@@ -797,8 +797,8 @@ class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant Heavy M
 
 };
 
-class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist]
-
+class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD // Marines [AT Specialist]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_light" };
 	backpack[] = { "B_Kitbag_cbr" };
@@ -815,8 +815,8 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD { // Marines [AT Specialist
 
 };
 
-class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant AT Specialist]
-
+class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD // Marines [Assistant AT Specialist]
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "rhsusf_spc_rifleman" };
 	backpack[] = { "B_Kitbag_cbr" };
@@ -833,8 +833,8 @@ class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD { // Marines [Assistant
 
 };
 
-class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
-
+class US_MARINES_PLT : US_MARINES_DEFAULT_FROGWD // Army Pilot with HGU-65
+{
 	backpack[] = { "" };
 	primary[] = { "rhsusf_weap_MP7A2_aor1", "rhsusf_acc_anpeq15A", "optic_Yorris", "rhsusf_mag_40Rnd_46x30_FMJ" };
 	secondary[] = { "" };
@@ -846,7 +846,7 @@ class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
 	compass[] = { "ItemCompass" };
 	goggles[] = { "rhsusf_shemagh2_gogg_tan" };
 	gps[] = { "ItemGPS" };
-	headgear[] = { "rhsusf_hgu56p" };
+	headgear[] = { "rhsusf_hgu56p_visor_tan" };
 	map[] = { "ItemMap" };
 	nvgs[] = { "rhsusf_ANPVS_15" };
 	watch[] = { "ACE_Altimeter" };
@@ -854,9 +854,17 @@ class US_MARINE_PLT : US_MARINES_DEFAULT_FROGWD { // Army Pilot with HGU-65
 
 };
 
+class US_MARINES_DOORGUNNER : US_MARINES_PLT 
+{
+	primary[] = { "rhs_weap_mk18_KAC_wd", "rhsusf_acc_anpeq15A", "rhsusf_acc_eotech_552_wd", "rhs_mag_30Rnd_556x45_M855A1_Stanag" };
+	magazines[] = { "rhs_mag_30Rnd_556x45_M855A1_Stanag",4 };
+	headgear[] = { "rhsusf_hgu56p_visor_mask_tan" };
 
-class US_NAVY_ADM : CommonAmerica { // Admiral
+};
 
+
+class US_NAVY_ADM : CommonAmerica // Admiral
+{
 	uniform[] = { "FUTARM_U_BASIC_MT" };
 	vest[] = { "usm_vest_safety" };
 	backpack[] = { "" };
@@ -878,14 +886,14 @@ class US_NAVY_ADM : CommonAmerica { // Admiral
 };
 
 
-class US_NAVY_RADM : US_NAVY_ADM { // Rear Admiral
-
+class US_NAVY_RADM : US_NAVY_ADM // Rear Admiral
+{
 	gps[] = {"B_EasyTrack_Tablet"};
 
 };
 
-class US_NAVY_JPLT : CommonAmerica { // Navy [Jet Pilot]
-
+class US_NAVY_JPLT : CommonAmerica // Navy [Jet Pilot]
+{
 	uniform[] = { "U_B_PilotCoveralls" };
 	vest[] = { "TFA_PlateCarrierH_fol" };
 	backpack[] = { "ACE_NonSteerableParachute" };
@@ -906,8 +914,8 @@ class US_NAVY_JPLT : CommonAmerica { // Navy [Jet Pilot]
 
 };
 
-class US_NAVY_MPLT : CommonAmerica { // Air Medavac Pilot
-
+class US_NAVY_MPLT : CommonAmerica // Air Medavac Pilot
+{
 	uniform[] = { "rhs_uniform_g3_tan" };
 	vest[] = { "V_PlateCarrier1_rgr" };
 	backpack[] = { "ACE_NonSteerableParachute" };
@@ -928,8 +936,8 @@ class US_NAVY_MPLT : CommonAmerica { // Air Medavac Pilot
 
 };
 
-class US_NAVY_MEDIC : CommonAmerica {  // Navy Medic
-
+class US_NAVY_MEDIC : CommonAmerica // Navy Medic
+{
 	uniform[] = { "rhs_uniform_g3_rgr" };
 	vest[] = { "V_PlateCarrier2_rgr" };
 	backpack[] = { "B_Carryall_oli" };
@@ -950,8 +958,8 @@ class US_NAVY_MEDIC : CommonAmerica {  // Navy Medic
 
 };
 
-class US_NAVY_PARAM : CommonAmerica {  // Navy Paramedic
-
+class US_NAVY_PARAM : CommonAmerica // Navy Paramedic
+{
 	uniform[] = { "rhs_uniform_g3_rgr" };
 	vest[] = { "V_PlateCarrier1_rgr" };
 	backpack[] = { "" };
@@ -971,8 +979,8 @@ class US_NAVY_PARAM : CommonAmerica {  // Navy Paramedic
 
 };
 
-class US_NAVY_AMCQSEC : CommonAmerica { // Air Medevac Perimeter Security
-
+class US_NAVY_AMCQSEC : CommonAmerica // Air Medevac Perimeter Security
+{
 	uniform[] = { "rhs_uniform_g3_tan" };
 	vest[] = { "V_PlateCarrier1_rgr" };
 	backpack[] = { "ACE_NonSteerableParachute" };

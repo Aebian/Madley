@@ -1,5 +1,5 @@
-class CommonGenB : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonGenB : CommonBlufor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{ 
 	uniform[] = { "" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -20,8 +20,8 @@ class CommonGenB : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoado
 
 };
 
-class CommonGenO : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonGenO : CommonOpfor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -42,8 +42,8 @@ class CommonGenO : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoadou
 
 };
 
-class CommonGenI : CommonIndependet { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonGenI : CommonIndependet // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -64,8 +64,8 @@ class CommonGenI : CommonIndependet { // [this, "Loadout"] call Poppy_fnc_applyL
 
 };
 
-class CommonGenC : CommonCivilian { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonGenC : CommonCivilian // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -87,8 +87,8 @@ class CommonGenC : CommonCivilian { // [this, "Loadout"] call Poppy_fnc_applyLoa
 };
 
 
-class Inferno_TL : CommonIndependet { // Inferno Squad Team-Lead
-
+class Inferno_TL : CommonIndependet // Inferno Squad Team-Lead
+{
 	uniform[] = { "rhs_uniform_g3_blk" };
 	vest[] = { "V_PlateCarrier2_blk" };
 	backpack[] = { "" };
@@ -110,14 +110,14 @@ class Inferno_TL : CommonIndependet { // Inferno Squad Team-Lead
 
 };
 
-class Inferno_LR : Inferno_TL { // Inferno Squad Long-Range Soldier
-
+class Inferno_LR : Inferno_TL // Inferno Squad Long-Range Soldier
+{
 	primary[] = { "arifle_MSBS65_Mark_black_F","muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Hamr", "30Rnd_65x39_caseless_msbs_mag_Tracer"};
 	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";
 };
 
-class Inferno_HW : Inferno_TL { // Inferno Squad Heavy-Weapon Soldier
-
+class Inferno_HW : Inferno_TL // Inferno Squad Heavy-Weapon Soldier
+{
 	backpack[] = { "B_LegStrapBag_black_F" };
 	primary[] = { "arifle_RPK12_F","muzzle_snds_B", "optic_Hamr", "rhs_75Rnd_762x39mm_tracer"};
 	secondary[] = { "hgun_Pistol_heavy_01_green_F", "muzzle_snds_acp", "optic_MRD_black", "11Rnd_45ACP_Mag" };
@@ -128,8 +128,8 @@ class Inferno_HW : Inferno_TL { // Inferno Squad Heavy-Weapon Soldier
 };
 
 
-class CIA_OP : CommonIndependet { // CIA Operator
-
+class CIA_OP : CommonIndependet // CIA Operator
+{
 	uniform[] = { "U_C_Uniform_Scientist_01_F" };
 	vest[] = { "V_PlateCarrier1_blk" };
 	backpack[] = { "" };
@@ -150,8 +150,8 @@ class CIA_OP : CommonIndependet { // CIA Operator
 };
 
 
-class CIA_SEC : CIA_OP { // CIA Security Force
-
+class CIA_SEC : CIA_OP // CIA Security Force
+{
 	uniform[] = { "U_C_Uniform_Scientist_01_formal_F" };
 	vest[] = { "V_PlateCarrier1_blk" };
 	backpack[] = { "" };

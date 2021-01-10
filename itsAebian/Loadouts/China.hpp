@@ -1,5 +1,5 @@
-class CommonChina : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonChina : CommonOpfor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "U_O_R_Gorka_01_black_F" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -19,8 +19,8 @@ class CommonChina : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoado
 
 };
 
-class CN_SPC_CMDR : CommonChina { // Chinese SpecOps Commander
-
+class CN_SPC_CMDR : CommonChina // Chinese SpecOps Commander
+{
 	uniform[] = { "U_O_R_Gorka_01_black_F" };
 	vest[] = { "V_PlateCarrier1_blk" };
 	backpack[] = { "B_LegStrapBag_black_F" };
@@ -42,8 +42,8 @@ class CN_SPC_CMDR : CommonChina { // Chinese SpecOps Commander
 
 };
 
-class CN_SPC_OP : CommonChina {  // Chinese SpecOps Operator (X)
-
+class CN_SPC_OP : CommonChina // Chinese SpecOps Operator (X)
+{
 	uniform[] = { "U_O_R_Gorka_01_black_F" };
 	vest[] = { "V_PlateCarrier1_blk" };
 	backpack[] = { "B_LegStrapBag_black_F" };
@@ -64,28 +64,28 @@ class CN_SPC_OP : CommonChina {  // Chinese SpecOps Operator (X)
 
 };
 
-class CN_SPC_OP_AT : CN_SPC_OP { // Chinese SpecOps Operator (AT-4)
-
+class CN_SPC_OP_AT : CN_SPC_OP // Chinese SpecOps Operator (AT-4)
+{
 	launcher[] = { "rhs_weap_M136" };
 
 };
 
-class CN_SPC_OP_MXM : CN_SPC_OP { // Chinese SpecOps Operator (AMS)
-
+class CN_SPC_OP_MXM : CN_SPC_OP // Chinese SpecOps Operator (AMS)
+{
 	primary[] = { "arifle_ARX_blk_F", "rhsusf_acc_aac_762sd_silencer", "acc_pointer_IR", "optic_AMS", "bipod_02_F_blk" };
 
 };
 
 
-class CN_SPC_OP_MED : CN_SPC_OP { // Chinese SpecOps Operator (MED)
-
+class CN_SPC_OP_MED : CN_SPC_OP // Chinese SpecOps Operator (MED)
+{
 	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 
 };
 
 
-class CN_SPC_OP_MG : CN_SPC_OP { // Chinese SpecOps Operator (QBZ-95-1)
-
+class CN_SPC_OP_MG : CN_SPC_OP // Chinese SpecOps Operator (QBZ-95-1)
+{
 	primary[] = { "arifle_CTARS_blk_F", "muzzle_snds_58_blk_F", "acc_pointer_IR", "optic_Hamr", "bipod_02_F_blk" };
 	magazines[] = { "100Rnd_580x42_Mag_F",8,"10Rnd_50BW_Mag_F",6, "11Rnd_45ACP_Mag", 4, "rhs_mag_rgo", 3 };
 	items[] = {};

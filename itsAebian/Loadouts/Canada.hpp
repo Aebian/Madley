@@ -1,5 +1,5 @@
-class CommonCanada : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonCanada : CommonBlufor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "rhs_uniform_FROG01_wd" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -19,8 +19,8 @@ class CommonCanada : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoa
 
 };
 
-class CA_RECON_RFL : CommonCanada { // Recon Rifleman
-
+class CA_RECON_RFL : CommonCanada // Recon Rifleman
+{
 	uniform[] = { "rhs_uniform_g3_m81" };
 	vest[] = { "rhsusf_mbav_rifleman" };
 	backpack[] = { "" };
@@ -41,8 +41,8 @@ class CA_RECON_RFL : CommonCanada { // Recon Rifleman
 
 };
 
-class CA_RECON_ARM : CommonCanada { // Recon Rifleman (ARM)
-
+class CA_RECON_ARM : CA_RECON_RFL // Recon Rifleman (ARM)
+{
 	uniform[] = { "rhs_uniform_g3_m81" };
 	vest[] = { "rhsusf_mbav_mg" };
 	backpack[] = { "" };
@@ -50,7 +50,6 @@ class CA_RECON_ARM : CommonCanada { // Recon Rifleman (ARM)
 	secondary[] = { "rhsusf_weap_m1911a1" };
 	launcher[] = { "" };
 	magazines[] = { "rhsusf_mag_7x45acp_MHP",2, "rhs_mag_100Rnd_556x45_M855A1_cmag_mixed",3 };
-	items[] += {"ACE_quikclot",4,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2 };
 	binoculars[] = { "ACE_MX2A" };
 	compass[] = { "ItemCompass" };
 	goggles[] = { "G_Combat_Goggles_tna_F" };

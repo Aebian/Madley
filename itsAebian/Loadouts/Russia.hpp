@@ -1,5 +1,5 @@
-class CommonRussia : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonRussia : CommonOpfor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -20,8 +20,8 @@ class CommonRussia : CommonOpfor { // [this, "Loadout"] call Poppy_fnc_applyLoad
 
 };
 
-class RU_VDV_CO : CommonRussia { // VDV [Commanding Officer]
-
+class RU_VDV_CO : CommonRussia // VDV [Commanding Officer]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_crewofficer" };
 	backpack[] = { "rhs_assault_umbts" };
@@ -41,8 +41,8 @@ class RU_VDV_CO : CommonRussia { // VDV [Commanding Officer]
 
 };
 
-class RU_VDV_JTAC : CommonRussia { // VDV [Joint Terminal Attack Controller]
-
+class RU_VDV_JTAC : CommonRussia // VDV [Joint Terminal Attack Controller]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_6sh92_vog" };
 	backpack[] = { "rhs_assault_umbts" };
@@ -62,8 +62,8 @@ class RU_VDV_JTAC : CommonRussia { // VDV [Joint Terminal Attack Controller]
 
 };
 
-class RU_VDV_CREW : CommonRussia { // VDV [Vehicle Crew]
-
+class RU_VDV_CREW : CommonRussia // VDV [Vehicle Crew]
+{
 	uniform[] = { "rhs_uniform_vdv_emr" };
 	vest[] = { "rhs_6b23_crew" };
 	backpack[] = { "" };
@@ -82,8 +82,8 @@ class RU_VDV_CREW : CommonRussia { // VDV [Vehicle Crew]
 
 };
 
-class RU_VDV_CREW_CM : RU_VDV_CREW { // VDV [Vehicle Crew Commander]
-
+class RU_VDV_CREW_CM : RU_VDV_CREW // VDV [Vehicle Crew Commander]
+{
 	vest[] = { "rhs_6b23_crewofficer" };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	secondary[] = { "rhs_weap_pya" };
@@ -91,8 +91,8 @@ class RU_VDV_CREW_CM : RU_VDV_CREW { // VDV [Vehicle Crew Commander]
 
 };
 
-class RU_VDV_DES_Sergeant : CommonRussia {  // VDV [Team Leader] (Lieutenant / Sergeant)
-
+class RU_VDV_DES_Sergeant : CommonRussia // VDV [Team Leader] (Lieutenant / Sergeant)
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92_headset_mapcase" };
 	backpack[] = { "" };
@@ -112,8 +112,8 @@ class RU_VDV_DES_Sergeant : CommonRussia {  // VDV [Team Leader] (Lieutenant / S
 
 };
 
-class RU_VDV_RFL_BASE : CommonRussia {  // VDV [Rifleman] Base
-
+class RU_VDV_RFL_BASE : CommonRussia // VDV [Rifleman] Base
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "" };
@@ -132,8 +132,8 @@ class RU_VDV_RFL_BASE : CommonRussia {  // VDV [Rifleman] Base
 
 };
 
-class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE { // VDV [Rifleman] Senior (Corporal)
-
+class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE // VDV [Rifleman] Senior (Corporal)
+{
 	vest[] = { "rhs_6b13_6sh92" };
 	primary[] = { "rhs_weap_ak74m_gp25","rhs_acc_dtk" };
 	magazines[] = { "rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",4,"rhs_VG40SZ",4,"SmokeShellGreen",2 };
@@ -141,8 +141,8 @@ class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE { // VDV [Rifleman] Senior (Corporal
 };
 
 
-class RU_VDV_DES_Machinegunner : CommonRussia { // VDV [Machine Gunner] (Private 1st Class)
-
+class RU_VDV_DES_Machinegunner : CommonRussia // VDV [Machine Gunner] (Private 1st Class)
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "B_Carryall_oli" };
@@ -161,8 +161,8 @@ class RU_VDV_DES_Machinegunner : CommonRussia { // VDV [Machine Gunner] (Private
 };
 
 
-class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE { // VDV [Rifleman GP-25] (Private 1st Class)
-
+class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE // VDV [Rifleman GP-25] (Private 1st Class)
+{
 	vest[] = { "rhs_6b13_6sh92_vog" };
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_ak74m_fullplum_gp25","rhs_acc_dtk" };
@@ -179,13 +179,13 @@ class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE { // VDV [Rifleman GP-25] (Private 1
 
 };
 
-class RU_VDV_DES_GL_RPG26 : RU_VDV_DES_GL_RShG2 { // VDV [Rifleman GP-25] (Private 1st Class)
-
+class RU_VDV_DES_GL_RPG26 : RU_VDV_DES_GL_RShG2 // VDV [Rifleman GP-25] (Private 1st Class)
+{
 	launcher[] = { "rhs_weap_rpg26" };
 };
 
-class RU_VDV_DES_Rifleman_Lite : CommonRussia {  // VDV [Sharpshooter] (Corporal)
-
+class RU_VDV_DES_Rifleman_Lite : CommonRussia // VDV [Sharpshooter] (Corporal)
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92_radio" };
 	backpack[] = { "" };
@@ -204,14 +204,14 @@ class RU_VDV_DES_Rifleman_Lite : CommonRussia {  // VDV [Sharpshooter] (Corporal
 };
 
 
-class RU_VDV_DES_Rifleman : RU_VDV_RFL_BASE { // VDV [Rifleman] (Private 1st Class)
-
+class RU_VDV_DES_Rifleman : RU_VDV_RFL_BASE // VDV [Rifleman] (Private 1st Class)
+{
  launcher[] = { "rhs_weap_rpg26" };
 
 };
 
-class RU_VDV_DES_Rifleman02 : RU_VDV_RFL_BASE { // VDV [Rifleman] (Private 2nd Class --> Private)
-
+class RU_VDV_DES_Rifleman02 : RU_VDV_RFL_BASE // VDV [Rifleman] (Private 2nd Class --> Private)
+{
 launcher[] = { "rhs_weap_rshg2" };
 backpack[] = { "rhs_sidor" };
 magazines[] += { "rhs_100Rnd_762x54mmR_7N26",2};
@@ -219,8 +219,8 @@ magazines[] += { "rhs_100Rnd_762x54mmR_7N26",2};
 };
 
 
-class RU_VDV_SNP : CommonRussia {  // VDV [Sniper]
-
+class RU_VDV_SNP : CommonRussia // VDV [Sniper]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92_radio" };
 	backpack[] = { "" };
@@ -238,8 +238,8 @@ class RU_VDV_SNP : CommonRussia {  // VDV [Sniper]
 
 };
 
-class RU_VDV_Grenadier : CommonRussia { // VDV [Grenadier (RPG-7)]
-
+class RU_VDV_Grenadier : CommonRussia // VDV [Grenadier (RPG-7)]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "rhs_rpg_empty" };
@@ -257,8 +257,8 @@ class RU_VDV_Grenadier : CommonRussia { // VDV [Grenadier (RPG-7)]
 
 };
 
-class RU_VDV_Grenadier_Assistant : RU_VDV_RFL_BASE { // VDV [Grenadier (RPG-7)]
-
+class RU_VDV_Grenadier_Assistant : RU_VDV_RFL_BASE // VDV [Grenadier (RPG-7)]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "rhs_rpg_empty" };
@@ -274,8 +274,8 @@ class RU_VDV_Grenadier_Assistant : RU_VDV_RFL_BASE { // VDV [Grenadier (RPG-7)]
 
 };
 
-class RU_VDV_DES_Machinegunner_WT : CommonRussia { // VDV [Machine Gunner / Weapons Team] (Corporal)
-
+class RU_VDV_DES_Machinegunner_WT : CommonRussia // VDV [Machine Gunner / Weapons Team] (Corporal)
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "B_Carryall_oli" };
@@ -293,16 +293,16 @@ class RU_VDV_DES_Machinegunner_WT : CommonRussia { // VDV [Machine Gunner / Weap
 
 };
 
-class RU_VDV_DES_Machinegunner_Assistant_WT : RU_VDV_RFL_BASE {
-
+class RU_VDV_DES_Machinegunner_Assistant_WT : RU_VDV_RFL_BASE 
+{
 backpack[] = { "B_Carryall_oli" };
 magazines[] = { "rhs_45Rnd_545X39_7U1_AK", 5,"rhs_100Rnd_762x54mmR_7N26",3};
 
 
 };
 
-class RU_VDV_DES_RFL_AA : CommonRussia { // VDV [Rifleman Anti-Air]
-
+class RU_VDV_DES_RFL_AA : CommonRussia // VDV [Rifleman Anti-Air]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b13_6sh92" };
 	backpack[] = { "B_TacticalPack_rgr" };
@@ -320,8 +320,8 @@ class RU_VDV_DES_RFL_AA : CommonRussia { // VDV [Rifleman Anti-Air]
 
 };
 
-class RU_VDV_LOG : CommonRussia {  // VDV [Logistic]
-
+class RU_VDV_LOG : CommonRussia // VDV [Logistic]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_ML_6sh92_headset" };
 	backpack[] = { "rhs_assault_umbts_engineer_empty" };
@@ -341,8 +341,8 @@ class RU_VDV_LOG : CommonRussia {  // VDV [Logistic]
 
 };
 
-class RU_VDV_ACO : CommonRussia {  // VDV [Aircraft Ground Coordinator]
-
+class RU_VDV_ACO : CommonRussia // VDV [Aircraft Ground Coordinator]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_ML_6sh92" };
 	backpack[] = { "" };
@@ -361,8 +361,8 @@ class RU_VDV_ACO : CommonRussia {  // VDV [Aircraft Ground Coordinator]
 
 };
 
-class RU_VDV_ATC : CommonRussia {  // VDV [Air Traffic Controller]
-
+class RU_VDV_ATC : CommonRussia // VDV [Air Traffic Controller]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_ML_6sh92" };
 	backpack[] = { "" };
@@ -382,8 +382,8 @@ class RU_VDV_ATC : CommonRussia {  // VDV [Air Traffic Controller]
 };
 
 
- class RU_VDV_SPC01 : CommonRussia { // VDV [Specialist]
-
+class RU_VDV_SPC01 : CommonRussia // VDV [Specialist]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz" };
 	backpack[] = { "" };
@@ -405,8 +405,8 @@ class RU_VDV_ATC : CommonRussia {  // VDV [Air Traffic Controller]
 
 };
 
- class RU_VDV_SPC02 : CommonRussia { // VDV [Specialist]
-
+class RU_VDV_SPC02 : CommonRussia // VDV [Specialist]
+{
 	uniform[] = { "rhs_uniform_vdv_emr_des" };
 	vest[] = { "rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz" };
 	backpack[] = { "" };
@@ -428,20 +428,20 @@ class RU_VDV_ATC : CommonRussia {  // VDV [Air Traffic Controller]
 
 };
 
-class RU_MSV_Rifleman : RU_VDV_RFL_BASE { // MSV [Rifleman] (Private 1st Class)
-
+class RU_MSV_Rifleman : RU_VDV_RFL_BASE // MSV [Rifleman] (Private 1st Class)
+{
  uniform[] = { "rhs_uniform_flora" };
  launcher[] = { "rhs_weap_rpg26" };
 
 };
 
-class RU_MSV_CREW : RU_VDV_CREW { // MSV [Vehicle Crew Commander]
-
+class RU_MSV_CREW : RU_VDV_CREW // MSV [Vehicle Crew Commander]
+{
 	uniform[] = { "rhs_uniform_msv_emr" };
 };
 
-class RU_MSV_CREW_CM : RU_MSV_CREW { // MSV [Vehicle Crew Commander]
-
+class RU_MSV_CREW_CM : RU_MSV_CREW // MSV [Vehicle Crew Commander]
+{
 	vest[] = { "rhs_6b23_crewofficer" };
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	secondary[] = { "rhs_weap_pya" };
@@ -449,8 +449,8 @@ class RU_MSV_CREW_CM : RU_MSV_CREW { // MSV [Vehicle Crew Commander]
 };
 
 
-class RU_VVS_HPLT : CommonRussia { // VVS [Helicopter Pilot]
-
+class RU_VVS_HPLT : CommonRussia // VVS [Helicopter Pilot]
+{
 	uniform[] = { "rhs_uniform_df15_tan" };
 	vest[] = { "rhs_6b23_ML_vydra_3m" };
 	backpack[] = { "B_TacticalPack_rgr" };
@@ -472,15 +472,15 @@ class RU_VVS_HPLT : CommonRussia { // VVS [Helicopter Pilot]
 
 };
 
-class RU_VVS_JPLT : RU_VVS_HPLT {
-
+class RU_VVS_JPLT : RU_VVS_HPLT 
+{
 	headgear[] = { "rhs_zsh7a_alt" };
 	backpack[] = { "rhs_d6_Parachute_backpack" };
 
 }
 
-class RU_SPC_LEAD : CommonRussia { // спецназ [Colonel / Leader] #\ Not Used By Players /#
-
+class RU_SPC_LEAD : CommonRussia // спецназ [Colonel / Leader] #\ Not Used By Players /#
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz" };
 	backpack[] = { "" };
@@ -497,11 +497,10 @@ class RU_SPC_LEAD : CommonRussia { // спецназ [Colonel / Leader] #\ Not U
 	headgear[] = { "rhs_beret_vdv3" };
 	map[] = { "ItemMap" };
 
-
 };
 
-class RU_SPC_PO : CommonRussia { // спецназ [Project Officer]
-
+class RU_SPC_PO : CommonRussia // спецназ [Project Officer]
+{
 	uniform[] = { "rhs_uniform_gorka_r_y" };
 	vest[] = { "rhsgref_6b23_khaki_officer" };
 	backpack[] = { "" };
@@ -521,8 +520,8 @@ class RU_SPC_PO : CommonRussia { // спецназ [Project Officer]
 
 };
 
-class RU_SPC_TL : CommonRussia { // спецназ [Team Leader]
-
+class RU_SPC_TL : CommonRussia // спецназ [Team Leader]
+{
 	uniform[] = { "rhs_uniform_gorka_r_y" };
 	vest[] = { "rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz" };
 	backpack[] = { "B_Carryall_oli" };
@@ -542,8 +541,8 @@ class RU_SPC_TL : CommonRussia { // спецназ [Team Leader]
 
 };
 
-class RU_SPC_OP : CommonRussia { // спецназ [Operator]
-
+class RU_SPC_OP : CommonRussia // спецназ [Operator]
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "B_Carryall_oli" };
@@ -562,8 +561,8 @@ class RU_SPC_OP : CommonRussia { // спецназ [Operator]
 
 };
 
-class RU_SPC_MG : CommonRussia { // спецназ [Machine Gunner]
-
+class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "B_Carryall_oli" };
@@ -582,8 +581,8 @@ class RU_SPC_MG : CommonRussia { // спецназ [Machine Gunner]
 
 };
 
-class RU_SPC_MED : CommonRussia { // спецназ [Medic]
-
+class RU_SPC_MED : CommonRussia // спецназ [Medic]
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_medic" };
 	backpack[] = { "B_Carryall_oli" };
@@ -603,8 +602,8 @@ class RU_SPC_MED : CommonRussia { // спецназ [Medic]
 
 };
 
-class RU_SPC_SNP : CommonRussia { // спецназ [Sniper]
-
+class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "rhs_assault_umbts" };
@@ -623,8 +622,8 @@ class RU_SPC_SNP : CommonRussia { // спецназ [Sniper]
 
 };
 
-class RU_SPC_SNP_T5000 : CommonRussia { // спецназ [Sniper ORSIS T-500]
-
+class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
+{
 	uniform[] = { "rhs_uniform_gorka_r_y" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "" };
@@ -643,8 +642,8 @@ class RU_SPC_SNP_T5000 : CommonRussia { // спецназ [Sniper ORSIS T-500]
 
 };
 
-class RU_SPC_ENG : CommonRussia { // спецназ | Engineer
-
+class RU_SPC_ENG : CommonRussia // спецназ | Engineer
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "rhs_assault_umbts_engineer_empty" };
@@ -663,8 +662,8 @@ class RU_SPC_ENG : CommonRussia { // спецназ | Engineer
 
 };
 
-class RU_SPC_IGLA : CommonRussia { // спецназ [Operator]
-
+class RU_SPC_IGLA : CommonRussia // спецназ [Operator]
+{
 	uniform[] = { "rhs_uniform_gorka_r_g" };
 	vest[] = { "rhs_6b23_digi_6sh92_headset_spetsnaz" };
 	backpack[] = { "rhs_assault_umbts" };

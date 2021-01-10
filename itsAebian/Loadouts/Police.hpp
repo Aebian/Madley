@@ -1,5 +1,5 @@
-class CommonPolice : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonPolice : CommonBlufor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "U_B_GEN_Soldier_F" };
 	vest[] = { "V_TacVest_gen_F" };
 	backpack[] = { "" };
@@ -19,8 +19,8 @@ class CommonPolice : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoa
 
 };
 
-class Police_Officer_WEST : CommonPolice {
-
+class Police_Officer_WEST : CommonPolice 
+{
 	uniform[] = { "U_C_Uniform_Scientist_01_F" };
 	vest[] = { "V_TacVest_blk_POLICE" };
 	backpack[] = { "" };
@@ -37,8 +37,8 @@ class Police_Officer_WEST : CommonPolice {
 };
 
 
-class Police_Specialist_WEST_Lead : CommonPolice { 
-
+class Police_Specialist_WEST_Lead : CommonPolice 
+{ 
 	uniform[] = { "U_I_G_Story_Protagonist_F" };
 	vest[] = { "V_TacVest_gen_F" };
 	backpack[] = { "" };
@@ -54,23 +54,23 @@ class Police_Specialist_WEST_Lead : CommonPolice {
 	headgear[] = { "H_PASGT_basic_black_F" };
 };
 
-class Police_Specialist_WEST_Operator : Police_Specialist_WEST_Lead { 
-
+class Police_Specialist_WEST_Operator : Police_Specialist_WEST_Lead 
+{ 
 	primary[] = { "arifle_AK12_F", "optic_ACO_grn", "30Rnd_762x39_Mag_F" };
 	magazines[] = { "16Rnd_9x21_Mag", 2, "30Rnd_762x39_Mag_F", 8};
 	binoculars[] = { "" };
 	compass[] = { "" };
 };
 
-class Police_Specialist_WEST_Shooter : Police_Specialist_WEST_Operator { 
-
+class Police_Specialist_WEST_Shooter : Police_Specialist_WEST_Operator 
+{ 
 	primary[] = { "srifle_DMR_06_camo_F", "optic_AMS", "20Rnd_762x51_Mag" };
 	magazines[] = { "16Rnd_9x21_Mag", 2, "20Rnd_762x51_Mag", 8};
 	binoculars[] = { "" };
 };
 
-class Police_Specialist_WEST_Pilot : Police_Specialist_WEST_Operator { 
-
+class Police_Specialist_WEST_Pilot : Police_Specialist_WEST_Operator 
+{ 
 	uniform[] = { "U_B_GEN_Soldier_F" };
 	primary[] = { "" };
 	magazines[] = { "16Rnd_9x21_Mag", 4};
@@ -79,8 +79,8 @@ class Police_Specialist_WEST_Pilot : Police_Specialist_WEST_Operator {
 };
 
 
-class Police_Officer_EAST : CommonPolice {
-
+class Police_Officer_EAST : CommonPolice 
+{
 	uniform[] = { "rhsgref_uniform_ttsko_urban" };
 	vest[] = { "rhs_vest_commander" };
 	backpack[] = { "" };
@@ -93,8 +93,8 @@ class Police_Officer_EAST : CommonPolice {
 	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
 };
 
-class Police_Specialist_EAST_Lead : CommonPolice {
-
+class Police_Specialist_EAST_Lead : CommonPolice 
+{
 	uniform[] = { "rhsgref_uniform_ttsko_mountain" };
 	vest[] = { "rhsgref_6b23_ttsko_mountain_nco" };
 	backpack[] = { "" };
@@ -106,8 +106,8 @@ class Police_Specialist_EAST_Lead : CommonPolice {
 	compass[] = { "ItemCompass" };	
 };
 
-class Police_Specialist_EAST_Operator : Police_Specialist_EAST_Lead {
-
+class Police_Specialist_EAST_Operator : Police_Specialist_EAST_Lead 
+{
 	uniform[] = { "rhsgref_uniform_ttsko_mountain" };
 	vest[] = { "rhsgref_6b23_ttsko_mountain" };
 	primary[] = { "rhs_weap_ak105", "rhs_acc_uuk", "rhs_30Rnd_545x39_7N6M_plum_AK" };
@@ -117,8 +117,8 @@ class Police_Specialist_EAST_Operator : Police_Specialist_EAST_Lead {
 };
 
 
-class Police_Specialist_EAST_Shooter : Police_Specialist_EAST_Operator {
-
+class Police_Specialist_EAST_Shooter : Police_Specialist_EAST_Operator 
+{
 	vest[] = { "rhsgref_6b23_ttsko_mountain_sniper" };
 	primary[] = { "rhs_weap_svds", "rhs_acc_tgpv2", "rhs_acc_pso1m2", "rhs_10Rnd_762x54mmR_7N14" };
 	secondary[] = { "rhs_weap_makarov_pm", "rhs_mag_9x18_8_57N181S" };
@@ -126,8 +126,8 @@ class Police_Specialist_EAST_Shooter : Police_Specialist_EAST_Operator {
 };
 
 
-class Police_Specialist_EAST_Pilot : Police_Specialist_EAST_Operator {
-
+class Police_Specialist_EAST_Pilot : Police_Specialist_EAST_Operator 
+{
 	uniform[] = {"rhs_uniform_df15_tan"};
 	vest[] = { "rhsgref_6b23_ttsko_digi_officer" };
 	primary[] = { "" };

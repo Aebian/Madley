@@ -1,5 +1,5 @@
-class CommonBritain : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonBritain : CommonBlufor // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{ 
 	uniform[] = { "U_B_CTRG_3" };
 	vest[] = { "" };
 	backpack[] = { "" };
@@ -21,8 +21,8 @@ class CommonBritain : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLo
 };
 
 
-class CTRG_CO : CommonBritain { // Commanding Officer
-
+class CTRG_CO : CommonBritain // Commanding Officer
+{
 	vest[] = { "V_TacVest_oli" };
 	backpack[] = { "B_LegStrapBag_black_F" };
 	primary[] = { "hlc_rifle_bcmblackjack","rhs_acc_1p87" };
@@ -37,8 +37,8 @@ class CTRG_CO : CommonBritain { // Commanding Officer
 
 };
 
-class CTRG_NATO_ADM : CommonBritain { // Carrier Admiral
-
+class CTRG_NATO_ADM : CommonBritain // Carrier Admiral
+{
 	vest[] = { "V_TacVest_oli" };
 	backpack[] = { "B_LegStrapBag_black_F" };
 	primary[] = { "rhs_weap_ak105_npz", "rhs_acc_tgpa", "rhs_acc_perst1ik", "rhsusf_acc_eotech_552_d" };
@@ -58,20 +58,21 @@ class CTRG_NATO_ADM : CommonBritain { // Carrier Admiral
 };
 
 
-class CTRG_XO : CTRG_CO { // Executive Officer
+class CTRG_XO : CTRG_CO // Executive Officer
+{
 
 };
 
-class CTRG_COS : CTRG_CO { // Chief of Supplies
-
-backpack[] = { "B_TacticalPack_blk" };
-items[] += { "CL_Logitracker", 1 ,"SmokeShellBlue", 6 , "SmokeShellYellow" , 6 , "29rnd_300BLK_STANAG_S", 10 };
+class CTRG_COS : CTRG_CO // Chief of Supplies
+{
+	backpack[] = { "B_TacticalPack_blk" };
+	items[] += { "CL_Logitracker", 1 ,"SmokeShellBlue", 6 , "SmokeShellYellow" , 6 , "29rnd_300BLK_STANAG_S", 10 };
 
 };
 
 
-class CTRG_FAC : CommonBritain { // Forward Air Controller
-
+class CTRG_FAC : CommonBritain // Forward Air Controller
+{
 	uniform[] = { "U_B_CTRG_2" };
 	vest[] = { "V_PlateCarrier2_rgr_noflag_F" };
 	backpack[] = { "B_TacticalPack_rgr" };
@@ -87,8 +88,8 @@ class CTRG_FAC : CommonBritain { // Forward Air Controller
 };
 
 
-class CTRG_LEAD : CommonBritain { // Section Lead
-
+class CTRG_LEAD : CommonBritain // Section Lead
+{
 	uniform[] = { "U_B_CTRG_Soldier_F", "U_B_CTRG_Soldier_3_F" };
 	vest[] = { "V_PlateCarrier1_CTRG_Tropical" };
 	backpack[] = { "B_LegStrapBag_black_F" };
@@ -103,8 +104,8 @@ class CTRG_LEAD : CommonBritain { // Section Lead
 
 };
 
-class CTRG_OPERATOR_LITE : CTRG_LEAD { // HK416 Operator
-
+class CTRG_OPERATOR_LITE : CTRG_LEAD // HK416 Operator
+{
 	backpack[] = { "" };
 	primary[] = { "rhs_weap_hk416d10_LMT_wd", "rhsusf_acc_nt4_black", "rhsusf_acc_anpeq15A", "rhsusf_acc_ACOG" };
 	secondary[] = { "" };
@@ -114,8 +115,8 @@ class CTRG_OPERATOR_LITE : CTRG_LEAD { // HK416 Operator
 
 };
 
-class CTRG_OPERATOR_MEDIUM : CTRG_OPERATOR_LITE { // HK416 Operator
-
+class CTRG_OPERATOR_MEDIUM : CTRG_OPERATOR_LITE // HK416 Operator
+{
 	backpack[] = { "B_Kitbag_rgr" };
 	primary[] = { "UK3CB_BAF_L85A2", "UK3CB_BAF_Silencer_L85", "rhs_acc_1p87" };
 	magazines[] = { "UK3CB_BAF_556_30Rnd_T", 14 };
@@ -123,30 +124,30 @@ class CTRG_OPERATOR_MEDIUM : CTRG_OPERATOR_LITE { // HK416 Operator
 
 };
 	
-class CTRG_OPERATOR_SUPRESS : CTRG_OPERATOR_LITE { // M249 Operator
-
+class CTRG_OPERATOR_SUPRESS : CTRG_OPERATOR_LITE // M249 Operator
+{
 	backpack[] = { "B_Kitbag_rgr" };
 	primary[] = { "rhs_weap_minimi_para_railed", "rhsusf_acc_eotech_552" };
 	magazines[] = { "rhs_200rnd_556x45_B_SAW", 6 };
 
 };
 
-class CTRG_OPERATOR_GRENADES : CTRG_OPERATOR_LITE { // M32 Operator
-
+class CTRG_OPERATOR_GRENADES : CTRG_OPERATOR_LITE // M32 Operator
+{
 	backpack[] = { "B_Carryall_oli" };
 	magazines[] += { "rhsusf_mag_6Rnd_M397_HET", 6};
 	items[] += { "rhs_weap_m32",1, "rhsusf_acc_anpeq16a", 1 };
 
 };
 
-class CTRG_OPERATOR_LITE_AT : CTRG_OPERATOR_LITE { // HK416 Operator with M136
-
+class CTRG_OPERATOR_LITE_AT : CTRG_OPERATOR_LITE // HK416 Operator with M136
+{
 	launcher[] = { "rhs_weap_M136_hp" };
 
 };
 
-class CTRG_OPERATOR_MEDICAL : CTRG_OPERATOR_LITE { // HK416 Operator with Medical Training Class 07 (Advanced)
-
+class CTRG_OPERATOR_MEDICAL : CTRG_OPERATOR_LITE // HK416 Operator with Medical Training Class 07 (Advanced)
+{
 	uniform[] = { "U_B_CTRG_Soldier_F", "U_B_CTRG_Soldier_3_F" };
 	backpack[] = { "B_ViperLightHarness_ghex_F" };
 	items[] += { "ACE_surgicalKit", 1, "ACE_morphine", 11, "ACE_epinephrine", 11, "ACE_fieldDressing", 20, "ACE_elasticBandage", 20, "ACE_quikclot", 20, "ACE_packingBandage", 20, "ACE_tourniquet", 10, "ACE_bloodIV", 10, "ACE_CableTie", 4 };
@@ -154,8 +155,8 @@ class CTRG_OPERATOR_MEDICAL : CTRG_OPERATOR_LITE { // HK416 Operator with Medica
 
 };
 
-class CTRG_OPERATOR_ENGINEER : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with Engineering Training Class 05 (basic)
-
+class CTRG_OPERATOR_ENGINEER : CTRG_OPERATOR_MEDIUM // L85A2 Operator with Engineering Training Class 05 (basic)
+{
 	vest[] = { "V_PlateCarrierSpec_A_CTRG_GL_Tropical" };
 	backpack[] = { "rhs_assault_umbts_engineer_empty" };
 	items[] += { "ACE_EntrenchingTool", 1, "ACE_DefusalKit", 1, "ACE_Clacker", 1, "ToolKit", 1, "ACE_wirecutter", 1, "MineDetector", 1 };
@@ -163,45 +164,45 @@ class CTRG_OPERATOR_ENGINEER : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with Eng
 
 };
 
-class CTRG_OPERATOR_MEDIUM_MACHINE_GUN : CTRG_OPERATOR_MEDIUM { // MMG Operator
-
+class CTRG_OPERATOR_MEDIUM_MACHINE_GUN : CTRG_OPERATOR_MEDIUM // MMG Operator
+{
 	backpack[] = { "" };
 	primary[] = { "MMG_01_tan_F", "rhs_acc_perst3", "rhs_acc_1p87", "bipod_02_F_hex" };
 	magazines[] = { "150Rnd_93x64_Mag", 3 };
 
 };
 
-class CTRG_OPERATOR_MEDIUM_MACHINE_GUN_ASSISTANT : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with Ammunation for MMG
-
+class CTRG_OPERATOR_MEDIUM_MACHINE_GUN_ASSISTANT : CTRG_OPERATOR_MEDIUM // L85A2 Operator with Ammunation for MMG
+{
   backpack[] = { "B_Carryall_ghex_F" };
   items[] += { "150Rnd_93x64_Mag",3, "ACE_SpareBarrel", 1 };
   binoculars[] = { "Binocular" };
 
 };
 
-class CTRG_OPERATOR_MEDIUM_AT : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with SMAAW
-
+class CTRG_OPERATOR_MEDIUM_AT : CTRG_OPERATOR_MEDIUM // L85A2 Operator with SMAAW
+{
   backpack[] = { "B_Carryall_oli" };
   launcher[] = { "rhs_weap_smaw_green", "ACE_acc_pointer_green", "rhs_weap_optic_smaw" };
   items[] += { "rhs_mag_smaw_HEDP", 1 , "rhs_mag_smaw_HEAA", 1 };
 
 };
 
-class CTRG_OPERATOR_MEDIUM_AT_ASSISTANT : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with Rockets for SMAAW
-
+class CTRG_OPERATOR_MEDIUM_AT_ASSISTANT : CTRG_OPERATOR_MEDIUM // L85A2 Operator with Rockets for SMAAW
+{
   backpack[] = { "B_Carryall_oli" };
   items[] += { "rhs_mag_smaw_HEDP", 1 , "rhs_mag_smaw_HEAA", 1,  "rhs_mag_smaw_SR", 2 };
 
 };
 
-class CTRG_OPERATOR_RAVEN : CTRG_OPERATOR_MEDIUM { // L85A2 Operator with RAVEN
-
+class CTRG_OPERATOR_RAVEN : CTRG_OPERATOR_MEDIUM  // L85A2 Operator with RAVEN
+{
   backpack[] = { "B_rhsusf_B_BACKPACK" };
 
 };
 
-class CTRG_OPERATOR_ESR : CTRG_OPERATOR_MEDIUM { // M2010 Operator 
-
+class CTRG_OPERATOR_ESR : CTRG_OPERATOR_MEDIUM // M2010 Operator 
+{
   uniform[] = { "U_B_CTRG_Soldier_2_F" };
   backpack[] = { "B_LegStrapBag_olive_F" };
   primary[] = { "rhs_weap_XM2010_wd", "rhsusf_acc_premier", "rhsusf_acc_anpeq15A", "rhsusf_acc_harris_bipod" };
@@ -216,8 +217,8 @@ class CTRG_OPERATOR_ESR : CTRG_OPERATOR_MEDIUM { // M2010 Operator
 
 
 
-class CTRG_UCAV_OPERATOR : CommonBritain { // Unmaned Combat Arial Vehicle Operator. The guy with the bombs.
-
+class CTRG_UCAV_OPERATOR : CommonBritain // Unmaned Combat Arial Vehicle Operator. The guy with the bombs.
+{
 	vest[] = { "V_PlateCarrierL_CTRG" };
 	backpack[] = { "" };
 	primary[] = { "SMG_01_F", "muzzle_snds_acp", "acc_flashlight_smg_01", "optic_Aco_smg" };
@@ -231,8 +232,8 @@ class CTRG_UCAV_OPERATOR : CommonBritain { // Unmaned Combat Arial Vehicle Opera
 
 };
 
-class CTRG_COMBAT_PILOT : CommonBritain { // Flying Angel
-
+class CTRG_COMBAT_PILOT : CommonBritain // Flying Angel
+{
 	uniform[] = { "U_BG_Guerrilla_6_1" };
 	vest[] = { "V_PlateCarrierL_CTRG" };
 	backpack[] = { "" };
@@ -247,8 +248,8 @@ class CTRG_COMBAT_PILOT : CommonBritain { // Flying Angel
 
 };
 
-class CTRG_SUPPLY_LEAD : CTRG_OPERATOR_MEDIUM { // Coordinator of Supplies
-
+class CTRG_SUPPLY_LEAD : CTRG_OPERATOR_MEDIUM // Coordinator of Supplies
+{
 	uniform[] = { "U_B_CTRG_3" };
 	lrRadios[] = { "ACRE_PRC148", "ACRE_PRC148" };
 	items[] += { "CL_Logitracker", 1,"SmokeShellBlue", 6,"SmokeShellYellow" , 6 };
@@ -258,8 +259,8 @@ class CTRG_SUPPLY_LEAD : CTRG_OPERATOR_MEDIUM { // Coordinator of Supplies
 
 };
 
-class CTRG_SUPPLY_DISPATCHER : CTRG_SUPPLY_LEAD { // Workhorse
-
+class CTRG_SUPPLY_DISPATCHER : CTRG_SUPPLY_LEAD // Workhorse
+{
 	items[] += { "ToolKit" };
 	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 1, true];";
 };

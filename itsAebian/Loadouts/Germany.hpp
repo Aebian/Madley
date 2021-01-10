@@ -1,5 +1,5 @@
-class CommonGermany : CommonBlufor { // [this, "Loadout"] call Poppy_fnc_applyLoadout;
-
+class CommonGermany : CommonBlufor  // [this, "Loadout"] call Poppy_fnc_applyLoadout;
+{
 	uniform[] = { "" };
 	vest[] = { "" };
 	backpack[] = { "" };
