@@ -1,33 +1,29 @@
 /*
     author: @Aebian
-    description: enable and disable anti-air AI of SAMs & CIWs
+    description: enable and disable anti-air AI of SAMs & CIWS
     returns: nothing
-    	// ["SILENT", [US_SAM_BATTERY_01, US_SAM_BATTERY_02, US_SAM_BATTERY_03, US_SAM_BATTERY_04]] execVM "itsAebian\KI_airDefense.sqf";
-
-
+	created: 2010-12-19
+	updated: 2021-01-10
+    // ["SILENT", [US_SAM_BATTERY_01, US_SAM_BATTERY_02, US_SAM_BATTERY_03, US_SAM_BATTERY_04]] execVM "itsAebian\KI_airDefense.sqf";
  */
 
 params[ "_cond", "_guns"];
 
+switch (_cond) do 
+{
 
-	if (_cond isEqualTo "ACTIVE") then { // Enable DEFENSE
-
+    case "ACTIVE": // Enable DEFENSE
+    {
 		{ _x setCombatMode "RED" } forEach _guns; 
-
 		{ diag_log format ["%1, %2", _x, "has been enabled" ] } forEach _guns;
 
-} 
+	};
 
-else 
+	case "SILENT": // Disable DEFENSE	
+	{
+		{ _x setCombatMode "BLUE" } forEach _guns; 	
+		{ diag_log format ["%1, %2", _x, "has been disabled" ] } forEach _guns;
 
- {
+	};
 
-	if (_cond isEqualTo "SILENT") then { // Disable DEFENSE	
-
-	{ _x setCombatMode "BLUE" } forEach _guns; 
-	
-	{ diag_log format ["%1, %2", _x, "has been disabled" ] } forEach _guns;
-
- }
-
-}   
+};

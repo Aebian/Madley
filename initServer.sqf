@@ -24,6 +24,8 @@ CIVILIAN setFriend [WEST, 1];
 
 [CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\KI_CodeLock.sqf";
 
+["SILENT", [US_SAM_BATTERY_01, US_SAM_BATTERY_02]] execVM "itsAebian\KI_airDefense.sqf";
+
 [] execVM "itsAebian\KI_fn_MissionRun.sqf";
 
 {_x enableChannel true} forEach [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
