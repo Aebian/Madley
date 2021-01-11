@@ -22,4 +22,4 @@ KI_fnc_baseIncoming =
   _speakers = [USMC_Base_Speaker01, USMC_Base_Speaker02, USMC_Base_Speaker03, USMC_Base_Speaker04, USMC_Base_Speaker05, USMC_Base_Speaker06];
   { [_x, "IncomingIncoming"] remoteExecCall ["say3D"]; } forEach _speakers
 
-}
+};

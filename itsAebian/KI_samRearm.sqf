@@ -7,10 +7,11 @@
 
 params ["_ammobox", "_gun"];
 
+if (!isServer) exitWith {};
+
 _yikes = 0;
 
 sleep 4;
-
 
 _gname = vehicleVarName _gun;	
 _antiairtube = createMarker [format ["%1%2", _gname], position _gun];
@@ -27,7 +28,6 @@ while { _yikes == 0 } do {
 		_yikes = 1;
 	};
 };
-
 
 while { alive _ammobox && alive _gun } do {
 
