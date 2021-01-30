@@ -14,7 +14,7 @@ switch (_cond) do
 
     case "ACTIVE": // Enable DEFENSE
     {
-		{ _x setCombatMode "RED" } forEach _guns; 
+		{ _x setCombatMode "GREEN" } forEach _guns; 
 		{ diag_log format ["%1, %2", _x, "has been enabled" ] } forEach _guns;
 
 	};

@@ -7,7 +7,7 @@
 
 KI_fnc_baseAirSupport = 
 {
-  [Stryker, StrykerVHC, 1200, [1159.28,11927.1,0]] execVM "itsAebian\KI_airSupport.sqf";
+  [Stryker, StrykerVHC, 1200, [228.376,11813.2,171.598]] execVM "itsAebian\KI_airSupport.sqf";
 };
 
 KI_fnc_baseSiren = 

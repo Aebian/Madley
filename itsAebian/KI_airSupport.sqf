@@ -10,7 +10,7 @@ params["_group", "_aircraft", "_gameTime", "_targetRAW"];
 
 (_group getVariable ["KI_airSupport_cfSwitch", "RFT"]) params ["_cond"];
 
-(units _group) params ["_gunner", "_pilot"];
+(units _group) params ["_pilot", "_gunner"];
 
 if (!alive _aircraft) exitWith // Break if no aircraft left
 {
