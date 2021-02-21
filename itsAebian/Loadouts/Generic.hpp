@@ -183,7 +183,7 @@ class WEAPONS_DEALER_LEAD : CommonIndependet // The Weapons Dealer
 	magazines[] = {"rhssaf_mag_15Rnd_9x19_JHP",12,"Laserbatteries",1};
 	items[] += {"ACE_quikclot",3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_red",2};
 	binoculars[] = {"Laserdesignator_01_khk_F"};
-	compass[] = {""};
+	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Aviator"};
 	gps[] = {"ItemGPS"};
 	headgear[] = {"H_Watchcap_camo"};
