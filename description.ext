@@ -60,7 +60,7 @@ class CfgSounds
 
 
 class CfgUnitInsignia
-  {
+{
     class InfernoSquad
     {
       displayName = "Inferno Squad";
@@ -76,4 +76,67 @@ class CfgUnitInsignia
       texture = "itsAebian\resources\stargate_03.paa";
       textureVehicle = "";
     };
+};
+
+class CfgIdentities 
+{
+  class Hoot
+  {
+    face = "Miller";
+    glasses = "";
+    name = "Norman Hooten";
+    nameSound = "Hoot";
+    pitch = 1.0;
+    speaker = "Male03ENG";
   };
+
+  class Martin
+  {
+    face = "WhiteHead_14";
+    glasses = "";
+    name = "Timothy Lynn Martin";
+    nameSound = "Martin";
+    pitch = 1.0;
+    speaker = "Male06ENG";
+  };
+
+  class Rierson
+  {
+    face = "WhiteHead_10";
+    glasses = "";
+    name = "Matthew Loren Rierson";
+    nameSound = "Rierson";
+    pitch = 1.0;
+    speaker = "Male03ENG";
+  };
+
+  class Fillmore
+  {
+    face = "Jay";
+    glasses = "";
+    name = "Earl Robert Fillmore";
+    nameSound = "Fillmore";
+    pitch = 1.0;
+    speaker = "Male05ENG";
+  };
+
+  class Gordon
+  {
+    face = "LivonianHead_7";
+    glasses = "";
+    name = "Gary Ivan Gordon";
+    nameSound = "Gordy";
+    pitch = 1.0;
+    speaker = "Male09ENG";
+  };
+
+  class Shughart
+  {
+    face = "WhiteHead_20";
+    glasses = "";
+    name = "Randall David Shughart";
+    nameSound = "Randy";
+    pitch = 1.0;
+    speaker = "Male08ENG";
+  };
+};

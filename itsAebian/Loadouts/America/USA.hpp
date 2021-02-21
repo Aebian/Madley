@@ -326,7 +326,7 @@ class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL // US Army Ranger (Marksman)
 	primary[] = {"rhs_weap_SCARH_FDE_LB_grip3","rhsusf_acc_anpeq15side","rhsusf_acc_su230_mrds_c","rhsusf_acc_grip2_tan","rhs_mag_20Rnd_SCAR_762x51_m61_ap"};
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7,"11Rnd_45ACP_Mag", 3 };
-	items[] += {  };
+	items[] += {};
 	nvgs[] = {""};
 
 };
@@ -377,7 +377,7 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	secondary[] = {"rhsusf_weap_m9"};
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_100Rnd_556x45_M855_cmag",3,"rhsusf_mag_15Rnd_9x19_FMJ",2 };
-	items[] += {"ACE_packingBandage",5,"ACE_quikclot",5,"ACE_tourniquet",2,"rhs_mag_m18_purple",3  };
+	items[] += {"ACE_packingBandage",5,"ACE_quikclot",5,"ACE_tourniquet",2,"rhs_mag_m18_purple",3};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -470,7 +470,7 @@ class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP // Army Counter Intelligence
 	secondary[] = {"hgun_Pistol_heavy_01_green_F","optic_MRD_black"};
 	launcher[] = {"rhs_weap_m72a7"};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",10,"11Rnd_45ACP_Mag",4 };
-	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_EarPlugs",1,"MineDetector",1  };
+	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_EarPlugs",1,"MineDetector",1};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -498,7 +498,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP // Army Pilot with HGU-65
 	secondary[] = {""};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_40Rnd_46x30_FMJ",3};
-	items[] += {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4,"rhs_mag_m18_purple",1  };
+	items[] += {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4,"rhs_mag_m18_purple",1};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -540,7 +540,7 @@ class US_ARMY_DOORGUNNER : US_ARMY_PLT // Army Helicopter Door Gunner with HGU-6
 class US_ARMY_HGUN_FLIR : US_ARMY_PLT 
 {
 	primary[] = {"MMG_02_sand_F","bipod_01_F_blk","rhsusf_acc_anpeq15side","rhsusf_acc_anpas13gv1","130Rnd_338_Mag"};
-	magazines[] = {"130Rnd_338_Mag",1,"rhsusf_mag_7x45acp_MHP",2 };
+	magazines[] = {"130Rnd_338_Mag",1,"rhsusf_mag_7x45acp_MHP",2};
 	goggles[] = {"rhsusf_shemagh2_od"};
 	headgear[] = {"rhsusf_hgu56p_visor_mask"};
 
@@ -555,7 +555,7 @@ class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP // Army Jet Pilot
 	secondary[] = {"rhsusf_weap_m1911a1"};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_7x45acp_MHP",3 };
-	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_tourniquet",2,"rhs_mag_m18_purple",2  };
+	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_tourniquet",2,"rhs_mag_m18_purple",2};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};

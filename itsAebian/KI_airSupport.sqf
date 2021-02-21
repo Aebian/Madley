@@ -84,7 +84,7 @@ switch (_cond) do
         [format ["%1, %2", groupId _group, "is en route for close air support, out." ]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2", groupId _group, "is en route for close air support, out." ];
 
-        waitUntil {(_aircraft distance _target) < 1500};
+        waitUntil {(_aircraft distance _target) < 2000};
 
         [format ["%1, %2, %3 %4", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString, "mike(s)."]] remoteExecCall ["sideChat"];
         diag_log format ["%1, %2, %3 %4", groupId _group, "arrived at the AO, time on station is", [_gameTime, "MM:SS"] call BIS_fnc_secondsToString, "mike(s)."];
@@ -98,7 +98,7 @@ switch (_cond) do
             scopeName "attackLoop";
             sleep 1;
 
-            _enemies = allUnits select {side group _x getFriend side _group < 0.6 && (alive _x) && {_x distance _target < 1500}};
+            _enemies = allUnits select {side group _x getFriend side _group < 0.6 && (alive _x) && {_x distance _target < 4000}};
             _visTargets = _enemies select {([objNull, "VIEW"] checkVisibility [eyePos (gunner _aircraft), eyePos _x] > 0.3)};
 
             _bulletMagnet = _visTargets call BIS_fnc_selectRandom;
