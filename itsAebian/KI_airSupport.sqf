@@ -17,7 +17,7 @@ if (!alive _aircraft) exitWith // Break if no aircraft left
     diag_log format ["%1, %2", groupId _group, "have lost the aircraft." ];
     _group setVariable ["KI_airSupport_cfSwitch", "RTB"];
 
-    [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
+    [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
 };
 
 if ({ alive _x } count units _group == 0) exitWith // Break if soliders died
@@ -41,7 +41,7 @@ switch (_cond) do
 
         _group setVariable ["KI_airSupport_cfSwitch", "IAO"];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
     };
 
     case "IAO": // Insert to AO
@@ -154,7 +154,7 @@ switch (_cond) do
         _group setVariable ["KI_airSupport_cfSwitch", "RTB"];    
         deleteWaypoint [_group, 1];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
     };
 
     case "RTB": // Returning to Base
@@ -242,7 +242,7 @@ switch (_cond) do
         _group setVariable ["KI_airSupport_cfSwitch", "SVC"];
         diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_AirSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
 
 
     };
@@ -258,7 +258,7 @@ switch (_cond) do
         _aircraft setAmmo 1;
         {_x setDamage 0} forEach units _group;
 
-        _group setVariable ["KI_airSupport_cfSwitch", "RTF"];
+        _group setVariable ["KI_airSupport_cfSwitch", "RFT"];
         diag_log format ["%1, %2", groupId _group, "ready for tasking" ];
         
     };

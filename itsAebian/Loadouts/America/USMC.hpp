@@ -233,7 +233,7 @@ class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD // Marines [Heavy Machine Gunner
 	items[] += {"ACE_quikclot", 3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1 };
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"ffaa_Glasses"};
+	goggles[] = {"rhs_googles_black"};
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -251,7 +251,7 @@ class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD // Marines [Assistant Heavy Mac
 	items[] += {"ACE_quikclot",3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1 };
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"ffaa_Glasses"};
+	goggles[] = {"rhs_googles_black"};
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -269,7 +269,7 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD // Marines [AT Specialist]
 	items[] += {"ACE_quikclot",3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1 };
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"ffaa_Glasses"};
+	goggles[] = {"rhs_googles_black"};
 	gps[] = {""};
 	map[] = {"ItemMap"};	
 	watch[] = {"ACE_Altimeter"};
@@ -287,7 +287,7 @@ class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD // Marines [Assistant A
 	items[] += {"ACE_quikclot",3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",1 };
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"ffaa_Glasses"};
+	goggles[] = {"rhs_googles_black"};
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};

@@ -198,6 +198,7 @@ class WEAPONS_DEALER_RFL : WEAPONS_DEALER_LEAD // Advanced Rifleman
 	vest[] = {"rhs_6b45_rifleman"};
 	primary[] = {"rhs_weap_ak105_zenitco01_b33","rhs_acc_tgpa","rhs_acc_perst3","rhsusf_acc_ACOG_USMC","rhs_30Rnd_545x39_7N10_AK"};
 	magazines[] = {"rhs_30Rnd_545x39_7N10_AK",14};
+	items[] = {"ACE_quikclot",3,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2};
 	binoculars[] = {""};
 	goggles[] = {"G_Tactical_Clear"};
 	headgear[] = {"rhsusf_bowman_cap"};

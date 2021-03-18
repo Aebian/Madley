@@ -6,58 +6,25 @@ Temp file for debugging scripts and functions.
 
 */
 
-params["_aircraft", "_group"];
-// (units _group) params ["_gunner", "_pilot"];
 
 
-
-_unitsGreen = [];
-{if ((side _x) == independent) then {_unitsGreen pushBack _x}} forEach allUnits;
-
-
-
-_targetPos = [];
-
-switch (_aircraft) do
+private _aircraft = param[0,objnull]; //helicopter
+private _z1 = param[1,0.5]; //stop height, I recommend setting this slightly above zero
+private _v1 = param[2,-2]; //stop velocity in z axis, don't set this positive or the helicopter will start flying upwards
+private _refreshTime = param[3,0.01];
+ 
+private _z2 = getpos _aircraft select 2;
+private _v2 = velocity _aircraft select 2;
+private _Vel = [];
+private _velZ = 0;
+private _z = getpos _aircraft select 2;
+while{_z >= _z1}do
 {
-
-	case 0: 
-	{
-		_targetPos = [10114.1,3990.78,0.0120544]; // Medical Camp
-
-	};
-
-	case 1: 
-	{
-		_targetPos = [8474.72,3773.58,0]; // Police Port
-		
-	};
-
-	case 2: 
-	{
-		_targetPos = [7725.62,4113.46,0.929428]; // Police HQ
-		
-	};
-
-	case 3: 
-	{
-		_targetPos = [4476.17,4268.79,0]; // USMC Hideout
-		
-	};
-
-
-	case 4: 
-	{
-		_targetPos = [729.582,12121.9,3.396]; // US Base
-		
-	};
-
-	case 5: 
-	{
-		_targetPos = []; // TBD
-		
-	};
-
+    _z = getpos _aircraft select 2;
+    _velZ = [_v1,_v2,(_z-_z1)/(_z2-_z1)] call BIS_fnc_lerp;
+    _vel = (velocity _aircraft);
+    _vel set [2,_velZ];
+    _aircraft setVelocity _vel;
+    sleep _refreshTime; //does not need to be every frame, gravity is not that fast anyway
+    //hintSilent(str([floor _z,_vel select 2,(_z-_z1)/(_z2-_z1)]));
 };
-
-{group _x addWaypoint [_targetPos, 1, 1, "MOVEIT"]} forEach _unitsGreen;
