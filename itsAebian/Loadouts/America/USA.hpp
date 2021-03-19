@@ -396,7 +396,7 @@ class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP // Army Special Scout Sniper
 { 
 	uniform[] = {"rhs_uniform_g3_m81"};
 	vest[] = {"rhsusf_spcs_ocp_sniper"};
-	backpack[] = {"ace_gunbag"};
+	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_XM2010_d","rhsusf_acc_M2010S","rhsusf_acc_anpeq15side","rhsusf_acc_M8541_mrds","bipod_02_F_hex","rhsusf_5Rnd_300winmag_xm2010"};
 	secondary[] = {"rhsusf_weap_m1911a1", "rhsusf_mag_7x45acp_MHP"};
 	launcher[] = {""};
@@ -419,7 +419,7 @@ class US_ARMY_SPC_SNIPER_ALT : US_ARMY_DEFAULT_UCP  // Army Special Scout Sniper
 {
     uniform[] = {"rhs_uniform_g3_m81"};
     vest[] = {"rhsusf_spcs_ocp_sniper"};
-    backpack[] = {"ace_gunbag"};
+    backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
     primary[] = {"rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan","rhs_acc_perst1ik_ris","optic_Hamr_khk_F","rhsusf_acc_grip2_wd","rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"};
     secondary[] = {"rhsusf_weap_m1911a1"};
     launcher[] = {""};
