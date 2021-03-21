@@ -28,6 +28,49 @@ diag_log format ["%1, %2", groupId _helicrew, "is KIA." ];
 _helicrew setVariable ["KI_chopperEvac_cfSwitch", "KIA"];
 };
 
+
+private _kiDescend = 
+{
+    params["_z1"];
+    _v1 = -6;
+    _refreshTime = 0.1;
+                
+    _z2 = getPosATL _aircraft select 2;
+    _v2 = velocity _aircraft select 2;
+    _Vel = [];
+    _velZ = 0;
+    _z = getPosATL _aircraft select 2;
+    while{_z >= _z1} do
+    {
+        _z = getPosATL _aircraft select 2;
+        _velZ = [_v1,_v2,(_z-_z1)/(_z2-_z1)] call BIS_fnc_lerp;
+        _vel = (velocity _aircraft);
+        _vel set [2,_velZ];
+        _aircraft setVelocity _vel;
+        sleep _refreshTime;
+    };  
+};
+
+_destination = objNull;
+
+switch (typeName _dropzone) do
+{
+    case "ARRAY":
+    {
+        _destination =  _dropzone;
+    };
+
+    case "STRING":
+    {
+        _destination = (getMarkerPos _dropzone);
+    };
+
+    case "OBJECT": 
+    {
+    _destination = (getPosATL _dropzone);
+    };
+};
+
 switch (_cond) do 
 {
 
@@ -47,7 +90,7 @@ switch (_cond) do
 		} forEach [driver _aircraft];
 
 
-		_helicrew setVariable ["KI_chopperEvac_BasePad", (getPos _aircraft)];
+		_helicrew setVariable ["KI_chopperEvac_BasePad", (getPosATL _aircraft)];
 		_helicrew setVariable ["KI_chopperEvac_cfSwitch", "IAO"];
 
 		[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
@@ -56,26 +99,6 @@ switch (_cond) do
 
 	case "IAO": // Insert to AO
     {
-	 _destination = objNull;
-
-        switch (typeName _dropzone) do
-        {
-            case "ARRAY":
-            {
-                _destination =  _dropzone;
-            };
-
-            case "STRING":
-            {
-                _destination = (getMarkerPos _dropzone);
-            };
-
-            case "OBJECT": 
-            {
-            _destination = (getPos _dropzone);
-            };
-        };
-
         if (count ((waypoints _helicrew) apply {_x select 1}) >= 2) then
         {
             deleteWaypoint [_helicrew, 1];
@@ -91,6 +114,7 @@ switch (_cond) do
             _onTarget setWaypointType "MOVE";
 
             [_helicrew, 1] setWaypointSpeed "FULL";
+            [_helicrew, 1] setWaypointCompletionRadius 3;
 
         };
 
@@ -100,39 +124,45 @@ switch (_cond) do
 		{
 			case "FRI": // Fast Rope Insert (Hover)
 			{
-
-                waitUntil {(_aircraft distance _destination) < 1600};
-                 _z1 = 0.5;
-                 _v1 = -2;
-                 _refreshTime = 0.01;
-                
-                 _z2 = getpos _aircraft select 2;
-                 _v2 = velocity _aircraft select 2;
-                 _Vel = [];
-                 _velZ = 0;
-                 _z = getpos _aircraft select 2;
-                while{_z >= _z1} do
+                waitUntil {(_aircraft distance _destination) < 1000};
+                if ((_destination select 2) <= 18) then
                 {
-                    _z = getpos _aircraft select 2;
-                    _velZ = [_v1,_v2,(_z-_z1)/(_z2-_z1)] call BIS_fnc_lerp;
-                    _vel = (velocity _aircraft);
-                    _vel set [2,_velZ];
-                    _aircraft setVelocity _vel;
-                    sleep _refreshTime;
-                };       
-				waitUntil {(_aircraft distance _destination) < 499};
+                    [18] call _kiDescend;
+                } 
+                else 
+                {
+                    [(_destination select 2)+ 2] call _kiDescend;
+                };
+
+				waitUntil {(_aircraft distance _destination) < 400};
 
                 [format ["%1, %2", groupId _helicrew, "is on target to insert troops, over." ]] remoteExecCall ["sideChat"];
 				diag_log format ["%1, %2", groupId _helicrew, "is on target to insert troops, over." ];	
 
-				waitUntil {(_aircraft distance _destination) < 60};
+                waitUntil {(_aircraft distance _destination) < 120};
+
+                _vect = (getposATL _aircraft) vectorDiff [_destination select 0,_destination select 1,getposATL _aircraft select 2]; 
+                _phi = (_vect select 1) atan2 (_vect select 0); 
+                
+                _aircraft doMove ([(_destination select 0)+48*cos(_phi+180),(_destination select 1)+48*sin(_phi+180),200]);
+				waitUntil {speed _aircraft < 1};
+
 				_troops = (fullCrew [_aircraft, "cargo", false]) apply {_x select 0};
 
-				[_aircraft, 18] call AR_Rappel_All_Cargo; // Needs Advanced Rappel Mod to work (ACE3 is eeeh)
-                deleteWaypoint [_helicrew, 1];
 
+                if ((_destination select 2) <= 18) then 
+                {
+                    [_aircraft, 18] call AR_Rappel_All_Cargo; // Needs Advanced Rappel Mod to work (ACE3 is eeeh)
+                } 
+                else 
+                {
+                    [_aircraft, ((_destination select 2)+ 3)] call AR_Rappel_All_Cargo; // Needs Advanced Rappel Mod to work (ACE3 is eeeh)
+
+                };
                 waitUntil { count ((fullCrew [_aircraft, "cargo", false]) apply {_x select 0}) == 0};
-				fullCrew [_aircraft, "cargo", false] apply {unassignVehicle (_x#0)};
+				
+                fullCrew [_aircraft, "cargo", false] apply {unassignVehicle (_x#0)};
+                deleteWaypoint [_helicrew, 1];
 
                 sleep 10;
 				_helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
@@ -143,25 +173,9 @@ switch (_cond) do
 
 			case "WDI": // Wheels Down Insert (Landing)
 			{
-                waitUntil {(_aircraft distance _destination) < 1600};
-                 _z1 = 0.5;
-                 _v1 = -2;
-                 _refreshTime = 0.01;
-                
-                 _z2 = getpos _aircraft select 2;
-                 _v2 = velocity _aircraft select 2;
-                 _Vel = [];
-                 _velZ = 0;
-                 _z = getpos _aircraft select 2;
-                while{_z >= _z1} do
-                {
-                    _z = getpos _aircraft select 2;
-                    _velZ = [_v1,_v2,(_z-_z1)/(_z2-_z1)] call BIS_fnc_lerp;
-                    _vel = (velocity _aircraft);
-                    _vel set [2,_velZ];
-                    _aircraft setVelocity _vel;
-                    sleep _refreshTime;
-                };     
+                waitUntil {(_aircraft distance _destination) < 1000};
+                [0.5] call _kiDescend;     
+		
 				 waitUntil {(_aircraft distance _destination) < 499};
                 _lpad = nearestObject [_dropzone, ("Helipad_base_F")];
 
@@ -204,7 +218,7 @@ switch (_cond) do
                     deleteVehicle _tempad;
                 };
 
-                sleep 5;
+                sleep 10;
 
                 _helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
 				[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
@@ -213,25 +227,9 @@ switch (_cond) do
 
 			case "EVAC": // Evac of Troops
 			{
-                waitUntil {(_aircraft distance _destination) < 1600};
-                 _z1 = 0.5;
-                 _v1 = -2;
-                 _refreshTime = 0.01;
-                
-                 _z2 = getpos _aircraft select 2;
-                 _v2 = velocity _aircraft select 2;
-                 _Vel = [];
-                 _velZ = 0;
-                 _z = getpos _aircraft select 2;
-                while{_z >= _z1} do
-                {
-                    _z = getpos _aircraft select 2;
-                    _velZ = [_v1,_v2,(_z-_z1)/(_z2-_z1)] call BIS_fnc_lerp;
-                    _vel = (velocity _aircraft);
-                    _vel set [2,_velZ];
-                    _aircraft setVelocity _vel;
-                    sleep _refreshTime;
-                };     
+                waitUntil {(_aircraft distance _destination) < 1000};
+                [0.5] call _kiDescend;
+
 				 waitUntil {(_aircraft distance _destination) < 499};
 
                 [format ["%1, %2", "%3", "%4", groupId _helicrew, "is on target to evacute the troops and is waiting for",[_wait, "MM:SS"] call BIS_fnc_secondsToString,"mikes, over." ]] remoteExecCall ["sideChat"];
@@ -279,7 +277,7 @@ switch (_cond) do
         _rtbPoint setWaypointScript "A3\functions_f\waypoints\fn_wpLand.sqf";
         _aircraft limitSpeed 1000;
 
-        sleep 2;
+        waitUntil {(_aircraft distance _destination) > 40};
          _weapons = _aircraft weaponsTurret [-1];
         {
             if ("cmdispenser" in toLowerANSI _x || "CMFlareLauncher" in toLowerANSI _x) exitWith
