@@ -412,6 +412,7 @@ class RU_MSV_Rifleman : RU_VDV_RFL_BASE // MSV [Rifleman] (Private 1st Class)
 class RU_MSV_CREW : RU_VDV_CREW // MSV [Vehicle Crew Commander]
 {
 	uniform[] = {"rhs_uniform_msv_emr"};
+};
 
 class RU_MSV_CREW_CM : RU_MSV_CREW // MSV [Vehicle Crew Commander]
 {

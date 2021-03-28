@@ -61,7 +61,7 @@ class US_AIRFORCE_ATC : US_ARMY_DEFAULT_UCP // Air Traffic Controller
 	headgear[] = {"rhsusf_Bowman"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
-	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";};
+	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
 };
 
 class US_AIRFORCE_JPLT : CommonAmerica // Airforce Jet Pilot
@@ -106,7 +106,8 @@ class US_AIRFORCE_STARGATE03_TL : CommonAmerica // Airforce Stargate 03 Team-Lea
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ChemicalDetector_01_watch_F"};
-	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"",0]";};	
+	preLoadout = "[(_this select 0),""Stargate03""] call bis_fnc_setUnitInsignia; (_this select 0) setVariable [""ACE_GForceCoef"",0]";
+};	
 
 class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL // Airforce Stargate 03 Member
 {
