@@ -16,7 +16,6 @@ class CommonPolice : CommonBlufor // [this,"Loadout"] call Poppy_fnc_applyLoadou
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class Police_Officer_WEST : CommonPolice 

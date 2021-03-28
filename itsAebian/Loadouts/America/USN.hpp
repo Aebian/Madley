@@ -19,14 +19,12 @@ class US_NAVY_ADM : CommonAmerica // Admiral
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 
 class US_NAVY_RADM : US_NAVY_ADM // Rear Admiral
 {
 	gps[] = {"B_EasyTrack_Tablet"};
-
 };
 
 class US_NAVY_JPLT : CommonAmerica // Navy [Jet Pilot]
@@ -48,7 +46,6 @@ class US_NAVY_JPLT : CommonAmerica // Navy [Jet Pilot]
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class US_NAVY_MPLT : CommonAmerica // Air Medavac Pilot
@@ -70,7 +67,6 @@ class US_NAVY_MPLT : CommonAmerica // Air Medavac Pilot
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class US_NAVY_MEDIC : CommonAmerica // Navy Medic
@@ -92,7 +88,6 @@ class US_NAVY_MEDIC : CommonAmerica // Navy Medic
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
-
 };
 
 class US_NAVY_PARAM : CommonAmerica // Navy Paramedic
@@ -113,7 +108,6 @@ class US_NAVY_PARAM : CommonAmerica // Navy Paramedic
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
-
 };
 
 class US_NAVY_AMCQSEC : CommonAmerica // Air Medevac Perimeter Security
@@ -134,5 +128,4 @@ class US_NAVY_AMCQSEC : CommonAmerica // Air Medevac Perimeter Security
 	headgear[] = {"rhsusf_hgu56p_mask"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };

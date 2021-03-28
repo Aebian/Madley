@@ -16,7 +16,6 @@ class CommonCanada : CommonBlufor // [this,"Loadout"] call Poppy_fnc_applyLoadou
 	map[] = {""};
 	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {""};
-
 };
 
 class CA_RECON_RFL : CommonCanada // Recon Rifleman
@@ -38,7 +37,6 @@ class CA_RECON_RFL : CommonCanada // Recon Rifleman
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
 	preLoadout = "[(_this select 0) ,""Canada""] call bis_fnc_setUnitInsignia;";
-
 };
 
 class CA_RECON_ARM : CA_RECON_RFL // Recon Rifleman (ARM)
@@ -59,5 +57,4 @@ class CA_RECON_ARM : CA_RECON_RFL // Recon Rifleman (ARM)
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
 	preLoadout = "[(_this select 0) ,""Canada""] call bis_fnc_setUnitInsignia;";
-
 };

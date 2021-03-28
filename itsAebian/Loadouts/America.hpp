@@ -16,7 +16,6 @@ class CommonAmerica : CommonBlufor // [this,"Loadout"] call Poppy_fnc_applyLoado
 	map[] = {""};
 	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {""};
-
 };
 
 #include "America\USA.hpp"

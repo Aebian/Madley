@@ -81,6 +81,7 @@ switch (_cond) do
 			_x disableAI "AUTOCOMBAT";
 			_x disableAI "AUTOTARGET";
 			_x disableAI "TARGET";
+            _x disableAI "COVER";
 		} forEach [driver _aircraft];
 				
 		{
@@ -301,6 +302,7 @@ switch (_cond) do
             _x enableAI "AUTOCOMBAT";
             _x enableAI "AUTOTARGET";
             _x enableAI "TARGET";
+            _x enableAI "COVER";
         } forEach [driver _aircraft];
 
         _aircraft land "LAND";

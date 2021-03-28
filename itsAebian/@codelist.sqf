@@ -227,7 +227,9 @@ attachPos = (get3DENSelected "object" select 0) worldToModel (getPosATL (get3DEN
 comment "Returns direction of selected 3DEN object from 0 to 360";
 dirPos = (get3DENSelected "object" select 0); copyToClipboard (getDir(str (dirPos)) worldToModel _x);
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
+comment "Return array of numbers for setVectorDirAndUp";
+vectorPos = [vectorDir (get3DENSelected "object" select 0), vectorUp (get3DENSelected "object" select 0)]; copyToClipboard (str (vectorPos));
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // RHS (rhsmods.org) - Specific Codes \\
 comment "Will make a RHS Humvee Olive Green";

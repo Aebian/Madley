@@ -18,6 +18,6 @@ KI_fnc_purgeDevice =
 
 params["_vehicle", "_object"];
 
-_vehicle addAction ["Trigger Device",KI_fnc_purgeDevice,_object,2,true,true,"","vehicle player isEqualTo _target"];
+_vehicle addAction ["Trigger Device",KI_fnc_purgeDevice,_object,2,true,true,"","vehicle _caller isEqualTo _target"];
 
 

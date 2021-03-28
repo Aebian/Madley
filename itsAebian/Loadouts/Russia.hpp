@@ -17,7 +17,6 @@ class CommonRussia : CommonOpfor // [this, "Loadout"] call Poppy_fnc_applyLoadou
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
 	lrRadios[] = {""};
-
 };
 
 class RU_VDV_CO : CommonRussia // VDV [Commanding Officer]
@@ -38,7 +37,6 @@ class RU_VDV_CO : CommonRussia // VDV [Commanding Officer]
 	headgear[] = {"rhs_beret_vdv1"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_VDV_JTAC : CommonRussia // VDV [Joint Terminal Attack Controller]
@@ -59,7 +57,6 @@ class RU_VDV_JTAC : CommonRussia // VDV [Joint Terminal Attack Controller]
 	headgear[] = {"rhs_beret_vdv1"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_VDV_CREW : CommonRussia // VDV [Vehicle Crew]
@@ -79,7 +76,6 @@ class RU_VDV_CREW : CommonRussia // VDV [Vehicle Crew]
 	headgear[] = {"rhs_tsh4_ess_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_CREW_CM : RU_VDV_CREW // VDV [Vehicle Crew Commander]
@@ -88,7 +84,6 @@ class RU_VDV_CREW_CM : RU_VDV_CREW // VDV [Vehicle Crew Commander]
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	secondary[] = {"rhs_weap_pya"};
 	magazines[] += {"rhs_mag_9x19_17",2};
-
 };
 
 class RU_VDV_DES_Sergeant : CommonRussia // VDV [Team Leader] (Lieutenant / Sergeant)
@@ -109,7 +104,6 @@ class RU_VDV_DES_Sergeant : CommonRussia // VDV [Team Leader] (Lieutenant / Serg
 	headgear[] = {"rhs_6b7_1m_emr_ess_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_RFL_BASE : CommonRussia // VDV [Rifleman] Base
@@ -129,7 +123,6 @@ class RU_VDV_RFL_BASE : CommonRussia // VDV [Rifleman] Base
 	headgear[] = {"rhs_6b27m_digi_ess_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE // VDV [Rifleman] Senior (Corporal)
@@ -137,7 +130,6 @@ class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE // VDV [Rifleman] Senior (Corporal)
 	vest[] = {"rhs_6b13_6sh92"};
 	primary[] = {"rhs_weap_ak74m_gp25","rhs_acc_dtk"};
 	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",4,"rhs_VG40SZ",4,"SmokeShellGreen",2};
-
 };
 
 
@@ -157,7 +149,6 @@ class RU_VDV_DES_Machinegunner : CommonRussia // VDV [Machine Gunner] (Private 1
 	headgear[] = {"rhs_6b27m_digi_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 
@@ -176,7 +167,6 @@ class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE // VDV [Rifleman GP-25] (Private 1st
 	headgear[] = {"rhs_6b27m_digi_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_DES_GL_RPG26 : RU_VDV_DES_GL_RShG2 // VDV [Rifleman GP-25] (Private 1st Class)
@@ -200,22 +190,19 @@ class RU_VDV_DES_Rifleman_Lite : CommonRussia // VDV [Sharpshooter] (Corporal)
 	headgear[] = {"rhs_6b27m_digi_ess_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 
 class RU_VDV_DES_Rifleman : RU_VDV_RFL_BASE // VDV [Rifleman] (Private 1st Class)
 {
  launcher[] = {"rhs_weap_rpg26"};
-
 };
 
 class RU_VDV_DES_Rifleman02 : RU_VDV_RFL_BASE // VDV [Rifleman] (Private 2nd Class --> Private)
 {
-launcher[] = {"rhs_weap_rshg2"};
-backpack[] = {"rhs_sidor"};
-magazines[] += {"rhs_100Rnd_762x54mmR_7N26",2};
-
+	launcher[] = {"rhs_weap_rshg2"};
+	backpack[] = {"rhs_sidor"};
+	magazines[] += {"rhs_100Rnd_762x54mmR_7N26",2};
 };
 
 
@@ -235,7 +222,6 @@ class RU_VDV_SNP : CommonRussia // VDV [Sniper]
 	headgear[] = {"rhs_6b27m_digi_ess_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_Grenadier : CommonRussia // VDV [Grenadier (RPG-7)]
@@ -254,7 +240,6 @@ class RU_VDV_Grenadier : CommonRussia // VDV [Grenadier (RPG-7)]
 	headgear[] = {"rhs_6b27m_digi_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_Grenadier_Assistant : RU_VDV_RFL_BASE // VDV [Grenadier (RPG-7)]
@@ -271,7 +256,6 @@ class RU_VDV_Grenadier_Assistant : RU_VDV_RFL_BASE // VDV [Grenadier (RPG-7)]
 	headgear[] = {"rhs_6b27m_digi_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_DES_Machinegunner_WT : CommonRussia // VDV [Machine Gunner / Weapons Team] (Corporal)
@@ -290,15 +274,12 @@ class RU_VDV_DES_Machinegunner_WT : CommonRussia // VDV [Machine Gunner / Weapon
 	headgear[] = {"rhs_6b27m_digi_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_DES_Machinegunner_Assistant_WT : RU_VDV_RFL_BASE 
 {
 backpack[] = {"B_Carryall_oli"};
 magazines[] = {"rhs_45Rnd_545X39_7U1_AK", 5,"rhs_100Rnd_762x54mmR_7N26",3};
-
-
 };
 
 class RU_VDV_DES_RFL_AA : CommonRussia // VDV [Rifleman Anti-Air]
@@ -317,7 +298,6 @@ class RU_VDV_DES_RFL_AA : CommonRussia // VDV [Rifleman Anti-Air]
 	headgear[] = {"rhs_6b27m_digi_ess_bala"};
 	map[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_LOG : CommonRussia // VDV [Logistic]
@@ -338,7 +318,6 @@ class RU_VDV_LOG : CommonRussia // VDV [Logistic]
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
 	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 1, true];";
-
 };
 
 class RU_VDV_ACO : CommonRussia // VDV [Aircraft Ground Coordinator]
@@ -358,7 +337,6 @@ class RU_VDV_ACO : CommonRussia // VDV [Aircraft Ground Coordinator]
 	headgear[] = {"ffaa_moe_boina"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
-
 };
 
 class RU_VDV_ATC : CommonRussia // VDV [Air Traffic Controller]
@@ -378,7 +356,6 @@ class RU_VDV_ATC : CommonRussia // VDV [Air Traffic Controller]
 	headgear[] = {"rhsusf_Bowman"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
-
 };
 
 
@@ -402,7 +379,6 @@ class RU_VDV_SPC01 : CommonRussia // VDV [Specialist]
 	watch[] = {"ItemWatch"};
 	nvgs[]= {"rhs_1PN138"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class RU_VDV_SPC02 : CommonRussia // VDV [Specialist]
@@ -425,20 +401,17 @@ class RU_VDV_SPC02 : CommonRussia // VDV [Specialist]
 	watch[] = {"ItemWatch"};
 	nvgs[]= {"rhs_1PN138"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class RU_MSV_Rifleman : RU_VDV_RFL_BASE // MSV [Rifleman] (Private 1st Class)
 {
  uniform[] = {"rhs_uniform_flora"};
  launcher[] = {"rhs_weap_rpg26"};
-
 };
 
 class RU_MSV_CREW : RU_VDV_CREW // MSV [Vehicle Crew Commander]
 {
 	uniform[] = {"rhs_uniform_msv_emr"};
-};
 
 class RU_MSV_CREW_CM : RU_MSV_CREW // MSV [Vehicle Crew Commander]
 {
@@ -447,7 +420,6 @@ class RU_MSV_CREW_CM : RU_MSV_CREW // MSV [Vehicle Crew Commander]
 	secondary[] = {"rhs_weap_pya"};
 	magazines[] += {"rhs_mag_9x19_17",2};
 };
-
 
 class RU_VVS_HPLT : CommonRussia // VVS [Helicopter Pilot]
 {
@@ -469,15 +441,13 @@ class RU_VVS_HPLT : CommonRussia // VVS [Helicopter Pilot]
 	watch[] = {"ItemWatch"};
 	nvgs[]= {"NVGogglesB_gry_F"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class RU_VVS_JPLT : RU_VVS_HPLT 
 {
 	headgear[] = {"rhs_zsh7a_alt"};
 	backpack[] = {"rhs_d6_Parachute_backpack"};
-
-}
+};
 
 class RU_SPC_LEAD : CommonRussia // спецназ [Colonel / Leader] #\ Not Used By Players /#
 {
@@ -496,7 +466,6 @@ class RU_SPC_LEAD : CommonRussia // спецназ [Colonel / Leader] #\ Not Use
 	gps[] = {"o_EasyTrack_PDA"};
 	headgear[] = {"rhs_beret_vdv3"};
 	map[] = {"ItemMap"};
-
 };
 
 class RU_SPC_PO : CommonRussia // спецназ [Project Officer]
@@ -517,7 +486,6 @@ class RU_SPC_PO : CommonRussia // спецназ [Project Officer]
 	headgear[] = {"rhssaf_beret_red"};
 	map[] = {"ItemMap"};
     preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0];";
-
 };
 
 class RU_SPC_TL : CommonRussia // спецназ [Team Leader]
@@ -538,7 +506,6 @@ class RU_SPC_TL : CommonRussia // спецназ [Team Leader]
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_OP : CommonRussia // спецназ [Operator]
@@ -558,7 +525,6 @@ class RU_SPC_OP : CommonRussia // спецназ [Operator]
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
@@ -578,7 +544,6 @@ class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_MED : CommonRussia // спецназ [Medic]
@@ -599,7 +564,6 @@ class RU_SPC_MED : CommonRussia // спецназ [Medic]
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
-
 };
 
 class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
@@ -619,7 +583,6 @@ class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
@@ -639,7 +602,6 @@ class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
 	headgear[] = {"rhs_beanie_green"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_ENG : CommonRussia // спецназ | Engineer
@@ -659,7 +621,6 @@ class RU_SPC_ENG : CommonRussia // спецназ | Engineer
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class RU_SPC_IGLA : CommonRussia // спецназ [Operator]
@@ -679,5 +640,4 @@ class RU_SPC_IGLA : CommonRussia // спецназ [Operator]
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };

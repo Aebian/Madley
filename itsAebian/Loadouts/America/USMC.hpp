@@ -16,7 +16,6 @@ class US_MARINES_DEFAULT_FROGWD : CommonBlufor // Base Loadout for US Marines (F
 	headgear[] = {"rhsusf_opscore_ut_pelt_nsw_cam", "rhsusf_mich_helmet_marpatwd_norotos_arc_headset", "rhsusf_lwh_helmet_marpatwd_headset"};
 	map[] = {"ItemMap"};
 	watch[] = {""};
-
 };
 
 
@@ -35,7 +34,6 @@ class US_MARINES_PL : US_MARINES_DEFAULT_FROGWD // Marines [Platoon Leader]
 	gps[] = {"ItemGPS"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_JTAC : US_MARINES_DEFAULT_FROGWD // Marines [Joint Terminal Attack Controller]
@@ -54,7 +52,6 @@ class US_MARINES_JTAC : US_MARINES_DEFAULT_FROGWD // Marines [Joint Terminal Att
 	gps[] = {"ItemGPS"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD // Marines [Squad Leader]
@@ -73,7 +70,6 @@ class US_MARINES_SQL : US_MARINES_DEFAULT_FROGWD // Marines [Squad Leader]
 	gps[] = {"ItemGPS"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD // Marines [Fire Team Leader]
@@ -91,7 +87,6 @@ class US_MARINES_FTL : US_MARINES_DEFAULT_FROGWD // Marines [Fire Team Leader]
 	gps[] = {"ItemGPS"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD // Marines [Automatic Rifleman]
@@ -109,7 +104,6 @@ class US_MARINES_ARM : US_MARINES_DEFAULT_FROGWD // Marines [Automatic Rifleman]
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier]
@@ -127,7 +121,6 @@ class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier]
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier M32]
@@ -145,7 +138,6 @@ class US_MARINES_GND32 : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier M32]
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
@@ -163,7 +155,6 @@ class US_MARINES_RFL : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman Anti-Tank]
@@ -181,7 +172,6 @@ class US_MARINES_RFL_AT : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman Anti-Ta
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
@@ -199,7 +189,6 @@ class US_MARINES_MXM : US_MARINES_DEFAULT_FROGWD // Marines [Rifleman]
 	gps[] = {""};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD // Marines [Weapon Squad Leader]
@@ -219,7 +208,6 @@ class US_MARINES_WSL : US_MARINES_DEFAULT_FROGWD // Marines [Weapon Squad Leader
 	headgear[] = {"rhsusf_ach_bare_semi_headset"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD // Marines [Heavy Machine Gunner]
@@ -237,7 +225,6 @@ class US_MARINES_MG : US_MARINES_DEFAULT_FROGWD // Marines [Heavy Machine Gunner
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD // Marines [Assistant Heavy Machine Gunner]
@@ -255,7 +242,6 @@ class US_MARINES_AMG : US_MARINES_DEFAULT_FROGWD // Marines [Assistant Heavy Mac
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD // Marines [AT Specialist]
@@ -273,7 +259,6 @@ class US_MARINES_SPEC_AT : US_MARINES_DEFAULT_FROGWD // Marines [AT Specialist]
 	gps[] = {""};
 	map[] = {"ItemMap"};	
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD // Marines [Assistant AT Specialist]
@@ -291,7 +276,6 @@ class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD // Marines [Assistant A
 	gps[] = {""};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
-
 };
 
 class US_MARINES_PLT : US_MARINES_DEFAULT_FROGWD // Army Pilot with HGU-65
@@ -312,7 +296,6 @@ class US_MARINES_PLT : US_MARINES_DEFAULT_FROGWD // Army Pilot with HGU-65
 	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
-
 };
 
 class US_MARINES_DOORGUNNER : US_MARINES_PLT 
@@ -320,5 +303,4 @@ class US_MARINES_DOORGUNNER : US_MARINES_PLT
 	primary[] = {"rhs_weap_mk18_KAC_wd", "rhsusf_acc_anpeq15A", "rhsusf_acc_eotech_552_wd", "rhs_mag_30Rnd_556x45_M855A1_Stanag"};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag",4 };
 	headgear[] = {"rhsusf_hgu56p_visor_mask_tan"};
-
 };

@@ -17,7 +17,6 @@ class CommonGenB : CommonBlufor // [this,"Loadout"] call Poppy_fnc_applyLoadout;
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class CommonGenO : CommonOpfor // [this,"Loadout"] call Poppy_fnc_applyLoadout;
@@ -39,7 +38,6 @@ class CommonGenO : CommonOpfor // [this,"Loadout"] call Poppy_fnc_applyLoadout;
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class CommonGenI : CommonIndependet // [this,"Loadout"] call Poppy_fnc_applyLoadout;
@@ -61,7 +59,6 @@ class CommonGenI : CommonIndependet // [this,"Loadout"] call Poppy_fnc_applyLoad
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class CommonGenC : CommonCivilian // [this,"Loadout"] call Poppy_fnc_applyLoadout;
@@ -83,7 +80,6 @@ class CommonGenC : CommonCivilian // [this,"Loadout"] call Poppy_fnc_applyLoadou
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 
@@ -106,15 +102,12 @@ class Inferno_TL : CommonIndependet // Inferno Squad Team-Lead
 	nvgs[] = {"NVGogglesB_blk_F"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";
-
-
 };
 
 class Inferno_LR : Inferno_TL // Inferno Squad Long-Range Soldier
 {
 	primary[] = {"arifle_MSBS65_Mark_black_F","muzzle_snds_65_TI_blk_F","acc_pointer_IR","optic_Hamr","30Rnd_65x39_caseless_msbs_mag_Tracer"};
-	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";
-};
+	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";};
 
 class Inferno_HW : Inferno_TL // Inferno Squad Heavy-Weapon Soldier
 {
@@ -124,7 +117,6 @@ class Inferno_HW : Inferno_TL // Inferno Squad Heavy-Weapon Soldier
 	launcher[] = {""};
 	magazines[] = {"11Rnd_45ACP_Mag",2,"rhs_75Rnd_762x39mm_tracer",5};
 	preLoadout = "[(_this select 0),""InfernoSquad""] call bis_fnc_setUnitInsignia;";
-
 };
 
 
@@ -146,7 +138,6 @@ class CIA_OP : CommonIndependet // CIA Operator
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 
@@ -168,7 +159,6 @@ class CIA_SEC : CIA_OP // CIA Security Force
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 
@@ -190,7 +180,6 @@ class WEAPONS_DEALER_LEAD : CommonIndependet // The Weapons Dealer
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
-
 };
 
 class WEAPONS_DEALER_RFL : WEAPONS_DEALER_LEAD // Advanced Rifleman 

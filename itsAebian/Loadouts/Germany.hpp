@@ -16,5 +16,4 @@ class CommonGermany : CommonBlufor  // [this, "Loadout"] call Poppy_fnc_applyLoa
 	map[] = {""};
 	nvgs[] = {""};
 	watch[] = {""};
-
 };
