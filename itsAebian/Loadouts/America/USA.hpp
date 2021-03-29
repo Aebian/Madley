@@ -11,7 +11,7 @@ class US_ARMY_DEFAULT_UCP : CommonBlufor // Base Loadout for US Army
 	magazines[] = {""};
 	items[] += { };
 	compass[]= {""};
-	binoculars[] = {"Binocular"};
+	binoculars[] = {"rhsusf_bino_m24_ARD"};
 	goggles[] = {"G_Aviator"};
 	gps[] = {""};
 	headgear[] = {"rhsusf_patrolcap_ucp"};
@@ -49,7 +49,7 @@ class US_ARMY_OPL : US_ARMY_DEFAULT_OCP // Army [Platoon Leader] OCP
 	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",8,"rhsusf_mag_15Rnd_9x19_JHP",2 };
 	items[] += {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",3,"rhs_mag_m18_purple",2,"rhs_mag_m18_red",2};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
-	binoculars[] = {"Binocular"};
+	binoculars[] = {"rhsusf_bino_m24_ARD"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Aviator"};
 	gps[] = {"ItemGPS"};
@@ -65,13 +65,42 @@ class US_ARMY_UPL : US_ARMY_OPL // Army [Platoon Leader] UCP
 	vest[] = {"rhsusf_spcs_ucp_squadleader"};
 };
 
+
+class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP 
+{
+	vest[] = {"rhsusf_spcs_ocp_squadleader"};
+	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
+	primary[] = {"rhs_weap_m4_m203","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR","rhs_mag_30Rnd_556x45_M193_Stanag","rhs_mag_M397_HET"};
+	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
+	launcher[] = {""};
+	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",6,"rhsusf_mag_15Rnd_9x19_JHP",2,"rhs_mag_M397_HET",2};
+	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"Laserbatteries",1,"rhs_mag_m18_green",4,"rhs_mag_m18_purple",4,"rhs_mag_m18_red",4,"rhs_mag_m18_yellow",4,"rhs_mag_m713_Red",3,"rhs_mag_m716_yellow",3,"rhs_mag_m715_Green",3,"NVGogglesB_blk_F",1};
+	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148", "ACRE_PRC148"};
+	binoculars[] = {"Laserdesignator"};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"rhsusf_oakley_goggles_blk"};
+	gps[] = {"ItemGPS"};
+	headgear[] = {"rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ocp_alt"};
+	map[] = {"ItemMap"};
+	nvgs[] = {""};
+	watch[] = {"ACE_Altimeter"};
+};
+
+class US_ARMY_UJTAC : US_ARMY_OJTAC // Army [JTAC] UCP 
+{
+	uniform[] = {"rhs_uniform_cu_ucp"};
+	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	headgear[] = {"rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt"};
+	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
+};
+
 class US_ARMY_OSQL : US_ARMY_OPL // Army [Squad Leader] OCP
 {
 	vest[] = {"rhsusf_spcs_ocp_squadleader"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_m4_m203","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3_3d","rhs_mag_30Rnd_556x45_M193_Stanag","rhs_mag_M397_HET"};
 	secondary[] = {""};
-	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",8,"rhs_mag_M397_HET", 5,"rhs_mag_m662_red", 2,"rhs_mag_m661_green", 2,"rhs_mag_m714_White", 6,"rhs_mag_m715_Green", 6,"rhs_mag_m713_Red", 6 };
+	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",8,"rhs_mag_M397_HET",5,"rhs_mag_m662_red",2,"rhs_mag_m661_green",2,"rhs_mag_m714_White",6,"rhs_mag_m715_Green",6,"rhs_mag_m713_Red",6};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",4,"rhs_mag_m18_purple",3,"rhs_mag_m18_red",2};
 	lrradios[] = {"ACRE_PRC148"};
 	goggles[] = {""};
@@ -82,6 +111,7 @@ class US_ARMY_USQL : US_ARMY_OSQL // Army [Squad Leader] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_squadleader"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OFTL : US_ARMY_OSQL // Army [Fire Team Leader] OCP
@@ -99,6 +129,7 @@ class US_ARMY_UFTL : US_ARMY_OFTL // Army [Fire Team Leader] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_teamleader","rhsusf_spcs_ucp_teamleader"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_ORFL : US_ARMY_OFTL // Army [Rifleman] OCP
@@ -112,6 +143,7 @@ class US_ARMY_URFL : US_ARMY_ORFL // Army [Rifleman] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OARM : US_ARMY_ORFL // Army [Automatic Rifleman] OCP
@@ -126,6 +158,7 @@ class US_ARMY_UARM : US_ARMY_OARM // Army [Automatic Rifleman] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_saw"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OGND : US_ARMY_ORFL // Army [Grenadier] OCP
@@ -140,6 +173,7 @@ class US_ARMY_UGND : US_ARMY_OGND // Army [Grenadier] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ocp_grenadier"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OMXM : US_ARMY_ORFL // Army [Marksman] OCP
@@ -154,6 +188,7 @@ class US_ARMY_UMXM : US_ARMY_OMXM // Army [Marksman] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_sniper"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OHMG : US_ARMY_OARM // Army [Machine Gunner] OCP
@@ -169,6 +204,7 @@ class US_ARMY_UHMG : US_ARMY_OHMG // Army [Machine Gunner] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_machinegunner"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 
 class US_ARMY_OMGA : US_ARMY_ORFL // Army [Machine Gunner Assistant] OCP
@@ -181,6 +217,7 @@ class US_ARMY_UMGA : US_ARMY_OMGA // Army [Machine Gunner Assistant] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
 };
 
@@ -195,6 +232,7 @@ class US_ARMY_UATS : US_ARMY_OATS // Army [AT-Specialist] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
 };
 
@@ -205,10 +243,11 @@ class US_ARMY_OASA : US_ARMY_ORFL // Army [AT-Specialist Assistant] OCP
 	magazines[] += {"rhs_mag_maaws_HEAT", 2};
 };
 
-class US_ARMY_UASA : US_ARMY_OASA // Army [AT-Specialist Assistant] OCP
+class US_ARMY_UASA : US_ARMY_OASA // Army [AT-Specialist Assistant] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
 };
 
