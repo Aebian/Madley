@@ -89,7 +89,7 @@ class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP
 class US_ARMY_UJTAC : US_ARMY_OJTAC // Army [JTAC] UCP 
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
-	vest[] = {"rhsusf_spcs_ucp_rifleman","rhsusf_spcs_ucp_rifleman_alt"};
+	vest[] = {"rhsusf_spcs_ucp_squadleader"};
 	headgear[] = {"rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
 };
