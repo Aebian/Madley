@@ -125,7 +125,7 @@ switch (_cond) do
 		{
 			case "FRI": // Fast Rope Insert (Hover)
 			{
-                waitUntil {(_aircraft distance _destination) < 1000};
+                waitUntil {(_aircraft distance _destination) < 1200};
                 if ((_destination select 2) <= 18) then
                 {
                     [18] call _kiDescend;
@@ -174,7 +174,7 @@ switch (_cond) do
 
 			case "WDI": // Wheels Down Insert (Landing)
 			{
-                waitUntil {(_aircraft distance _destination) < 1000};
+                waitUntil {(_aircraft distance _destination) < 1200};
                 [0.5] call _kiDescend;     
 		
 				 waitUntil {(_aircraft distance _destination) < 499};
@@ -228,7 +228,7 @@ switch (_cond) do
 
 			case "EVAC": // Evac of Troops
 			{
-                waitUntil {(_aircraft distance _destination) < 1000};
+                waitUntil {(_aircraft distance _destination) < 1200};
                 [0.5] call _kiDescend;
 
 				 waitUntil {(_aircraft distance _destination) < 499};

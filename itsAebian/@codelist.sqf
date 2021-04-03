@@ -221,14 +221,17 @@ comment "Will apply Dazzle camo to the armed NATO prowler";
 comment "Show Objects IDs in the Editor again";
 do3DENAction "ToggleMapIDs";
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Returns the attachTo coordinates of objects you 'placed' in 3DEN that are needed. So you can actually attach items via 3DEN now";
+comment "Returns the attachTo coordinates of objects you 'placed' in 3DEN that are needed. So you can actually attach items via 3DEN now. Object first, then things you want to attach.";
 attachPos = (get3DENSelected "object" select 0) worldToModel (getPosATL (get3DENSelected "object" select 1)); copyToClipboard (str (attachPos));
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Returns direction of selected 3DEN object from 0 to 360";
 dirPos = (get3DENSelected "object" select 0); copyToClipboard (getDir(str (dirPos)) worldToModel _x);
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-comment "Return array of numbers for setVectorDirAndUp";
+comment "Return array of numbers for setVectorDirAndUp when object faces north";
 vectorPos = [vectorDir (get3DENSelected "object" select 0), vectorUp (get3DENSelected "object" select 0)]; copyToClipboard (str (vectorPos));
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+comment "Return array of numbers for setVectorDirAndUp relative to the base objects position.";
+vectorPosRel = [(get3DENSelected "object" select 0) vectorWorldToModel vectorDir (get3DENSelected "object" select 1), (get3DENSelected "object" select 0) vectorWorldToModel vectorUp (get3DENSelected "object" select 1)]; copyToClipboard (str (vectorPosRel));
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // RHS (rhsmods.org) - Specific Codes \\
