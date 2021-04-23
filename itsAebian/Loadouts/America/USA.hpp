@@ -79,7 +79,7 @@ class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP
 	binoculars[] = {"Laserdesignator"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhsusf_oakley_goggles_blk"};
-	gps[] = {"ItemGPS"};
+	gps[] = {"B_UavTerminal"};
 	headgear[] = {"rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ocp_alt"};
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
@@ -111,6 +111,7 @@ class US_ARMY_USQL : US_ARMY_OSQL // Army [Squad Leader] UCP
 {
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_squadleader"};
+	backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
 	headgear[] = {"rhsusf_ach_helmet_ucp_alt","rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ESS_ucp","rhsusf_ach_helmet_headset_ucp","rhsusf_ach_helmet_headset_ucp_alt","rhsusf_ach_helmet_headset_ess_ucp"};
 };
 

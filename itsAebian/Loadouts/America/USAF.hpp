@@ -8,7 +8,7 @@ class US_AIRFORCE_SECF_LEAD : US_ARMY_DEFAULT_UCP // Airforce Security Forces Le
 	primary[] = {"rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhsusf_acc_SFMB556","rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red","rhs_mag_M441_HE"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
 	launcher[] = {""};
-	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red",8,"rhsusf_mag_7x45acp_MHP",3,"rhs_mag_m18_red",2,"rhsusf_mag_15Rnd_9x19_JHP",2,"1Rnd_SmokeRed_Grenade_shell",3,"rhs_mag_m713_Red",4,"rhs_mag_M441_HE",3,"UGL_FlareRed_F",2 };
+	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red",8,"rhs_mag_m18_red",2,"rhsusf_mag_15Rnd_9x19_JHP",2,"rhs_mag_m713_Red",4,"rhs_mag_M441_HE",3,"UGL_FlareRed_F",2 };
 	items[] += {"ACE_packingBandage",2,"ACE_fieldDressing",2,"ACE_EarPlugs",1 };
 	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
