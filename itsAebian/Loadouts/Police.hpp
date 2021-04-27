@@ -80,48 +80,51 @@ class Police_Specialist_WEST_Pilot : Police_Specialist_WEST_Operator
 
 class Police_Officer_EAST : CommonPolice 
 {
-	uniform[] = {"rhsgref_uniform_ttsko_urban"};
-	vest[] = {"rhs_vest_commander"};
+	uniform[] = {"rhs_uniform_omon"};
+	vest[] = {"rhs_belt_holster"};
 	backpack[] = {""};
 	primary[] = {""};
-	secondary[] = {"rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S"};
-	magazines[] = {"rhs_mag_9x18_8_57N181S",4};
+	secondary[] = {"rhs_weap_pya","rhs_mag_9x19_7n31_17"};
+	magazines[] = {"rhs_mag_9x19_7n31_17",4};
 	items[] += {"ACE_EarPlugs",1};
 	goggles[] = {""};
-	headgear[] = {"rhsgref_fieldcap_ttsko_urban"};
+	headgear[] = {"rhs_omon_cap"};
 	postLoadout = "(_this select 0) action ['SwitchWeapon',(_this select 0),(_this select 0),1]";
+};
+
+class Police_Officer_EAST_Beret : Police_Officer_EAST 
+{
+	headgear[] = {"rhs_beret_omon"};
+
 };
 
 class Police_Specialist_EAST_Lead : CommonPolice 
 {
-	uniform[] = {"rhsgref_uniform_ttsko_mountain"};
-	vest[] = {"rhsgref_6b23_ttsko_mountain_nco"};
+	uniform[] = {"rhs_uniform_gorka_r_g_gloves"};
+	vest[] = {"rhs_6b2_holster"};
 	backpack[] = {""};
 	primary[] = {"rhs_weap_ak74n_2","rhs_acc_dtk3","rhs_acc_perst1ik","rhs_acc_1p63","rhs_30Rnd_545x39_7N6M_plum_AK"};
 	secondary[] = {"rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S"};
 	magazines[] = {"rhs_mag_9x18_8_57N181S",4,"rhs_30Rnd_545x39_7N6M_plum_AK",8};
-	goggles[] = {"rhsusf_oakley_goggles_blk"};
-	headgear[] = {"rhs_altyn_novisor_bala"};
+	goggles[] = {""};
+	headgear[] = {"rhs_altyn_bala"};
 	compass[] = {"ItemCompass"};	
 };
 
 class Police_Specialist_EAST_Operator : Police_Specialist_EAST_Lead 
 {
-	uniform[] = {"rhsgref_uniform_ttsko_mountain"};
-	vest[] = {"rhsgref_6b23_ttsko_mountain"};
+	vest[] = {"rhs_6b2_holster"};
 	primary[] = {"rhs_weap_ak105","rhs_acc_uuk","rhs_30Rnd_545x39_7N6M_plum_AK"};
-	secondary[] = {"rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S"};
-	magazines[] = {"rhs_mag_9x18_8_57N181S",4,"rhs_30Rnd_545x39_7N6M_plum_AK",8};
+	magazines[] = {"rhs_mag_9x18_8_57N181S",4,"rhs_30Rnd_545x39_7N6M_plum_AK",6};
 	compass[] = {""};	
 };
 
 
 class Police_Specialist_EAST_Shooter : Police_Specialist_EAST_Operator 
 {
-	vest[] = {"rhsgref_6b23_ttsko_mountain_sniper"};
+	vest[] = {"rhs_6b2_SVD"};
 	primary[] = {"rhs_weap_svds","rhs_acc_tgpv2","rhs_acc_pso1m2","rhs_10Rnd_762x54mmR_7N14"};
-	secondary[] = {"rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S"};
-	magazines[] = {"rhs_mag_9x18_8_57N181S",4,"rhs_10Rnd_762x54mmR_7N14",8};
+	magazines[] = {"rhs_mag_9x18_8_57N181S",2,"rhs_10Rnd_762x54mmR_7N14",8};
 };
 
 

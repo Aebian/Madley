@@ -1,5 +1,5 @@
 ### TheLab - Madley
-Arma 3 Mission on Malden (v2035). Used as playground and script making facility for various purposes. <br>
+Arma 3 Mission on Chernarus (Summer). Used as playground and script making facility for various purposes. <br>
 Airbase and several ambient things included
 
 
@@ -17,4 +17,4 @@ Airbase and several ambient things included
 
 
 ==
-Used Mods: CBA_A3, RHS_DEV, ACE_A3
+Used Mods: CBA_A3, RHS_DEV (All), ACE_A3, CUP Terrains (Base) and Cup Terrains (Maps)

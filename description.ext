@@ -5,12 +5,12 @@ class Header
 	maxPlayers = 450; //max # of players the mission supports
 };
 
-author = "Natascha & Aebian";
+author = "Aebian";
 onLoadName = "TheLab - Madley";
 dev= "Aebian";
 
 loadScreen = "a3\missions_f_tacops\data\img\campaign3_ca.paa";
-onLoadMission = "I can't see your wings but girl you're my Angel...";
+onLoadMission = "Nobody asks to be a hero, it just sometimes turns out that way.";
 overviewText = "TheLab - Madley";
 
 reviveMode = 1;
