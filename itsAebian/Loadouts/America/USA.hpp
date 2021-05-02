@@ -63,7 +63,7 @@ class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP // US Army Air Commander
 
 class US_ARMY_OPL : US_ARMY_DEFAULT_OCP // Army [Platoon Leader] OCP
 {
-	vest[] = {"rhsusf_spcs_ocp_squadleader"};
+	vest[] = {"rhsusf_iotv_ocp_Squadleader"};
 	backpack[] = {""};
 	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhs_mag_30Rnd_556x45_M193_Stanag"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
@@ -90,7 +90,6 @@ class US_ARMY_UPL : US_ARMY_OPL // Army [Platoon Leader] UCP
 
 class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP 
 {
-	vest[] = {"rhsusf_spcs_ocp_squadleader"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_m4_m203","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR","rhs_mag_30Rnd_556x45_M193_Stanag","rhs_mag_M397_HET"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
