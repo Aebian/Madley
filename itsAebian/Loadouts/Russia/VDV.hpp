@@ -12,7 +12,7 @@ class RU_VDV_CO : CommonRussia // VDV [Commanding Officer]
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Goggles_VR"};
-	gps[] = {"o_EasyTrack_Tablet"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_beret_vdv1"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -32,7 +32,7 @@ class RU_VDV_JTAC : CommonRussia // VDV [Joint Terminal Attack Controller]
 	binoculars[] = {"Laserdesignator_02"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Bandanna_khk"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_beret_vdv1"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -51,7 +51,7 @@ class RU_VDV_CREW : CommonRussia // VDV [Vehicle Crew]
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {""};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_tsh4_ess_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -79,7 +79,7 @@ class RU_VDV_DES_Sergeant : CommonRussia // VDV [Team Leader] (Lieutenant / Serg
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {""};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_6b7_1m_emr_ess_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -290,7 +290,7 @@ class RU_VDV_LOG : CommonRussia // VDV [Logistic]
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"ffaa_brilat_item_nbq"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_6b27m_ml_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -310,7 +310,7 @@ class RU_VDV_ACO : CommonRussia // VDV [Aircraft Ground Coordinator]
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Aviator"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"ffaa_moe_boina"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -329,7 +329,7 @@ class RU_VDV_ATC : CommonRussia // VDV [Air Traffic Controller]
 	binoculars[] = {"Binocular"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Aviator"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhsusf_Bowman"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -350,7 +350,7 @@ class RU_VDV_SPC01 : CommonRussia // VDV [Specialist]
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhsusf_shemagh2_gogg_od"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -372,7 +372,7 @@ class RU_VDV_SPC02 : CommonRussia // VDV [Specialist]
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhsusf_shemagh2_gogg_od"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor"};
 	map[] = {"ItemMap"};
 	watch[] = {"ItemWatch"};
@@ -394,7 +394,7 @@ class RU_SPC_LEAD : CommonRussia // спецназ [Colonel / Leader] #\ Not Use
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Bandanna_khk"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_beret_vdv3"};
 	map[] = {"ItemMap"};
 };
@@ -413,7 +413,7 @@ class RU_SPC_PO : CommonRussia // спецназ [Project Officer]
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Goggles_VR"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhssaf_beret_red"};
 	map[] = {"ItemMap"};
     preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0];";
@@ -433,7 +433,7 @@ class RU_SPC_TL : CommonRussia // спецназ [Team Leader]
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -452,7 +452,7 @@ class RU_SPC_OP : CommonRussia // спецназ [Operator]
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
@@ -471,7 +471,7 @@ class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -490,7 +490,7 @@ class RU_SPC_MED : CommonRussia // спецназ [Medic]
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -510,7 +510,7 @@ class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
 	binoculars[] = {"ACE_MX2A"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -529,7 +529,7 @@ class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
 	binoculars[] = {"ACE_MX2A"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Bandanna_aviator"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_beanie_green"};
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
@@ -548,7 +548,7 @@ class RU_SPC_ENG : CommonRussia // спецназ | Engineer
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};
@@ -567,7 +567,7 @@ class RU_SPC_IGLA : CommonRussia // спецназ [Operator]
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
-	gps[] = {"o_EasyTrack_PDA"};
+	gps[] = {"ItemGPS"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
 	map[] = {""};
 	watch[] = {"ACE_Altimeter"};

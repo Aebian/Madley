@@ -24,7 +24,7 @@ class US_NAVY_ADM : CommonAmerica // Admiral
 
 class US_NAVY_RADM : US_NAVY_ADM // Rear Admiral
 {
-	gps[] = {"B_EasyTrack_Tablet"};
+	gps[] = {"ItemGPS"};
 };
 
 class US_NAVY_JPLT : CommonAmerica // Navy [Jet Pilot]
