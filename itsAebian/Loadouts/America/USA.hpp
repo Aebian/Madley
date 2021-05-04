@@ -68,7 +68,7 @@ class US_ARMY_OPL : US_ARMY_DEFAULT_OCP // Army [Platoon Leader] OCP
 	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhs_mag_30Rnd_556x45_M193_Stanag"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
 	launcher[] = {""};
-	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",8,"rhsusf_mag_15Rnd_9x19_JHP",2 };
+	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",6,"rhsusf_mag_15Rnd_9x19_JHP",2 };
 	items[] += {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",3,"rhs_mag_m18_purple",2,"rhs_mag_m18_red",2};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_m24_ARD"};
@@ -293,10 +293,10 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_crewman"};
 	backpack[] = {""};
-	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhs_acc_1p87"};
+	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhs_acc_1p87", "rhs_mag_30Rnd_556x45_M193_Stanag"};
 	secondary[] = {"rhsusf_weap_m9"};
 	launcher[] = {""};
-	magazines[] = {"rhs_mag_100Rnd_556x45_M855_cmag",3,"rhsusf_mag_15Rnd_9x19_FMJ",2 };
+	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",3,"rhsusf_mag_15Rnd_9x19_FMJ",2 };
 	items[] += {"ACE_packingBandage",5,"ACE_quikclot",5,"ACE_tourniquet",2,"rhs_mag_m18_purple",3};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"lerca_1200_tan"};

@@ -118,7 +118,7 @@ comment "Stop AI group from moving without disabling the moveFunction (re-enable
 {_x stop true} forEach units group groupName;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Stop AI at mission start to prevent formation changes done in editor";
-{ doStop _x } forEach units group groupName;
+doStop (units groupName);
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Stop AI from moving around while disabling the PATH FSM";
 {_x disableAI "PATH"} forEach units group groupName;
