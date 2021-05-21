@@ -103,7 +103,7 @@ class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP
 	gps[] = {"B_UavTerminal"};
 	headgear[] = {"rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ocp_alt"};
 	map[] = {"ItemMap"};
-	nvgs[] = {""};
+	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {"ACE_Altimeter"};
 };
 
@@ -121,11 +121,13 @@ class US_ARMY_OSQL : US_ARMY_OPL // Army [Squad Leader] OCP
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_m4_m203","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3_3d","rhs_mag_30Rnd_556x45_M193_Stanag","rhs_mag_M397_HET"};
 	secondary[] = {""};
+	launcher[] = {"rhs_weap_m136"};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",8,"rhs_mag_M397_HET",5,"rhs_mag_m662_red",2,"rhs_mag_m661_green",2,"rhs_mag_m714_White",6,"rhs_mag_m715_Green",6,"rhs_mag_m713_Red",6};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",4,"rhs_mag_m18_purple",3,"rhs_mag_m18_red",2};
 	lrradios[] = {"ACRE_PRC148"};
 	goggles[] = {""};
 	headgear[] = {"rhsusf_ach_helmet_ocp_alt","rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_ESS_ocp","rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ocp_alt","rhsusf_ach_helmet_headset_ess_ocp"};
+	nvgs[] = {"rhsusf_ANPVS_14"};
 };
 
 class US_ARMY_USQL : US_ARMY_OSQL // Army [Squad Leader] UCP
@@ -158,6 +160,7 @@ class US_ARMY_ORFL : US_ARMY_OFTL // Army [Rifleman] OCP
 {
 	vest[] = {"rhsusf_iotv_ocp_Rifleman"};
 	primary[] = {"rhs_weap_m4","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhs_mag_30Rnd_556x45_M193_Stanag"};	
+	launcher[] = {""};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m67",4,"rhs_mag_m18_purple",1};
 };
 
@@ -305,7 +308,7 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	gps[] = {"ItemGPS"};
 	headgear[] = {"rhsusf_cvc_green_alt_helmet"};
 	map[] = {"ItemMap"};
-	nvgs[] = {"rhsusf_ANPVS_14"};
+	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 1, true];";
 };
@@ -404,7 +407,6 @@ class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL // US Army Ranger (Marksman)
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7,"11Rnd_45ACP_Mag", 3 };
 	items[] += {};
-	nvgs[] = {""};
 };
 
 class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL // US Army Ranger (Sniper)
@@ -416,7 +418,6 @@ class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL // US Army Ranger (Sniper)
 	launcher[] = {""};
 	magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag", 8,"rhsusf_5Rnd_762x51_m118_special_Mag", 6 ,"11Rnd_45ACP_Mag", 3 };
 	items[] += {"rhsusf_acc_eotech_552_d","rhsusf_acc_m24_silencer_d"};
-	nvgs[] = {""};
 };
 
 class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP // Army Sniper
@@ -505,7 +506,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP // Army Pilot with HGU-65
 	gps[] = {"ItemGPS"};
 	headgear[] = {"rhsusf_hgu56p","rhsusf_hgu56p_visor"};
 	map[] = {"ItemMap"};
-	nvgs[] = {"rhsusf_ANPVS_14"};
+	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
 };
@@ -531,14 +532,13 @@ class US_ARMY_DOORGUNNER : US_ARMY_PLT // Army Helicopter Door Gunner with HGU-6
 	items[] = {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4};
 	goggles[] = {"rhsusf_shemagh2_od"};
 	headgear[] = {"rhsusf_hgu56p_visor_mask","rhsusf_hgu56p_mask","rhsusf_hgu56p_mask_mo","rhsusf_hgu56p_mask_skull","rhsusf_hgu56p_visor_mask_mo","rhsusf_hgu56p_visor_mask_skull"};
+	nvgs[] = {"NVGogglesB_blk_F"};
 };
 
-class US_ARMY_HGUN_FLIR : US_ARMY_PLT 
+class US_ARMY_HGUN_FLIR : US_ARMY_DOORGUNNER 
 {
 	primary[] = {"MMG_02_sand_F","bipod_01_F_blk","rhsusf_acc_anpeq15side","rhsusf_acc_anpas13gv1","130Rnd_338_Mag"};
 	magazines[] = {"130Rnd_338_Mag",1,"rhsusf_mag_7x45acp_MHP",2};
-	goggles[] = {"rhsusf_shemagh2_od"};
-	headgear[] = {"rhsusf_hgu56p_visor_mask"};
 };
 
 class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP // Army Jet Pilot
@@ -580,7 +580,7 @@ class US_DELTA_OPERATOR : US_ARMY_DEFAULT_OCP // 1st SFOD-D Operator
 	gps[] = {"ItemGPS"};
 	headgear[] = {"rhsusf_protech_helmet_rhino_ess"};
 	map[] = {"ItemMap"};
-	nvgs[] = {""};
+	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0];(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
 };

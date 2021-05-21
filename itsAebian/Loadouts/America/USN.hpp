@@ -27,6 +27,37 @@ class US_NAVY_RADM : US_NAVY_ADM // Rear Admiral
 	gps[] = {"ItemGPS"};
 };
 
+
+class US_NAVY_SWCC_LEAD : CommonAmerica // SWCC [Officer]
+{
+	uniform[] = {"rhs_uniform_g3_m81"};
+	vest[] = {"rhsusf_spc_patchless_radio"};
+	backpack[] = {""};
+	primary[] = {"rhs_weap_m4_carryhandle","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3","rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger"};
+	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_FMJ"};
+	launcher[] = {""};
+	magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger",8,"rhsusf_mag_15Rnd_9x19_FMJ",2 };
+	items[] += {"ACE_quikclot", 3, "ACE_fieldDressing", 4, "ACE_packingBandage", 4, "ACE_tourniquet", 2, "rhs_mag_m18_green", 1, "rhs_mag_m18_red", 1 };
+	lrradios[] =  {"ACRE_PRC148"};
+	binoculars[] = {"rhsusf_bino_lerca_1200_black"};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"rhs_googles_black"};
+	gps[] = {"ItemGPS"};
+	headgear[] = {"rhsusf_opscore_fg_pelt"};
+	map[] = {"ItemMap"};
+	watch[] = {"ACE_Altimeter"};
+};
+
+class US_NAVY_SWCC_OP : US_NAVY_SWCC_LEAD // SWCC [Operator]
+{
+	vest[] = {"rhsusf_spc_patchless"};
+	primary[] = {"rhs_weap_m4_carryhandle","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552","rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger"};
+	goggles[] = {"rhsusf_shemagh2_gogg_tan","rhsusf_shemagh_gogg_tan"};
+	headgear[] = {"rhsusf_opscore_fg"};
+	watch[] = {"ACE_Altimeter"};
+};
+
+
 class US_NAVY_JPLT : CommonAmerica // Navy [Jet Pilot]
 {
 	uniform[] = {"U_B_PilotCoveralls"};

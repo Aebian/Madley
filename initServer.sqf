@@ -9,6 +9,9 @@ ace_medical_selections = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "Rig
 WEST setFriend [CIVILIAN, 1];
 CIVILIAN setFriend [WEST, 1];
 
+WEST setFriend [EAST, 0.8];
+EAST setFriend [WEST, 0.7];
+
 // execVM "itsAebian\us_reveal.sqf";
 
  curGrpW =  createGroup WEST; theCurator  = curGrpW createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
