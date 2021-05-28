@@ -7,7 +7,7 @@ class RU_VVS_HPLT : CommonRussia // VVS [Helicopter Pilot]
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
 	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",4,"rhs_mag_9x19_17",2};
-	items[] += {"ACE_elasticBandage",4,"ACE_fieldDressing",4,"ACE_quikclot",4,"ACE_packingBandage",4,"ACE_morphine",2,"ACE_epinephrine",2,"ACE_tourniquet",2,"ACE_MapTools","ACE_microDAGR"};
+	items[] += {"ACE_elasticBandage",4,"ACE_fieldDressing",4,"ACE_quikclot",4,"ACE_packingBandage",4,"ACE_morphine",2,"ACE_epinephrine",2,"ACE_tourniquet",2,"ACE_MapTools","ACE_microDAGR","rhs_mag_nspn_yellow",3};
 	lrradios[] =  {"ACRE_PRC117F"};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};

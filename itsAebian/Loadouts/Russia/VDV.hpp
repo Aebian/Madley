@@ -6,7 +6,7 @@ class RU_VDV_CO : CommonRussia // VDV [Commanding Officer]
 	primary[] = {"rhs_weap_ak74m_camo","rhs_acc_dtk3","rhs_acc_perst1ik","rhs_acc_pkas"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",5,"rhs_mag_9x19_17",2,"SmokeShellPurple",6,"SmokeShellGreen",3,"SmokeShell",3,"SmokeShellRed",3};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",5,"rhs_mag_9x19_17",2,"rhs_mag_nspn_yellow",6,"rhs_mag_nspn_green",3,"rhs_mag_nspd",3,"rhs_mag_nspn_red",3};
 	items[] += {"ACE_bloodIV",2,"ACE_quikclot",6,"ACE_fieldDressing",6,"ACE_packingBandage",6,"ACE_tourniquet",2,"rhs_6b27m_digi_ess_bala",1};
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
@@ -26,7 +26,7 @@ class RU_VDV_JTAC : CommonRussia // VDV [Joint Terminal Attack Controller]
 	primary[] = {"rhs_weap_ak103_gp25","rhs_acc_pbs1","rhs_acc_ekp1"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_30Rnd_762x39mm_tracer",5,"rhs_mag_9x19_17",2,"SmokeShellGreen", 4,"SmokeShellPurple",6,"SmokeShell",3,"rhs_VG40MD_Red",6};
+	magazines[] = {"rhs_30Rnd_762x39mm_tracer",5,"rhs_mag_9x19_17",2,"rhs_mag_nspn_green", 4,"rhs_mag_nspn_yellow",6,"rhs_mag_nspd",3,"rhs_VG40MD_Red",6};
 	items[] += {"ACE_morphine",1,"ACE_epinephrine",2};
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = {"Laserdesignator_02"};
@@ -73,7 +73,7 @@ class RU_VDV_DES_Sergeant : CommonRussia // VDV [Team Leader] (Lieutenant / Serg
 	primary[] = {"rhs_weap_ak74m_camo","rhs_acc_dtk3","rhs_acc_perst1ik","rhs_acc_1p29"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {"rhs_weap_rshg2"};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",6,"rhs_mag_9x19_17",2,"SmokeShellRed",3};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",6,"rhs_mag_9x19_17",2,"rhs_mag_nspn_red",3};
 	items[] += {"ACE_fieldDressing",6,"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_morphine",1,"ACE_epinephrine",1, "rhs_mag_rgo",3};
 	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"Binocular"};
@@ -108,7 +108,7 @@ class RU_VDV_DES_Efreitor : RU_VDV_RFL_BASE // VDV [Rifleman] Senior (Corporal)
 {
 	vest[] = {"rhs_6b13_6sh92"};
 	primary[] = {"rhs_weap_ak74m_gp25","rhs_acc_dtk"};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",4,"rhs_VG40SZ",4,"SmokeShellGreen",2};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",4,"rhs_VG40SZ",4,"rhs_mag_nspn_green",2};
 };
 
 
@@ -137,7 +137,7 @@ class RU_VDV_DES_GL_RShG2 : RU_VDV_RFL_BASE // VDV [Rifleman GP-25] (Private 1st
 	backpack[] = {""};
 	primary[] = {"rhs_weap_ak74m_fullplum_gp25","rhs_acc_dtk"};
 	launcher[] = {"rhs_weap_rshg2"};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",14,"rhs_VG40SZ",4,"SmokeShellGreen",2};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_VG40TB",14,"rhs_VG40SZ",4,"rhs_mag_nspn_green",2};
 	items[] += {"ACE_packingBandage",2,"ACE_quikclot",2,"ACE_elasticBandage",2,"ACE_fieldDressing",2, "rhs_mag_rgo",1};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
@@ -266,7 +266,7 @@ class RU_VDV_DES_RFL_AA : RU_VDV_RFL_BASE // VDV [Rifleman Anti-Air]
 	backpack[] = {"B_TacticalPack_rgr"};
 	primary[] = {"rhs_weap_aks74un","rhs_acc_pgs64_74un"};
 	launcher[] = {"rhs_weap_igla"};
-	magazines[] = {"rhs_30Rnd_545x39_7U1_AK",7,"rhs_mag_9x19_17",2,"rhs_mag_9k38_rocket",3,"SmokeShellGreen",2, "rhs_mag_rgo",3};
+	magazines[] = {"rhs_30Rnd_545x39_7U1_AK",7,"rhs_mag_9x19_17",2,"rhs_mag_9k38_rocket",3,"rhs_mag_nspn_green",2, "rhs_mag_rgo",3};
 	items[] += {"ACE_EarPlugs"};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
@@ -388,7 +388,7 @@ class RU_SPC_LEAD : CommonRussia // спецназ [Colonel / Leader] #\ Not Use
 	primary[] = {"rhs_weap_asval_grip","rhs_acc_ekp1"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_20rnd_9x39mm_SP6",6,"rhs_mag_9x19_17",2,"SmokeShellGreen",2,"SmokeShellRed",2};
+	magazines[] = {"rhs_20rnd_9x39mm_SP6",6,"rhs_mag_9x19_17",2,"rhs_mag_nspn_green",2,"rhs_mag_nspn_red",2};
 	items[] += {"ACE_packingBandage",2,"ACE_quikclot",2,"ACE_packingBandage",2,"ACE_fieldDressing",2,"ACE_tourniquet",1,"ACE_MapTools"};
 	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
@@ -407,7 +407,7 @@ class RU_SPC_PO : CommonRussia // спецназ [Project Officer]
 	primary[] = {"rhs_weap_ak74m_zenitco01_b33","rhs_acc_uuk", "rhsusf_acc_anpeq15_bk_top", "rhsusf_acc_eotech_552_d", "rhsusf_acc_grip2"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_mag_9x19_17",2,"SmokeShellPurple",3,"rhs_mag_an_m14_th3",1};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",3,"rhs_mag_9x19_17",2,"rhs_mag_nspn_yellow",3,"rhs_mag_an_m14_th3",1};
 	items[] += {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_elasticBandage",3,"ACE_fieldDressing",3,"ACE_morphine",2,"ACE_epinephrine",2,"ACE_tourniquet",1,"ACE_MapTools"};
 	lrradios[] =  {""};
 	binoculars[] = {"rhs_pdu4"};
@@ -427,7 +427,7 @@ class RU_SPC_TL : CommonRussia // спецназ [Team Leader]
 	primary[] = {"rhs_weap_ak105_zenitco01_b33","rhs_acc_dtk4short", "rhsusf_acc_eotech_552_d", "rhsusf_acc_grip2", "rhs_acc_perst3"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",11,"rhs_mag_9x19_17",2,"SmokeShellGreen",4,"SmokeShellRed",4};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",11,"rhs_mag_9x19_17",2,"rhs_mag_nspn_green",4,"rhs_mag_nspn_red",4};
 	items[] += {"ACE_packingBandage",8,"ACE_quikclot",8,"ACE_fieldDressing",8,"ACE_tourniquet",4,"ACE_MapTools"};
 	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
@@ -444,12 +444,12 @@ class RU_SPC_OP : CommonRussia // спецназ [Operator]
 	uniform[] = {"rhs_uniform_gorka_r_g"};
 	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
 	backpack[] = {"B_Carryall_oli"};
-	primary[] = {"rhs_weap_asval_grip","rhs_acc_pkas_asval"};
+	primary[] = {"rhs_weap_asval_grip","rhs_acc_pkas_asval","rhs_20rnd_9x39mm_SP6"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_20rnd_9x39mm_SP6",11,"rhs_mag_9x19_17",2,"SmokeShellGreen",3,"SmokeShellRed",3};
+	magazines[] = {"rhs_20rnd_9x39mm_SP6",11,"rhs_mag_9x19_17",2,"rhs_mag_rgn",3,"rhs_mag_nspn_green",3,"rhs_mag_nspn_red",3};
 	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_tourniquet",2,"ACE_epinephrine","ACE_morphine"};
-	binoculars[] = {""};
+	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
 	gps[] = {"ItemGPS"};
@@ -458,16 +458,21 @@ class RU_SPC_OP : CommonRussia // спецназ [Operator]
 	watch[] = {"ACE_Altimeter"};
 };
 
-class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
+
+class RU_SPC_OP2 : RU_SPC_OP // спецназ [Operator]
 {
-	uniform[] = {"rhs_uniform_gorka_r_g"};
-	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
-	backpack[] = {"B_Carryall_oli"};
+	primary[] = {"rhs_weap_ak104_zenitco01","rhs_acc_dtk4long","rhs_acc_perst3","rhs_acc_grip_ffg2","rhs_acc_okp7_dovetail","rhs_75Rnd_762x39mm"};
+	secondary[] = {"rhs_weap_pya","rhs_mag_9x19_17"};
+	launcher[] = {"rhs_weap_rpg18"};
+	magazines[] = {"rhs_75Rnd_762x39mm",5,"rhs_mag_9x19_17",3,"rhs_mag_rgn",5,"rhs_mag_nspn_green",3,"rhs_mag_nspn_red",3,"rhs_mag_fakel",3};
+};
+
+class RU_SPC_MG : RU_SPC_OP // спецназ [Machine Gunner]
+{
 	primary[] = {"rhs_weap_pkp","rhs_acc_1p63"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_100Rnd_762x54mmR_7N26",3,"rhs_mag_9x19_17",2,"SmokeShellGreen",4};
-	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_elasticBandage",4,"ACE_epinephrine",2,"ACE_morphine",2,"ACE_tourniquet",2};
+	magazines[] = {"rhs_100Rnd_762x54mmR_7N26",3,"rhs_mag_9x19_17",2,"rhs_mag_nspn_green",4};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
@@ -477,15 +482,14 @@ class RU_SPC_MG : CommonRussia // спецназ [Machine Gunner]
 	watch[] = {"ACE_Altimeter"};
 };
 
-class RU_SPC_MED : CommonRussia // спецназ [Medic]
+class RU_SPC_MED : RU_SPC_OP // спецназ [Medic]
 {
-	uniform[] = {"rhs_uniform_gorka_r_g"};
 	vest[] = {"rhs_6b23_digi_medic"};
 	backpack[] = {"B_Carryall_oli"};
 	primary[] = {"rhs_weap_ak105","rhs_acc_dtk4short","rhs_acc_perst1ik","rhs_acc_1p63"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",6,"rhs_mag_9x19_17",2,"SmokeShellYellow",4};
+	magazines[] = {"rhs_45Rnd_545X39_7U1_AK",6,"rhs_mag_9x19_17",2,"rhs_mag_nspn_yellow",4};
 	items[] += {"ACE_packingBandage",26,"ACE_quikclot",26,"ACE_elasticBandage",26,"ACE_bloodIV",12,"ACE_epinephrine",19,"ACE_morphine",16,"ACE_atropine",6,"ACE_surgicalKit","ACE_tourniquet",10};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
@@ -497,16 +501,13 @@ class RU_SPC_MED : CommonRussia // спецназ [Medic]
 	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
 
-class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
+class RU_SPC_SNP : RU_SPC_OP // спецназ [Sniper]
 {
-	uniform[] = {"rhs_uniform_gorka_r_g"};
-	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
 	backpack[] = {"rhs_assault_umbts"};
 	primary[] = {"rhs_weap_vss_grip","rhs_acc_pso1m21"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_20rnd_9x39mm_SP6",13,"rhs_mag_9x19_17",2,"SmokeShellYellow",4};
-	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_elasticBandage",4,"ACE_tourniquet",2,"ACE_morphine",2};
+	magazines[] = {"rhs_20rnd_9x39mm_SP6",13,"rhs_mag_9x19_17",2,"rhs_mag_nspn_yellow",4};
 	binoculars[] = {"ACE_MX2A"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
@@ -516,7 +517,7 @@ class RU_SPC_SNP : CommonRussia // спецназ [Sniper]
 	watch[] = {"ACE_Altimeter"};
 };
 
-class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
+class RU_SPC_SNP_T5000 : RU_SPC_OP // спецназ [Sniper ORSIS T-500]
 {
 	uniform[] = {"rhs_uniform_gorka_r_y"};
 	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
@@ -524,8 +525,7 @@ class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
 	primary[] = {"rhs_weap_t5000","rhs_acc_dh520x56"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_5Rnd_338lapua_t5000",20,"rhs_mag_9x19_17",6,"SmokeShellYellow",4};
-	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_elasticBandage",4,"ACE_tourniquet",2,"ACE_morphine",2};
+	magazines[] = {"rhs_5Rnd_338lapua_t5000",20,"rhs_mag_9x19_17",6,"rhs_mag_nspn_yellow",4};
 	binoculars[] = {"ACE_MX2A"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"G_Bandanna_aviator"};
@@ -535,16 +535,14 @@ class RU_SPC_SNP_T5000 : CommonRussia // спецназ [Sniper ORSIS T-500]
 	watch[] = {"ACE_Altimeter"};
 };
 
-class RU_SPC_ENG : CommonRussia // спецназ | Engineer
+class RU_SPC_ENG : RU_SPC_OP // спецназ | Engineer
 {
-	uniform[] = {"rhs_uniform_gorka_r_g"};
-	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
 	backpack[] = {"rhs_assault_umbts_engineer_empty"};
 	primary[] = {"rhs_weap_ak104_zenitco01_b33_grip1","rhs_acc_pbs1","rhsusf_acc_anpeq15_bk_top_h","rhsusf_acc_eotech_552","rhs_acc_grip_rk6"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {""};
-	magazines[] = {"rhs_30Rnd_762x39mm_U",8,"rhs_mag_9x19_17",2,"SmokeShellGreen",3,"SmokeShellRed",3};
-	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_tourniquet",2,"ACE_epinephrine","ACE_morphine","ACE_DefusalKit","ACE_EntrenchingTool","MineDetector","ACE_wirecutter"};
+	magazines[] = {"rhs_30Rnd_762x39mm_U",8,"rhs_mag_9x19_17",2,"rhs_mag_nspn_green",3,"rhs_mag_nspn_red",3};
+	items[] += {"ACE_DefusalKit","ACE_EntrenchingTool","MineDetector","ACE_wirecutter"};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
@@ -554,16 +552,13 @@ class RU_SPC_ENG : CommonRussia // спецназ | Engineer
 	watch[] = {"ACE_Altimeter"};
 };
 
-class RU_SPC_IGLA : CommonRussia // спецназ [Operator]
+class RU_SPC_IGLA : RU_SPC_OP // спецназ [Operator]
 {
-	uniform[] = {"rhs_uniform_gorka_r_g"};
-	vest[] = {"rhs_6b23_digi_6sh92_headset_spetsnaz"};
 	backpack[] = {"rhs_assault_umbts"};
 	primary[] = {"rhs_weap_ak104_zenitco01_b33_afg","rhs_acc_pbs1", "rhsusf_acc_anpeq15side", "rhsusf_acc_eotech_552", "rhsusf_acc_grip2"};
 	secondary[] = {"rhs_weap_pya"};
 	launcher[] = {"rhs_weap_igla"};
-	magazines[] = {"rhs_30Rnd_762x39mm",10,"rhs_mag_9x19_17",2,"rhs_mag_9k38_rocket",2,"SmokeShellGreen",3,"SmokeShellRed",3};
-	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_elasticBandage",4,"ACE_tourniquet",2,"ACE_epinephrine","ACE_morphine"};
+	magazines[] = {"rhs_30Rnd_762x39mm",10,"rhs_mag_9x19_17",2,"rhs_mag_9k38_rocket",2,"rhs_mag_nspn_green",3,"rhs_mag_nspn_red",3};
 	binoculars[] = {""};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_ess_black"};
