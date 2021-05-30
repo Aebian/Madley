@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=4829;
+		nextID=4835;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8944;
+		nextID=9171;
 	};
 	class Camera
 	{
-		pos[]={5369.7759,24.338682,2406.4744};
-		dir[]={-0.89004952,-0.43671933,0.130917};
-		up[]={-0.43208793,0.89958549,0.063556068};
-		aside[]={0.14552763,4.4065382e-007,0.98937833};
+		pos[]={5650.1748,86.91671,2743.8513};
+		dir[]={-0.78414661,-0.51541454,-0.34585252};
+		up[]={-0.47161934,0.85691351,-0.20801093};
+		aside[]={-0.40357873,6.4683263e-007,0.91502786};
 	};
 };
 binarizationWanted=0;
-sourceName="Madley";
+sourceName="madley";
 addons[]=
 {
 	"A3_Props_F_Orange_Humanitarian_Camps",
@@ -1083,7 +1083,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			dataType="Layer";
@@ -66249,7 +66249,7 @@ class Mission
 							{
 								name="BaseTrigger";
 								condition="call{thisList findIf {[west, side _x] call BIS_fnc_sideIsEnemy && (count thisList) > 20 || (_x isKindOf ""Tank_F"") && [west, side _x] call BIS_fnc_sideIsEnemy} !=-1}";
-								onActivation="call{[Vulture21CR, Vulture21VHC, 600, [5160.96,2321.28,0]] execVM ""itsAebian\KI_airSupport.sqf"";}";
+								onActivation="call{[Vulture21CR, Vulture21VHC, 600, [5160.96,2321.28,0]] execVM ""itsAebian\NH_airSupport.sqf"";}";
 								sizeA=1000;
 								sizeB=800;
 								timeout[]={20,20,20};
@@ -77762,7 +77762,7 @@ class Mission
 							{
 								name="DefendAFBTrigger";
 								condition="call{thisList findIf {[east, side _x] call BIS_fnc_sideIsEnemy && (count thisList) > 20 || (_x isKindOf ""Tank_F"") && [east, side _x] call BIS_fnc_sideIsEnemy} !=-1}";
-								onActivation="call{[Hunter1CR, Hunter1VHC, 600, [4819.37,9343.83,5.01364]] execVM ""itsAebian\KI_airSupport.sqf"";}";
+								onActivation="call{[Hunter1CR, Hunter1VHC, 600, [4819.37,9343.83,5.01364]] execVM ""itsAebian\NH_airSupport.sqf"";}";
 								sizeA=800;
 								sizeB=1200;
 								repeatable=1;
@@ -85569,6 +85569,51 @@ class Mission
 			};
 			id=4827;
 			atlOffset=1.9073486e-006;
+		};
+		class Item40
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5642.4282,82.813606,2740.3992};
+				angles[]={6.2578578,4.3372478,0.30849296};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addEventHandler [""Fired"",{[_this select 0,getNumber (configFile/""CfgAmmo""/(_this select 4)/""explosive"")] " \n "spawn {if (_this select 1==1) then {sleep 0.75};_this select 0 setVehicleAmmo 1}}];}";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				pylons="rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];";
+			};
+			id=4829;
+			type="rhs_t15_tv";
+			atlOffset=-4.5776367e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSt15NumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

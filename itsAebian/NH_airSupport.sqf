@@ -3,27 +3,27 @@
     description: AirSupport script for TIC (complete re-write).
     returns: nothing
 	created: 2020-12-19
-	[Vulture21CR, Vulture21VHC, 600, [7660.26,11162.2,2.86102e-005]] execVM "itsAebian\KI_airSupport.sqf";
+	[Vulture21CR, Vulture21VHC, 600, [7660.26,11162.2,2.86102e-005]] execVM "itsAebian\NH_airSupport.sqf";
 */
 
 params["_group", "_aircraft", "_gameTime", "_targetRAW"];
 
-(_group getVariable ["KI_airSupport_cfSwitch", "RFT"]) params ["_cond"];
+(_group getVariable ["NH_airSupport_cfSwitch", "RFT"]) params ["_cond"];
 
 (units _group) params ["_pilot", "_gunner"];
 
 if (!alive _aircraft) exitWith // Break if no aircraft left
 {
     diag_log format ["%1, %2", groupId _group, "have lost the aircraft." ];
-    _group setVariable ["KI_airSupport_cfSwitch", "RTB"];
+    _group setVariable ["NH_airSupport_cfSwitch", "RTB"];
 
-    [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
+    [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\NH_airSupport.sqf";
 };
 
 if ({ alive _x } count units _group == 0) exitWith // Break if soliders died
 {
 diag_log format ["%1, %2", groupId _group, "is KIA." ];
-_group setVariable ["KI_airSupport_cfSwitch", "KIA"];
+_group setVariable ["NH_airSupport_cfSwitch", "KIA"];
 };
 
 switch (_cond) do 
@@ -31,17 +31,17 @@ switch (_cond) do
 
     case "RFT": // Ready for Tasking
     {
-        _group setVariable ["KI_airSupport_WaitingArea", (getPos _gunner)];
+        _group setVariable ["NH_airSupport_WaitingArea", (getPos _gunner)];
 
         _pilot assignAsDriver _aircraft;
 		_gunner assignAsGunner _aircraft;
 
-        _aircraft setVariable ["KI_airSupport_heliPad", nearestObject [_aircraft, ("Helipad_base_F")]];
-        _aircraft setVariable ["KI_airSupport_heliHeading", (getDir _aircraft)];
+        _aircraft setVariable ["NH_airSupport_heliPad", nearestObject [_aircraft, ("Helipad_base_F")]];
+        _aircraft setVariable ["NH_airSupport_heliHeading", (getDir _aircraft)];
 
-        _group setVariable ["KI_airSupport_cfSwitch", "IAO"];
+        _group setVariable ["NH_airSupport_cfSwitch", "IAO"];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\NH_airSupport.sqf";
     };
 
     case "IAO": // Insert to AO
@@ -151,10 +151,10 @@ switch (_cond) do
             diag_log format ["%1, %2", groupId _group, "is bingo fuel and RTB, good luck, out." ];
         };
 
-        _group setVariable ["KI_airSupport_cfSwitch", "RTB"];    
+        _group setVariable ["NH_airSupport_cfSwitch", "RTB"];    
         deleteWaypoint [_group, 1];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\NH_airSupport.sqf";
     };
 
     case "RTB": // Returning to Base
@@ -173,8 +173,8 @@ switch (_cond) do
             _x commandWatch objNull;
         } forEach units _group;
 
-        _heliPad = (_aircraft getVariable ["KI_airSupport_heliPad", objNull]);
-        _originalHeading = (_aircraft getVariable ["KI_airSupport_heliHeading", objNull]);
+        _heliPad = (_aircraft getVariable ["NH_airSupport_heliPad", objNull]);
+        _originalHeading = (_aircraft getVariable ["NH_airSupport_heliHeading", objNull]);
 
         _rtbPoint = _group addWaypoint [_heliPad, 1, 1, "Return to Base"];
         sleep 2;
@@ -222,7 +222,7 @@ switch (_cond) do
         _group setCombatMode "BLUE";
 		_group setBehaviour "SAFE";
 
-        waitUntil {_aircraft distance (_aircraft getVariable ["KI_airSupport_heliPad", objNull]) < 5 && isEngineOn _aircraft == false};
+        waitUntil {_aircraft distance (_aircraft getVariable ["NH_airSupport_heliPad", objNull]) < 5 && isEngineOn _aircraft == false};
 
         {
             _x enableAI "AUTOCOMBAT";
@@ -237,19 +237,19 @@ switch (_cond) do
 		unassignVehicle _gunner;
 
 		[_pilot, _gunner] orderGetIn false;
-        _group move (_group getVariable ["KI_airSupport_WaitingArea", objNull]);
+        _group move (_group getVariable ["NH_airSupport_WaitingArea", objNull]);
 
-        _group setVariable ["KI_airSupport_cfSwitch", "SVC"];
+        _group setVariable ["NH_airSupport_cfSwitch", "SVC"];
         diag_log format ["%1, %2", groupId _group, "on ground for maintenance" ];
 
-        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\KI_airSupport.sqf";
+        [_group, _aircraft, _gameTime, _targetRAW] execVM "itsAebian\NH_airSupport.sqf";
 
 
     };
 
     case "SVC": // Maintenance run on that aircraft
     {
-        _group setVariable ["KI_airSupport_cfSwitch", "DND"];
+        _group setVariable ["NH_airSupport_cfSwitch", "DND"];
         sleep 300;
 
         _aircraft setDamage 0;
@@ -258,7 +258,7 @@ switch (_cond) do
         _aircraft setAmmo 1;
         {_x setDamage 0} forEach units _group;
 
-        _group setVariable ["KI_airSupport_cfSwitch", "RFT"];
+        _group setVariable ["NH_airSupport_cfSwitch", "RFT"];
         diag_log format ["%1, %2", groupId _group, "ready for tasking" ];
         
     };

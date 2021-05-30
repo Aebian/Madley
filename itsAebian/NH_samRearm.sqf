@@ -1,7 +1,7 @@
 /*
     author: @Aebian
     description: Auto-rearm of SAM assets after three minutes if vehicle ammo is zero.
-	[MissileAmmo_01, SAM_BATTERY_01] execVM "itsAebian\KI_samRearm.sqf"
+	[MissileAmmo_01, SAM_BATTERY_01] execVM "itsAebian\NH_samRearm.sqf"
  */
 
 

@@ -12,7 +12,7 @@ _displayID = 1234;
 _hasCode = _keyPad getVariable ["hasCode", false];
 _isLocked = _keyPad getVariable ["isLocked", false];
 
-createDialog "KI_KeyDialog";
+createDialog "NH_KeyDialog";
 _ctrlIndicator = (findDisplay _displayID) displayCtrl 1001;
 
 if (_isLocked) then

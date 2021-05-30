@@ -3,13 +3,13 @@
     description: Chopper insert / exfill 
     returns: at least a helo
 	created: 2021-02-28
-	[TigerOneCR, "FRI", PJMarker] execVM "itsAebian\KI_chopperEvac.sqf";
+	[TigerOneCR, "FRI", PJMarker] execVM "itsAebian\NH_chopperEvac.sqf";
 	_wait is optional and only needed when used with EVAC. 
 */
 
 params["_helicrew", "_assignment", "_dropzone", "_wait"];
 
-(_helicrew getVariable ["KI_chopperEvac_cfSwitch", "RFT"]) params ["_cond"];
+(_helicrew getVariable ["NH_chopperEvac_cfSwitch", "RFT"]) params ["_cond"];
 _aircraft = ([_helicrew, true] call BIS_fnc_groupVehicles) select 0;
 
 if (isNil "_wait") then { _wait = 120; };
@@ -17,15 +17,15 @@ if (isNil "_wait") then { _wait = 120; };
 if (!alive _aircraft) exitWith // Break if no aircraft left
 {
     diag_log format ["%1, %2", groupId _helicrew, "have lost the aircraft." ];
-    _helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
+    _helicrew setVariable ["NH_chopperEvac_cfSwitch", "RTB"];
 
-	[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
+	[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\NH_chopperEvac.sqf";
 };
 
 if ({ alive _x } count units _helicrew == 0) exitWith // Break if soliders died
 {
 diag_log format ["%1, %2", groupId _helicrew, "is KIA." ];
-_helicrew setVariable ["KI_chopperEvac_cfSwitch", "KIA"];
+_helicrew setVariable ["NH_chopperEvac_cfSwitch", "KIA"];
 };
 
 
@@ -91,10 +91,10 @@ switch (_cond) do
 		} forEach [driver _aircraft];
 
 
-		_helicrew setVariable ["KI_chopperEvac_BasePad", (getPosATL _aircraft)];
-		_helicrew setVariable ["KI_chopperEvac_cfSwitch", "IAO"];
+		_helicrew setVariable ["NH_chopperEvac_BasePad", (getPosATL _aircraft)];
+		_helicrew setVariable ["NH_chopperEvac_cfSwitch", "IAO"];
 
-		[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
+		[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\NH_chopperEvac.sqf";
 
 	};
 
@@ -166,9 +166,9 @@ switch (_cond) do
                 deleteWaypoint [_helicrew, 1];
 
                 sleep 10;
-				_helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
+				_helicrew setVariable ["NH_chopperEvac_cfSwitch", "RTB"];
 
-				[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
+				[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\NH_chopperEvac.sqf";
 
 			};
 
@@ -221,8 +221,8 @@ switch (_cond) do
 
                 sleep 10;
 
-                _helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
-				[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
+                _helicrew setVariable ["NH_chopperEvac_cfSwitch", "RTB"];
+				[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\NH_chopperEvac.sqf";
 
 			};
 
@@ -256,10 +256,10 @@ switch (_cond) do
                 deleteVehicle _tempad;
             };
 
-            _helicrew setVariable ["KI_chopperEvac_cfSwitch", "RTB"];
+            _helicrew setVariable ["NH_chopperEvac_cfSwitch", "RTB"];
             deleteWaypoint [_helicrew, 1];
 
-			[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\KI_chopperEvac.sqf";
+			[_helicrew, _assignment, _dropzone, _wait] execVM "itsAebian\NH_chopperEvac.sqf";
 
 
 			};
@@ -270,7 +270,7 @@ switch (_cond) do
 	case "RTB": // Return to Base
 	{
 		_helicrew setBehaviour "CARELESS";
-        _heliPad = (_helicrew getVariable ["KI_chopperEvac_BasePad", objNull]);
+        _heliPad = (_helicrew getVariable ["NH_chopperEvac_BasePad", objNull]);
 
         _rtbPoint = _helicrew addWaypoint [_heliPad, 1, 1, "Return to Base"];
         _rtbPoint setWaypointType "SCRIPTED";
@@ -311,18 +311,18 @@ switch (_cond) do
 		_helicrew setCombatMode "BLUE";
 		_helicrew setBehaviour "SAFE";
 
-        waitUntil {_aircraft distance (_aircraft getVariable ["KI_chopperEvac_BasePad", objNull]) < 5};
+        waitUntil {_aircraft distance (_aircraft getVariable ["NH_chopperEvac_BasePad", objNull]) < 5};
         sleep 36;
 
         _aircraft engineOn false;
-        _helicrew setVariable ["KI_chopperEvac_cfSwitch", "SVC"];
+        _helicrew setVariable ["NH_chopperEvac_cfSwitch", "SVC"];
 
         diag_log format ["%1, %2", groupId _helicrew, "on ground for maintenance" ];
 	};
 
 	case "SVC": // Maintenance run on that aircraft
 	{
-		_helicrew setVariable ["KI_chopperEvac_cfSwitch", "DND"];
+		_helicrew setVariable ["NH_chopperEvac_cfSwitch", "DND"];
 		sleep 300;
 
         _aircraft setDamage 0;
@@ -331,7 +331,7 @@ switch (_cond) do
         _aircraft setAmmo 1;
         {_x setDamage 0} forEach units _helicrew;
 
-        _helicrew setVariable ["KI_chopperEvac_cfSwitch", "RFT"];
+        _helicrew setVariable ["NH_chopperEvac_cfSwitch", "RFT"];
         diag_log format ["%1, %2", groupId _helicrew, "ready for tasking" ];
 
 	};

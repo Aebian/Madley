@@ -16,8 +16,8 @@ overviewText = "TheLab - Madley";
 reviveMode = 1;
 reviveRequiredItems = 0;
 
-#include "itsAebian\CodeLock\dialog\kicl_defines.hpp"
-#include "itsAebian\CodeLock\dialog\kicl_control.hpp"
+#include "itsAebian\CodeLock\dialog\nhcl_defines.hpp"
+#include "itsAebian\CodeLock\dialog\nhcl_control.hpp"
 
 #include "Poppy\CfgPoppy.hpp"
 #include "CfgLoadouts.hpp"

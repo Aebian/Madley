@@ -4,7 +4,7 @@
             returns: death to enemies
             created: 2020-12-14
 			updated: 2021-01-10
-		    // [Viper, thisList, 5, 0] execVM "itsAebian\KI_snipeAction.sqf";
+		    // [Viper, thisList, 5, 0] execVM "itsAebian\NH_snipeAction.sqf";
 */
 
 
@@ -62,7 +62,7 @@ switch (_cond) do
 
 		_sniper  setVariable ["KI_snipeAction_cfSwitch", 1, true];	
 
-		[_group, _targets, _shots, _delay] execVM "itsAebian\KI_snipeAction.sqf";
+		[_group, _targets, _shots, _delay] execVM "itsAebian\NH_snipeAction.sqf";
 
 	};
 

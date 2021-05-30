@@ -3,7 +3,7 @@
     description: Animated control checkpoint.
     returns: nothing
 	created: 2021-01-02
-	["PreCheck", TestTrigger, [SgtTest,CplTest], TestGate] execVM "itsAebian\KI_controlCheckpoint.sqf";
+	["PreCheck", TestTrigger, [SgtTest,CplTest], TestGate] execVM "itsAebian\NH_controlCheckpoint.sqf";
 	Usage: Create trigger 8 long, 3 wide.  
 */
 
@@ -37,7 +37,7 @@ switch (_cond) do
 		waitUntil {speed _vehicleObject == 0 };
 		sleep 2;
 
-		["Inspection", _triggerObj, _group, _barGate] execVM "itsAebian\KI_controlCheckpoint.sqf";
+		["Inspection", _triggerObj, _group, _barGate] execVM "itsAebian\NH_controlCheckpoint.sqf";
 
 	};
 
@@ -91,7 +91,7 @@ switch (_cond) do
 		diag_log format ["%1: %2", groupId (group _watchGuard), "Your vehicle checks out. You are allowed to pass. Start your engine and move trough gate." ];
 
 		sleep 20;
-		["OpenGate", _triggerObj, _group, _barGate] execVM "itsAebian\KI_controlCheckpoint.sqf";
+		["OpenGate", _triggerObj, _group, _barGate] execVM "itsAebian\NH_controlCheckpoint.sqf";
 
 	};
 
