@@ -3,7 +3,7 @@
     description: Canon back blast for armored vehicles excluding autocanon below 40mm.
     returns: nothing
 	[] execVM "itsAebian\NH_canonBlast.sqf"; 
-    */ 
+*/ 
  
  {
     if   (_x isKindOf "Tank_F" )

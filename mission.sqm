@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=4835;
+		nextID=4842;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9171;
+		nextID=10760;
 	};
 	class Camera
 	{
-		pos[]={5650.1748,86.91671,2743.8513};
-		dir[]={-0.78414661,-0.51541454,-0.34585252};
-		up[]={-0.47161934,0.85691351,-0.20801093};
-		aside[]={-0.40357873,6.4683263e-007,0.91502786};
+		pos[]={5432.3047,156.92169,2683.1248};
+		dir[]={-0.94898105,-0.29628459,-0.10799278};
+		up[]={-0.29439011,0.95509601,-0.033501554};
+		aside[]={-0.1130701,2.9268813e-007,0.9935919};
 	};
 };
 binarizationWanted=0;
@@ -224,13 +224,14 @@ addons[]=
 	"rhs_c_air",
 	"CUP_Editor_Signs_Config",
 	"rhsusf_c_ch53",
-	"A3_Static_F"
+	"A3_Static_F",
+	"A3_Drones_F_Weapons_F_Gamma_Items"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=117;
+		items=118;
 		class Item0
 		{
 			className="A3_Props_F_Orange";
@@ -1032,6 +1033,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item117
+		{
+			className="A3_Drones_F";
+			name="Arma 3 Beta - Drones";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -1056,6 +1064,33 @@ randomSeed=13563325;
 class ScenarioData
 {
 	author="Aebian";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableTargetDebug";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -85343,8 +85378,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5367.9307,22.047085,2405.0867};
-						angles[]={0,4.9270768,0};
+						position[]={5639.8188,79.40889,2739.1321};
+						angles[]={0,3.0436511,0};
 					};
 					side="East";
 					flags=7;
@@ -85493,14 +85528,14 @@ class Mission
 							compass="ItemCompass";
 							watch="ACE_Altimeter";
 							radio="ItemRadio";
-							gps="ItemGPS";
+							gps="O_UavTerminal";
 							goggles="rhs_ess_black";
 							headgear="rhs_altyn_novisor_bala";
 						};
 					};
 					id=4828;
 					type="rhs_vdv_recon_rifleman_scout_akm";
-					atlOffset=1.9073486e-006;
+					atlOffset=-0.0020065308;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -85567,30 +85602,53 @@ class Mission
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=4828;
+						item1=4835;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=4827;
-			atlOffset=1.9073486e-006;
+			atlOffset=-0.0020065308;
 		};
 		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5642.4282,82.813606,2740.3992};
-				angles[]={6.2578578,4.3372478,0.30849296};
+				position[]={5639.165,81.742241,2739.0229};
+				angles[]={6.2578607,4.3467946,0.27300441};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
-				init="call{this addEventHandler [""Fired"",{[_this select 0,getNumber (configFile/""CfgAmmo""/(_this select 4)/""explosive"")] " \n "spawn {if (_this select 1==1) then {sleep 0.75};_this select 0 setVehicleAmmo 1}}];}";
+				init="call{[NH_T15A,1] execVM ""itsAebian\NH_autonArmata.sqf"";}";
+				name="NH_T15A";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
-				pylons="rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];rhs_mag_9m133m2_pylon[00,];";
+				pylons="rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];";
 			};
-			id=4829;
+			id=4835;
 			type="rhs_t15_tv";
-			atlOffset=-4.5776367e-005;
+			atlOffset=-0.0020065308;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -85608,11 +85666,30 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Default";
+							value="BoldRed";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="rhs_decalNumber";
+					expression="if( _value >= 0)then{if( _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cRHSt15NumberPlaces}else{[_this, [['Number', cRHSt15NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'], _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=22;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

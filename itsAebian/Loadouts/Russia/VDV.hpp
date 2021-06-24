@@ -465,6 +465,7 @@ class RU_SPC_OP2 : RU_SPC_OP // спецназ [Operator]
 	secondary[] = {"rhs_weap_pya","rhs_mag_9x19_17"};
 	launcher[] = {"rhs_weap_rpg18"};
 	magazines[] = {"rhs_75Rnd_762x39mm",5,"rhs_mag_9x19_17",3,"rhs_mag_rgn",5,"rhs_mag_nspn_green",3,"rhs_mag_nspn_red",3,"rhs_mag_fakel",3};
+	gps[] = {"O_UavTerminal"};
 };
 
 class RU_SPC_MG : RU_SPC_OP // спецназ [Machine Gunner]
