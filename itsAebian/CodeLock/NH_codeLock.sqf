@@ -5,8 +5,8 @@
 	created: 2019-12-31
 
 	desc:
-		#include "itsAebian\CodeLock\dialog\kicl_defines.hpp"
-		#include "itsAebian\CodeLock\dialog\kicl_control.hpp"
+		#include "itsAebian\CodeLock\dialog\nhcl_defines.hpp"
+		#include "itsAebian\CodeLock\dialog\nhcl_control.hpp"
 
 	init:
 		[CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\NH_CodeLock.sqf"; // for default status (door open, no code set) set code to 123456
@@ -14,7 +14,6 @@
 
 params ["_keypad", "_building", "_code"];
 
-_keyPad = (_this select 0);
 _doorCount = getNumber (configFile >> "cfgVehicles" >> typeOf _building >> "numberOfDoors");
 _doorList = [];
 

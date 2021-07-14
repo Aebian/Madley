@@ -5,7 +5,7 @@
 	created: 2019-12-31
 */
 
-class KI_KeyDialog
+class NH_KeyDialog
 {
 	idd = 1234;
 	

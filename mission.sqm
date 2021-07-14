@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=4842;
+		nextID=4850;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10760;
+		nextID=10988;
 	};
 	class Camera
 	{
-		pos[]={5432.3047,156.92169,2683.1248};
-		dir[]={-0.94898105,-0.29628459,-0.10799278};
-		up[]={-0.29439011,0.95509601,-0.033501554};
-		aside[]={-0.1130701,2.9268813e-007,0.9935919};
+		pos[]={5821.3628,167.57224,2816.1296};
+		dir[]={-0.061603401,-0.93707383,-0.34366399};
+		up[]={-0.16533948,0.34912965,-0.92237234};
+		aside[]={-0.98431528,1.5457772e-008,0.17644317};
 	};
 };
 binarizationWanted=0;
@@ -6329,7 +6329,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -6610,7 +6610,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -8826,7 +8826,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -9109,7 +9109,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -9392,7 +9392,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -9675,7 +9675,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -9958,7 +9958,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -10245,7 +10245,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -11957,7 +11957,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -14329,7 +14329,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -14593,7 +14593,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -14876,7 +14876,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -16418,7 +16418,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -19843,7 +19843,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -20107,7 +20107,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -28058,7 +28058,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -28481,7 +28481,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -29001,7 +29001,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -31201,7 +31201,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -31261,7 +31261,7 @@ class Mission
 										class Attribute1
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -31687,7 +31687,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -31786,7 +31786,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -32477,7 +32477,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -32838,7 +32838,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -32938,7 +32938,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -33078,7 +33078,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -33420,7 +33420,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -34339,7 +34339,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -35218,7 +35218,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -35621,7 +35621,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -35967,7 +35967,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -36010,7 +36010,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -36415,7 +36415,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -37060,7 +37060,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -37332,7 +37332,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -37375,7 +37375,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -37545,7 +37545,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -37781,7 +37781,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -37939,7 +37939,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -38035,7 +38035,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -38467,7 +38467,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -38991,7 +38991,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -39532,7 +39532,7 @@ class Mission
 												class Attribute1
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -39636,7 +39636,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -40104,7 +40104,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -40572,7 +40572,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -41040,7 +41040,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -41625,7 +41625,7 @@ class Mission
 												class Attribute1
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -41880,7 +41880,7 @@ class Mission
 												class Attribute0
 												{
 													property="VehicleCustomization";
-													expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+													expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 													class Value
 													{
 														class data
@@ -42744,7 +42744,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -43320,7 +43320,7 @@ class Mission
 												class Attribute0
 												{
 													property="groupID";
-													expression="[_this, _value] call CBA_fnc_setCallsign";
+													expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 													class Value
 													{
 														class data
@@ -48089,7 +48089,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -48225,7 +48225,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -69350,7 +69350,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -70138,7 +70138,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -70983,7 +70983,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -71026,7 +71026,7 @@ class Mission
 										class Attribute0
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -71223,7 +71223,7 @@ class Mission
 										class Attribute0
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -71421,7 +71421,7 @@ class Mission
 										class Attribute0
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -71620,7 +71620,7 @@ class Mission
 										class Attribute0
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -71979,7 +71979,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -72549,7 +72549,7 @@ class Mission
 										class Attribute19
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -73089,7 +73089,7 @@ class Mission
 										class Attribute19
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -74070,7 +74070,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -74915,7 +74915,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -75118,7 +75118,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -78077,7 +78077,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -78198,7 +78198,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -78495,7 +78495,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -78755,7 +78755,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -79015,7 +79015,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -79792,7 +79792,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -79889,7 +79889,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -80052,7 +80052,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -80853,7 +80853,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -81333,7 +81333,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -81775,7 +81775,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -82217,7 +82217,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -83029,7 +83029,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="[_this, _value] call CBA_fnc_setCallsign";
+											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 											class Value
 											{
 												class data
@@ -83122,7 +83122,7 @@ class Mission
 										class Attribute2
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -83380,7 +83380,7 @@ class Mission
 										class Attribute2
 										{
 											property="VehicleCustomization";
-											expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
 											{
 												class data
@@ -84974,7 +84974,7 @@ class Mission
 								class Attribute0
 								{
 									property="groupID";
-									expression="[_this, _value] call CBA_fnc_setCallsign";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 									class Value
 									{
 										class data
@@ -85015,7 +85015,7 @@ class Mission
 								class Attribute0
 								{
 									property="VehicleCustomization";
-									expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+									expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 									class Value
 									{
 										class data
@@ -85378,8 +85378,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5639.8188,79.40889,2739.1321};
-						angles[]={0,3.0436511,0};
+						position[]={5806.7124,90.871452,2798.4233};
+						angles[]={0,1.4203717,-0};
 					};
 					side="East";
 					flags=7;
@@ -85535,7 +85535,7 @@ class Mission
 					};
 					id=4828;
 					type="rhs_vdv_recon_rifleman_scout_akm";
-					atlOffset=-0.0020065308;
+					atlOffset=4.5776367e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -85602,95 +85602,15 @@ class Mission
 			class Attributes
 			{
 			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=4828;
-						item1=4835;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
 			id=4827;
-			atlOffset=-0.0020065308;
+			atlOffset=4.5776367e-005;
 		};
 		class Item40
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5639.165,81.742241,2739.0229};
-				angles[]={6.2578607,4.3467946,0.27300441};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				init="call{[NH_T15A,1] execVM ""itsAebian\NH_autonArmata.sqf"";}";
-				name="NH_T15A";
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-				pylons="rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];rhs_mag_9m133m2_pylon[0,];";
-			};
-			id=4835;
-			type="rhs_t15_tv";
-			atlOffset=-0.0020065308;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="rhs_decalNumber_type";
-					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSt15NumberPlaces, _value]]] call rhs_fnc_decalsInit";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="BoldRed";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="rhs_decalNumber";
-					expression="if( _value >= 0)then{if( _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cRHSt15NumberPlaces}else{[_this, [['Number', cRHSt15NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'], _value] ] ] call rhs_fnc_decalsInit}};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=22;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			dataType="Layer";
+			name="Double House Container";
+			id=4847;
+			atlOffset=0.58236694;
 		};
 	};
 };
