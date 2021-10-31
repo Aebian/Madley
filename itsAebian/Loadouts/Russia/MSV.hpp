@@ -60,14 +60,14 @@ class RU_MSV_EMR_Machinegunner : RU_MSV_RFL_BASE // MSV [Rifleman] (Private)
 class RU_MSV_EMR_Yefreytor : RU_MSV_EMR_Sergeant // MSV [Senior Rifleman] (Yefreytor)
 {
 	vest[] = {"rhs_6b45_rifleman_2"};
-	primary[] = {"rhs_weap_ak74m_fullplum","rhs_acc_dtk","rhs_30Rnd_545x39_7U1_AK"};
+	primary[] = {"rhs_weap_ak74m_fullplum_gp25","rhs_acc_dtk","rhs_30Rnd_545x39_7U1_AK"};
 	magazines[] = {"rhs_30Rnd_545x39_7U1_AK",6,"rhs_VG40TB",4,"rhs_GRD40_White",10};
 };
 
 class RU_MSV_EMR_Rifleman_GP30 : RU_MSV_RFL_BASE // MSV [Rifleman] (Private)
 {
 	vest[] = {"rhs_6b45_grn"};
-	primary[] = {"rhs_weap_ak74m_fullplum","rhs_acc_dtk","rhs_30Rnd_545x39_7U1_AK"};
+	primary[] = {"rhs_weap_ak74m_fullplum_gp25","rhs_acc_dtk","rhs_30Rnd_545x39_7U1_AK"};
 	magazines[] = {"rhs_30Rnd_545x39_7U1_AK",6,"rhs_VG40TB",6,"rhs_VOG25P",7};
 };
 
@@ -85,3 +85,27 @@ class RU_MSV_EMR_CREW_CM : RU_MSV_EMR_CREW // MSV [Tank Crew Commander]
 	secondary[] = {"rhs_weap_pya"};
 	magazines[] += {"rhs_mag_9x19_17",2};
 };
+
+class RU_MSV_EMR_MED : RU_MSV_RFL_BASE // MSV [Medic]
+{
+	vest[] = {"rhs_6b23_digi_medic"};
+	backpack[] = {"rhs_rk_sht_30_emr_medic"};
+	primary[] = {"rhs_weap_ak105","rhs_acc_perst1ik","rhs_acc_1p63","rhs_30Rnd_545x39_7N22_plum_AK"};
+	secondary[] = {"rhs_weap_pya","rhs_mag_9x19_17"};
+	magazines[] = {"rhs_30Rnd_545x39_7N22_plum_AK",4,"rhs_mag_9x19_17",2,"rhs_mag_nspn_yellow",4};
+	items[] += {"ACE_packingBandage",24,"ACE_quikclot",24,"ACE_elasticBandage",24,"ACE_bloodIV",10,"ACE_epinephrine",18,"ACE_morphine",16,"ACE_atropine",6,"ACE_surgicalKit","ACE_tourniquet",10};
+	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+};
+
+
+class RU_MSV_EMR_MEDBASE : RU_MSV_EMR_MED // MSV [Medic on secure Base]
+{
+	vest[] = {""};
+	backpack[] = {""};
+	primary[] = {""};
+	secondary[] = {""};
+	magazines[] = {""};
+	items[] = {"ACE_surgicalKit","ACE_tourniquet",6};
+	goggles[] = {"rhs_googles_clear"};
+	headgear[] = {""};
+}

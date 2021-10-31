@@ -53,3 +53,10 @@ vehicle player removeWeaponGlobal "RHS_M260_MELB";
 
 
 //////////////////////////////////
+
+
+this addEventHandler ["Fired",{
+    params ["_helo", "_weapon"];
+_ammo = _helo ammoOnPylon "pylon1";
+if (_ammo == 50) then {sleep 0.75};_helo setAmmoOnPylon ["pylon1", 250] && _helo setAmmoOnPylon ["pylon2", 250]
+}];
