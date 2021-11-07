@@ -25,3 +25,5 @@ Airbase and several ambient things included
 - CUP Terrains (Core) [583496184]
 - Cup Terrains (Maps) [583544987]
 - Atlas LHD Upgraded [1737598604]
+
+You can use the workshop ID's to look them up on Steam.
