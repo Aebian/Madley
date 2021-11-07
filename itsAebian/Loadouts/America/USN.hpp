@@ -160,3 +160,30 @@ class US_NAVY_AMCQSEC : CommonAmerica // Air Medevac Perimeter Security
 	map[] = {"ItemMap"};
 	watch[] = {"ACE_Altimeter"};
 };
+
+class US_NAVY_BOATSEC : CommonAmerica // Navy Ship Security (Pistol Only)
+{
+	uniform[] = {"U_B_CTRG_Soldier_3_F"};
+	vest[] = {"V_Pocketed_olive_F"};
+	backpack[] = {""};
+	primary[] = {""};
+	secondary[] = {"hgun_P07_khk_F","16Rnd_9x21_Mag"};
+	launcher[] = {""};
+	magazines[] = {"16Rnd_9x21_Mag",5};
+	items[] += {};
+	lrradios[] =  {"ACRE_PRC148"};
+	binoculars[] = {""};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"G_Balaclava_TI_G_tna_F"};
+	gps[] = {"ItemGPS"};
+	headgear[] = {"H_HelmetB_tna_F"};
+	map[] = {"ItemMap"};
+	nvgs[] = {""};
+	watch[] = {"ACE_Altimeter"};
+};
+
+class US_NAVY_BOATSEC_LR : US_NAVY_BOATSEC // Navy Ship Security (with Primary)
+{
+	primary[] = {"rhs_weap_mk18_wd","rhsusf_acc_eotech_552_wd","rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red"};
+	magazines[] = {"16Rnd_9x21_Mag",3,"rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red",4};
+};

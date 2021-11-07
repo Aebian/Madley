@@ -14,4 +14,14 @@ Airbase and several ambient things included
 
 
 ==
-Used Mods: CBA_A3, RHS_DEV (All), ACE_A3, CUP Terrains (Base) and Cup Terrains (Maps)
+#### Used Mods: 
+- CBA_A3 [450814997]
+- RHS AFRF (DEV) [843425103]
+- RHS USAF (DEV) [843577117]
+- RHS GREF (DEV) [843593391]
+- RHS SAF (DEV) [843632231]
+- ACE_A3 [463939057]
+- ACEX_A3 [708250744]
+- CUP Terrains (Core) [583496184]
+- Cup Terrains (Maps) [583544987]
+- Atlas LHD Upgraded [1737598604]

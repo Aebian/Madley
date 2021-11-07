@@ -278,7 +278,7 @@ class US_MARINES_SPEC_AT_ASS : US_MARINES_DEFAULT_FROGWD // Marines [Assistant A
 	watch[] = {"ACE_Altimeter"};
 };
 
-class US_MARINES_PLT : US_MARINES_DEFAULT_FROGWD // Army Pilot with HGU-65
+class US_MARINES_PLT : US_MARINES_DEFAULT_FROGWD // Marines Pilot with HGU-65
 {
 	backpack[] = {""};
 	primary[] = {"rhsusf_weap_MP7A2_aor1", "rhsusf_acc_anpeq15A", "optic_Yorris", "rhsusf_mag_40Rnd_46x30_FMJ"};
