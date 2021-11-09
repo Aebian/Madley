@@ -2,20 +2,20 @@
 
 class US_NAVY_ADM : CommonAmerica // Admiral
 {
-	uniform[] = {"FUTARM_U_BASIC_MT"};
-	vest[] = {"usm_vest_safety"};
+	uniform[] = {"U_B_ParadeUniform_01_US_F"};
+	vest[] = {""};
 	backpack[] = {""};
 	primary[] = {""};
 	secondary[] = {"rhsusf_weap_m1911a1"};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_7x45acp_MHP",2 };
-	items[] += {"ACE_quikclot",4,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2};
+	items[] += {"ACE_quikclot",1,"ACE_fieldDressing",1,"ACE_packingBandage",1};
 	lrradios[] =  {"ACRE_PRC148", "ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {""};
 	gps[] = {"ItemGPS"};
-	headgear[] = {"FUTARM_H_MILCAP_MT"};
+	headgear[] = {"H_ParadeDressCap_01_US_F"};
 	map[] = {"ItemMap"};
 	nvgs[] = {""};
 	watch[] = {"ACE_Altimeter"};
