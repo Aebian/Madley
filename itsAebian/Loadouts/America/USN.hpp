@@ -28,6 +28,20 @@ class US_NAVY_RADM : US_NAVY_ADM // Rear Admiral
 };
 
 
+class US_NAVY_ADM_FO : US_NAVY_ADM // Admiral [Fight Outfit]
+{
+	uniform[] = {"rhs_uniform_FROG01_wd"};
+	vest[] = {"rhsusf_spc_squadleader"};
+	backpack[] = {""};
+	primary[] = {"rhs_weap_mk18_KAC_bk","rhsusf_acc_anpeq15_bk_top","rhsusf_acc_T1_high","rhsusf_acc_grip2","rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red"};
+	launcher[] = {""};
+	magazines[] = {"rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red",6,"rhsusf_mag_15Rnd_9x19_JHP",2 };
+	items[] += {"ACE_quikclot",4,"ACE_fieldDressing",3,"ACE_packingBandage",3,"ACE_tourniquet",2,"rhs_mag_m18_green",3,"rhs_mag_m18_purple",3,"rhs_mag_m18_red",3};
+	headgear[] = {"rhs_8point_marpatwd"};
+};
+
+
+
 class US_NAVY_SWCC_LEAD : CommonAmerica // SWCC [Officer]
 {
 	uniform[] = {"rhs_uniform_g3_m81"};
