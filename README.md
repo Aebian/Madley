@@ -1,5 +1,5 @@
 ### TheLab - Madley
-Arma 3 Mission on Chernarus (Summer). Used as playground and script making facility for various purposes. <br>
+Arma 3 Mission on Chernarus. Used as playground and script making facility for various purposes. <br>
 Airbase and several ambient things included
 
 
