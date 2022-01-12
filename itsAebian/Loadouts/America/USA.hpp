@@ -528,7 +528,7 @@ class US_ARMY_PLT_AH64 : US_ARMY_PLT // Army Pilot with IHADSS (AH-64D Apache re
 class US_ARMY_DOORGUNNER : US_ARMY_PLT // Army Helicopter Door Gunner with HGU-65
 {
 	primary[] = {"rhs_weap_mk18_KAC_wd","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552_wd","rhs_mag_30Rnd_556x45_M855A1_Stanag"};
-	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag",4 };
+	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag",3 };
 	items[] = {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4};
 	goggles[] = {"rhsusf_shemagh2_od"};
 	headgear[] = {"rhsusf_hgu56p_visor_mask","rhsusf_hgu56p_mask","rhsusf_hgu56p_mask_mo","rhsusf_hgu56p_mask_skull","rhsusf_hgu56p_visor_mask_mo","rhsusf_hgu56p_visor_mask_skull"};

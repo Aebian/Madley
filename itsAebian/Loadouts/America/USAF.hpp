@@ -86,21 +86,27 @@ class US_AIRFORCE_JPLT : CommonAmerica // Airforce Jet Pilot
 	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"",0]";
 };	
 
+class US_AIRFORCE_PLT : US_AIRFORCE_JPLT // Airforce Pilot (Transport Aircraft)
+{
+	headgear[] = {"H_Cap_headphones"};
+
+};
+
 
 class US_AIRFORCE_STARGATE03_TL : CommonAmerica // Airforce Stargate 03 Team-Lead
 {
-	uniform[] = {"rhs_uniform_acu_oefcp"};
-	vest[] = {"rhsusf_spcs_ocp_squadleader"};
+	uniform[] = {"rhs_uniform_g3_mc"};
+	vest[] = {"V_PlateCarrier2_blk"};
 	backpack[] = {""};
-	primary[] = {"arifle_MSBS65_black_F","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552", "30Rnd_65x39_caseless_msbs_mag_Tracer"};
+	primary[] = {"rhs_weap_m16a4_imod_M203","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552","rhs_mag_30Rnd_556x45_Mk318_PMAG","rhs_mag_M397_HET"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
 	launcher[] = {""};
-	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"30Rnd_65x39_caseless_msbs_mag_Tracer",11};
+	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"rhs_mag_30Rnd_556x45_Mk318_PMAG",10,"rhs_mag_M397_HET",3};
 	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_tourniquet",2,"rhs_mag_m18_purple",2};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"rhsusf_shemagh2_gogg_tan"};
+	goggles[] = {"rhsusf_shemagh2_gogg_od"};
 	gps[] = {"B_UavTerminal"};
 	headgear[] = {"H_Watchcap_khk"};
 	map[] = {"ItemMap"};
@@ -120,8 +126,10 @@ class US_AIRFORCE_STARGATE03_TL_WDL : US_AIRFORCE_STARGATE03_TL // Airforce Star
 
 class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL // Airforce Stargate 03 Member
 {
-	vest[] = {"rhsusf_spcs_ocp_rifleman_alt"};
+	vest[] = {"V_PlateCarrier2_blk"};
 	headgear[] = {"H_Watchcap_khk"};
+	primary[] = {"SMG_03C_black","rhsusf_acc_anpeq15A","50Rnd_570x28_SMG_03"};
+	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"50Rnd_570x28_SMG_03",11};
 	binoculars[] = {""};
 };
 
@@ -137,15 +145,13 @@ class US_AIRFORCE_STARGATE03_RFL_WDL : US_AIRFORCE_STARGATE03_RFL // Airforce St
 class US_AIRFORCE_STARGATE03_MG : US_AIRFORCE_STARGATE03_RFL // Airforce Stargate 03 Member
 {
 	primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15A", "rhsusf_acc_ACOG_3d", "rhsusf_200Rnd_556x45_soft_pouch"};
-	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"rhsusf_200Rnd_556x45_soft_pouch",3};
-	vest[] = {"rhsusf_spcs_ocp_rifleman_alt"};
+	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"rhsusf_200Rnd_556x45_soft_pouch",2};
 	headgear[] = {"H_Watchcap_khk"};
 };
 
 class US_AIRFORCE_STARGATE03_MG_WDL : US_AIRFORCE_STARGATE03_MG // Airforce Stargate 03 Member [WDL]
 {
 	uniform[] = {"rhs_uniform_bdu_erdl"};
-	vest[] = {"V_PlateCarrier2_blk"};
 	goggles[] = {"rhsusf_shemagh2_gogg_grn"};
 	headgear[] = {"H_Watchcap_camo"};
 };
