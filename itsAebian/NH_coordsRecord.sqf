@@ -3,7 +3,7 @@
     description: Record of Coordinates
     returns: coordinates array
     created: 2019-06-23
-    Init: [true] execVM "itsAebian\coords.sqf";
+    Init: [true] execVM "itsAebian\NH_coordsRecord.sqf";
 */
 
 params ["_state"];
