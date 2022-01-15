@@ -18,11 +18,11 @@ while {alive _target} do
         case 0:
         {
             (group _defender) move (_target getPos [4,45]); 
-        }
+        };
         case 1: 
         {
             (group _defender) move (getPos _target); 
-        }
-    }
+        };
+    };
     sleep 1;
 };
