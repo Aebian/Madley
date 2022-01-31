@@ -130,6 +130,7 @@ class US_AIRFORCE_STARGATE03_RFL : US_AIRFORCE_STARGATE03_TL // Airforce Stargat
 	headgear[] = {"H_Watchcap_khk"};
 	primary[] = {"SMG_03C_black","rhsusf_acc_anpeq15A","50Rnd_570x28_SMG_03"};
 	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"50Rnd_570x28_SMG_03",11};
+	items[] = {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_tourniquet",2};
 	binoculars[] = {""};
 };
 
