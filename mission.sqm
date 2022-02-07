@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=21241;
+		nextID=21701;
 	};
 	class Camera
 	{
-		pos[]={4530.1626,116.4943,2462.3611};
-		dir[]={0.89467901,-0.2873686,0.3420487};
-		up[]={0.26842508,0.95781517,0.10262318};
-		aside[]={0.3571099,-2.3798202e-007,-0.93407291};
+		pos[]={4787.6919,52.388565,2573.072};
+		dir[]={-0.92470574,-0.19278529,0.32844457};
+		up[]={-0.18169527,0.98123026,0.064536616};
+		aside[]={0.33472174,-5.7176658e-007,0.94237638};
 	};
 };
 binarizationWanted=0;
@@ -19526,7 +19526,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="HQ House";
-					state=1;
 					class Entities
 					{
 						items=8;
@@ -19534,6 +19533,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Briefing Room";
+							state=1;
 							class Entities
 							{
 								items=3;
@@ -20243,6 +20243,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="House Basement";
+							state=1;
 							class Entities
 							{
 								items=14;
@@ -20576,6 +20577,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Entrace Room";
+							state=1;
 							class Entities
 							{
 								items=23;
@@ -21002,6 +21004,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Armory";
+							state=1;
 							class Entities
 							{
 								items=5;
@@ -21608,6 +21611,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Floors General";
+							state=1;
 							class Entities
 							{
 								items=3;
@@ -22158,6 +22162,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Flag Posts";
+							state=1;
 							class Entities
 							{
 								items=3;
@@ -77250,7 +77255,7 @@ class Mission
 							};
 							id=5458;
 							type="rhsusf_m1240a1_m2crows_usmc_wd";
-							atlOffset=7.6935487;
+							atlOffset=7.6336994;
 						};
 						class Item4
 						{
@@ -77269,7 +77274,7 @@ class Mission
 							};
 							id=5459;
 							type="rhsusf_m1240a1_m2crows_usmc_wd";
-							atlOffset=7.7478261;
+							atlOffset=7.6879773;
 						};
 						class Item5
 						{
@@ -77288,7 +77293,7 @@ class Mission
 							};
 							id=5460;
 							type="rhsusf_m1240a1_mk19crows_usmc_wd";
-							atlOffset=7.7761574;
+							atlOffset=7.7085533;
 						};
 						class Item6
 						{
@@ -77307,7 +77312,7 @@ class Mission
 							};
 							id=5461;
 							type="rhsusf_m1240a1_mk19crows_usmc_wd";
-							atlOffset=7.754056;
+							atlOffset=7.6864552;
 						};
 						class Item7
 						{
@@ -77948,7 +77953,7 @@ class Mission
 						};
 					};
 					id=5482;
-					atlOffset=60.629139;
+					atlOffset=60.629078;
 				};
 				class Item18
 				{
@@ -78545,7 +78550,7 @@ class Mission
 				};
 			};
 			id=5226;
-			atlOffset=73.351212;
+			atlOffset=73.351204;
 		};
 		class Item57
 		{

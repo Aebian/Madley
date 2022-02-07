@@ -27,7 +27,7 @@ class US_ARMY_DEFAULT_OCP : US_ARMY_DEFAULT_UCP
 class US_ARMY_DEFAULT_UCP_NM : US_ARMY_DEFAULT_UCP // US Army Soldier (No-Main)
 {
 	primary[] = {""};
-	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
+	postLoadout = "(_this select 0) action ['SwitchWeapon',(_this select 0),(_this select 0),1]";
 };
 
 class US_ARMY_DEFAULT_UCP_NG : US_ARMY_DEFAULT_UCP_NM // US Army Soldier (Un-Armed) 
@@ -47,7 +47,7 @@ class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP // US Army Air Commander
 	primary[] = {""};
 	secondary[] = {"hgun_Pistol_heavy_01_green_F","optic_MRD_black","11Rnd_45ACP_Mag"};
 	launcher[] = {""};
-	magazines[] = {"11Rnd_45ACP_Mag", 4 };
+	magazines[] = {"11Rnd_45ACP_Mag",4 };
 	items[] += {"ACE_EarPlugs",1 };
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -58,7 +58,7 @@ class US_ARMY_AIR_CMDR : US_ARMY_DEFAULT_UCP // US Army Air Commander
 	nvgs[] = {""};
 	watch[] = {"ACE_Altimeter"};
 	insignia[] = {"Spetsnaz223rdDetachment"};
-	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
+	postLoadout = "(_this select 0) action ['SwitchWeapon',(_this select 0),(_this select 0),1]";
 };
 
 class US_ARMY_OPL : US_ARMY_DEFAULT_OCP // Army [Platoon Leader] OCP
@@ -96,7 +96,7 @@ class US_ARMY_OJTAC : US_ARMY_OPL // Army [JTAC] OCP
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",6,"rhsusf_mag_15Rnd_9x19_JHP",2,"rhs_mag_M397_HET",2};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"Laserbatteries",1,"rhs_mag_m18_green",4,"rhs_mag_m18_purple",4,"rhs_mag_m18_red",4,"rhs_mag_m18_yellow",4,"rhs_mag_m713_Red",3,"rhs_mag_m716_yellow",3,"rhs_mag_m715_Green",3,"NVGogglesB_blk_F",1};
-	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148", "ACRE_PRC148"};
+	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"Laserdesignator"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhsusf_oakley_goggles_blk"};
@@ -175,7 +175,7 @@ class US_ARMY_OARM : US_ARMY_ORFL // Army [Automatic Rifleman] OCP
 {
 	vest[] = {"rhsusf_iotv_ocp_SAW"};
 	primary[] = {"rhs_weap_m249_pip_L_vfg","rhsusf_acc_eotech_552","rhsusf_200Rnd_556x45_soft_pouch_coyote"};
-	magazines[]= {"rhsusf_200Rnd_556x45_soft_pouch_coyote", 2};
+	magazines[]= {"rhsusf_200Rnd_556x45_soft_pouch_coyote",2};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",2,"rhs_mag_m18_purple",1,"rhs_mag_m18_red",2};
 };
 
@@ -190,7 +190,7 @@ class US_ARMY_OGND : US_ARMY_ORFL // Army [Grenadier] OCP
 {
 	vest[] = {"rhsusf_iotv_ocp_Grenadier"};
 	primary[] = {"rhs_weap_m4_m320","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhs_mag_30Rnd_556x45_M193_Stanag","rhs_mag_M397_HET"};	
-	magazines[]= {"rhs_mag_30Rnd_556x45_M193_Stanag", 6,"rhs_mag_M397_HET", 12};
+	magazines[]= {"rhs_mag_30Rnd_556x45_M193_Stanag",6,"rhs_mag_M397_HET",12};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m67",3,"rhs_mag_m18_purple",1};
 };
 
@@ -221,7 +221,7 @@ class US_ARMY_OHMG : US_ARMY_OARM // Army [Machine Gunner] OCP
 	vest[] = {"rhsusf_spcs_ocp_machinegunner"};
 	primary[] = {"rhs_weap_m240B","rhsusf_acc_ARDEC_M240","optic_Hamr","rhsusf_100Rnd_762x51"};
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
-	magazines[]= {"rhsusf_100Rnd_762x51", 3,"rhsusf_mag_15Rnd_9x19_JHP", 4};
+	magazines[]= {"rhsusf_100Rnd_762x51",3,"rhsusf_mag_15Rnd_9x19_JHP",4};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m18_green",1,"rhs_mag_m18_red",2};
 };
 
@@ -235,7 +235,7 @@ class US_ARMY_UHMG : US_ARMY_OHMG // Army [Machine Gunner] UCP
 class US_ARMY_OMGA : US_ARMY_ORFL // Army [Machine Gunner Assistant] OCP
 {
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
-	magazines[] += {"rhsusf_100Rnd_762x51", 4};
+	magazines[] += {"rhsusf_100Rnd_762x51",4};
 };
 
 class US_ARMY_UMGA : US_ARMY_OMGA // Army [Machine Gunner Assistant] UCP
@@ -250,7 +250,7 @@ class US_ARMY_OATS : US_ARMY_ORFL // Army [AT-Specialist] OCP
 {
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	launcher[] = {"rhs_weap_maaws","rhs_optic_maaws","rhs_mag_maaws_HEAT"};
-	magazines[] += {"rhs_mag_maaws_HEAT", 2};
+	magazines[] += {"rhs_mag_maaws_HEAT",2};
 };
 
 class US_ARMY_UATS : US_ARMY_OATS // Army [AT-Specialist] UCP
@@ -265,7 +265,7 @@ class US_ARMY_UATS : US_ARMY_OATS // Army [AT-Specialist] UCP
 class US_ARMY_OASA : US_ARMY_ORFL // Army [AT-Specialist Assistant] OCP
 {
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
-	magazines[] += {"rhs_mag_maaws_HEAT", 2};
+	magazines[] += {"rhs_mag_maaws_HEAT",2};
 };
 
 class US_ARMY_UASA : US_ARMY_OASA // Army [AT-Specialist Assistant] UCP
@@ -280,7 +280,7 @@ class US_ARMY_OENG : US_ARMY_ORFL // Army [Engineer] OCP
 {
 	vest[] = {"rhsusf_iotv_ocp_Repair"};
 	items[] = {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2,"rhs_mag_m67",2,"rhs_mag_m18_purple",1};
-	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 1, true];";
+	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"",1,true];";
    	postLoadout = "(unitbackPack (_this select 0)) additemCargo [""ToolKit"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_wirecutter"",1];(unitbackPack (_this select 0)) additemCargo [""MineDetector"",1];(unitbackPack (_this select 0)) additemCargo [""ACE_EntrenchingTool"",2];(unitbackPack (_this select 0)) additemCargo [""ACE_CableTie"",6];(unitbackPack (_this select 0)) additemCargo [""APERSMineDispenser_Mag"",1];";
 };
 
@@ -296,7 +296,7 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	uniform[] = {"rhs_uniform_cu_ucp"};
 	vest[] = {"rhsusf_spcs_ucp_crewman"};
 	backpack[] = {""};
-	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhs_acc_1p87", "rhs_mag_30Rnd_556x45_M193_Stanag"};
+	primary[] = {"rhs_weap_m4a1_blockII_KAC_wd","rhs_acc_1p87","rhs_mag_30Rnd_556x45_M193_Stanag"};
 	secondary[] = {"rhsusf_weap_m9"};
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M193_Stanag",3,"rhsusf_mag_15Rnd_9x19_FMJ",2 };
@@ -310,7 +310,7 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 1, true];";
+	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"",1,true];";
 };
 
 // US Army Rangers // 
@@ -323,7 +323,7 @@ class US_ARMY_RANGER_CMDR : US_ARMY_DEFAULT_UCP // US Ranger Commander
 	primary[] = {""};
 	secondary[] = {"hgun_Pistol_heavy_01_green_F","optic_MRD_black"};
 	launcher[] = {""};
-	magazines[] = {"11Rnd_45ACP_Mag", 4 };
+	magazines[] = {"11Rnd_45ACP_Mag",4 };
 	items[] += {"ACE_EarPlugs",1 };
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -339,7 +339,7 @@ class US_ARMY_RANGER_CMDR : US_ARMY_DEFAULT_UCP // US Ranger Commander
 class US_ARMY_RANGER_CMDR_ALT : US_ARMY_RANGER_CMDR 
 {
 	primary[] = {"rhs_weap_m249_pip_L_vfg","rhsusf_acc_saw_bipod","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhsusf_200Rnd_556x45_soft_pouch"};
-	magazines[] += {"rhsusf_200Rnd_556x45_soft_pouch", 3 };
+	magazines[] += {"rhsusf_200Rnd_556x45_soft_pouch",3 };
 };
 
 class US_ARMY_RANGER_LEAD : US_ARMY_OPL // Army [Element Leader]
@@ -349,7 +349,7 @@ class US_ARMY_RANGER_LEAD : US_ARMY_OPL // Army [Element Leader]
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_SCARH_FDE_CQC","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhsusf_acc_grip2_tan" ,"rhs_mag_20Rnd_SCAR_762x51_m61_ap"};
 	secondary[] = {"hgun_Pistol_heavy_01_F","acc_flashlight_pistol"};
-	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7,"11Rnd_45ACP_Mag", 3,"Laserbatteries"};
+	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap",7,"11Rnd_45ACP_Mag",3,"Laserbatteries"};
 	items[] += {"ACE_EarPlugs",1 };
 	binoculars[] = {"Laserdesignator_03"};
 	goggles[] = {"rhsusf_shemagh2_gogg_tan"};
@@ -361,7 +361,7 @@ class US_ARMY_RANGER_RFL : US_ARMY_RANGER_LEAD // US Army Ranger (Rifleman)
 {
 	vest[] = {"rhsusf_mbav_rifleman"};
 	backpack[] = {""};
-	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7,"11Rnd_45ACP_Mag", 3 };
+	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap",7,"11Rnd_45ACP_Mag",3 };
 	items[] = {"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",1,"rhs_mag_m18_green",1,"rhs_mag_m18_red",2};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	insignia[] = {"Spetsnaz223rdDetachment"};
@@ -371,13 +371,13 @@ class US_ARMY_RANGER_ARM : US_ARMY_RANGER_RFL
 {
 	vest[] = {"rhsusf_mbav_mg"};
 	primary[] = {"rhs_weap_m249_pip_L_vfg","rhsusf_acc_saw_bipod","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d","rhsusf_200Rnd_556x45_soft_pouch"};
-	magazines[] = {"rhsusf_200Rnd_556x45_soft_pouch", 3,"11Rnd_45ACP_Mag", 2 };
+	magazines[] = {"rhsusf_200Rnd_556x45_soft_pouch",3,"11Rnd_45ACP_Mag",2 };
 };
 
 class US_ARMY_RANGER_ARM_NEW : US_ARMY_RANGER_ARM 
 {
 	primary[] = {"MMG_02_sand_F","bipod_01_F_blk","rhsusf_acc_anpeq15side","optic_ERCO_snd_F","130Rnd_338_Mag"};
-	magazines[] = {"130Rnd_338_Mag", 4,"11Rnd_45ACP_Mag", 2 };
+	magazines[] = {"130Rnd_338_Mag",4,"11Rnd_45ACP_Mag",2 };
 	backpack[] = {"B_Kitbag_tan"};
 };
 
@@ -386,16 +386,16 @@ class US_ARMY_RANGER_MED : US_ARMY_RANGER_RFL // US Army Ranger (Medic)
 	vest[] = {"rhsusf_mbav_medic"};
 	backpack[] = {"B_Kitbag_cbr"};
 	primary[] = {"rhs_weap_mk18_KAC_wd","muzzle_snds_m_khk_F","acc_pointer_IR","rhsusf_acc_compm4","rhsusf_acc_grip2_wd","rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"};
-	magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 7,"11Rnd_45ACP_Mag", 2 };
-	items[] += {"ACE_surgicalKit","ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20,"ACE_bloodIV",10,"ACE_epinephrine",16,"ACE_morphine", 16,"ACE_tourniquet", 8,"rhs_mag_m18_green", 6 };
-	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+	magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger",7,"11Rnd_45ACP_Mag",2 };
+	items[] += {"ACE_surgicalKit","ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20,"ACE_bloodIV",10,"ACE_epinephrine",16,"ACE_morphine",16,"ACE_tourniquet",8,"ACE_splint",6,"rhs_mag_m18_green",6 };
+	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"",2,true]";
 };
 
-class US_ARMY_RANGER_MED_NG : US_ARMY_RANGER_MED // US Army Ranger (Medic, No-Gun [Main])
+class US_ARMY_RANGER_MED_NG : US_ARMY_RANGER_MED // US Army Ranger (Medic,No-Gun [Main])
 {
 	primary[] = {""};
 	goggles[] = {""};
-	postLoadout = "(_this select 0) action ['SwitchWeapon', (_this select 0), (_this select 0), 1]";
+	postLoadout = "(_this select 0) action ['SwitchWeapon',(_this select 0),(_this select 0),1]";
 };
 
 class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL // US Army Ranger (Marksman)
@@ -405,7 +405,7 @@ class US_ARMY_RANGER_MXM : US_ARMY_RANGER_RFL // US Army Ranger (Marksman)
 	backpack[] = {""};
 	primary[] = {"rhs_weap_SCARH_FDE_LB_grip3","rhsusf_acc_anpeq15side","rhsusf_acc_su230_mrds_c","rhsusf_acc_grip2_tan","rhs_mag_20Rnd_SCAR_762x51_m61_ap"};
 	launcher[] = {""};
-	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap", 7,"11Rnd_45ACP_Mag", 3 };
+	magazines[] = {"rhs_mag_20Rnd_SCAR_762x51_m61_ap",7,"11Rnd_45ACP_Mag",3 };
 	items[] += {};
 };
 
@@ -416,7 +416,7 @@ class US_ARMY_RANGER_SNP : US_ARMY_RANGER_RFL // US Army Ranger (Sniper)
 	backpack[] = {""};
 	primary[] = {"rhs_weap_m24sws_d","rhsusf_acc_m24_muzzlehider_d" ,"rhsusf_acc_M8541_low_d" ,"rhsusf_5Rnd_762x51_m118_special_Mag" ,"rhsusf_acc_harris_swivel","rhsusf_5Rnd_762x51_m993_Mag"};
 	launcher[] = {""};
-	magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag", 8,"rhsusf_5Rnd_762x51_m118_special_Mag", 6 ,"11Rnd_45ACP_Mag", 3 };
+	magazines[] = {"rhsusf_5Rnd_762x51_m993_Mag",8,"rhsusf_5Rnd_762x51_m118_special_Mag",6 ,"11Rnd_45ACP_Mag",3 };
 	items[] += {"rhsusf_acc_eotech_552_d","rhsusf_acc_m24_silencer_d"};
 };
 
@@ -426,7 +426,7 @@ class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP // Army Sniper
 	vest[] = {"rhsusf_spcs_ocp_sniper"};
 	backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
 	primary[] = {"rhs_weap_XM2010_d","rhsusf_acc_M2010S","rhsusf_acc_anpeq15side","rhsusf_acc_premier_mrds","bipod_02_F_hex","rhsusf_5Rnd_300winmag_xm2010"};
-	secondary[] = {"rhsusf_weap_m1911a1", "rhsusf_mag_7x45acp_MHP"};
+	secondary[] = {"rhsusf_weap_m1911a1","rhsusf_mag_7x45acp_MHP"};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_5Rnd_300winmag_xm2010",25,"rhsusf_mag_7x45acp_MHP",4};
 	items[] += {"ACE_EarPlugs",1,"rhs_mag_m18_green",3,"rhs_mag_m18_purple",4};
@@ -438,21 +438,21 @@ class US_ARMY_SPC_SNIPER : US_ARMY_DEFAULT_UCP // Army Sniper
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
+	preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"",1,true]";
 	postLoadout = "(unitbackPack (_this select 0)) addWeaponWithAttachmentsCargoGlobal [[""rhs_weap_mk18_KAC_wd"",""rhsusf_acc_nt4_tan"",""rhs_acc_perst1ik_ris"",""optic_Hamr_khk_F"",[""rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"",30],[],""rhsusf_acc_grip2_wd""],1];(unitbackPack (_this select 0)) additemCargo [""rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"",10];";
 };
 
 class US_ARMY_SPC_SNIPER_ALT : US_ARMY_SPC_SNIPER  // Army Sniper (Alternate)
 {
     primary[] = {"rhs_weap_m24sws_d","rhsusf_acc_m24_silencer_d","rhsusf_acc_premier_mrds","rhsusf_acc_harris_swivel","rhsusf_5Rnd_762x51_m993_Mag"};
-    magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 10,"rhsusf_mag_7x45acp_MHP", 3,"rhsusf_5Rnd_762x51_m993_Mag",20};
+    magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger",10,"rhsusf_mag_7x45acp_MHP",3,"rhsusf_5Rnd_762x51_m993_Mag",20};
     postLoadout = "(unitbackPack (_this select 0)) addWeaponWithAttachmentsCargoGlobal [[""rhs_weap_mk18_KAC_wd"",""rhsusf_acc_nt4_tan"",""rhs_acc_perst1ik_ris"",""optic_Hamr_khk_F"",[""rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"",30],[],""rhsusf_acc_grip2_wd""],1];(unitbackPack (_this select 0)) additemCargo [""rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"",10];";
 };
 
 class US_ARMY_SPC_SNIPER_ALT2 : US_ARMY_SPC_SNIPER  // Army Sniper (Alternate 2)
 {
     primary[] = {"rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan","rhs_acc_perst1ik_ris","optic_Hamr_khk_F","rhsusf_acc_grip2_wd","rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger"};
-    magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 10,"rhsusf_mag_7x45acp_MHP", 3};
+    magazines[] = {"rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger",10,"rhsusf_mag_7x45acp_MHP",3};
     postLoadout = "(unitbackPack (_this select 0)) addWeaponWithAttachmentsCargoGlobal [[""rhs_weap_XM2010_d"",""rhsusf_acc_M2010S"",""rhsusf_acc_anpeq15side"",""rhsusf_acc_premier_mrds"",[""rhsusf_5Rnd_300winmag_xm2010"",5],[],""bipod_02_F_hex""],1];(unitbackPack (_this select 0)) additemCargo [""rhsusf_5Rnd_300winmag_xm2010"",25];";
 };
 
@@ -481,7 +481,7 @@ class US_ARMY_SPC_ACI : US_ARMY_DEFAULT_UCP // Army Counter Intelligence
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "[(_this select 0),"""",""male02rus""] call BIS_fnc_setIdentity;(_this select 0) setVariable [""ACE_GForceCoef"", 0];(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];(_this select 0) setVariable [""ACE_IsEngineer"", 2, true];";
+	preLoadout = "[(_this select 0),"""",""male02rus""] call BIS_fnc_setIdentity;(_this select 0) setVariable [""ACE_GForceCoef"",0];(_this select 0) setVariable [""ACE_medical_medicClass"",1,true];(_this select 0) setVariable [""ACE_IsEngineer"",2,true];";
 }; 
 
 class US_ARMY_SPC_ACI_148 : US_ARMY_SPC_ACI // Army Counter Intelligence (with 148-Vest)
@@ -508,7 +508,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP // Army Pilot with HGU-65
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
+	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"",0]";
 };
 
 class US_ARMY_PLT_MED : US_ARMY_PLT // Army MEDAVAC Pilot
@@ -560,7 +560,7 @@ class US_ARMY_JPLT : US_ARMY_DEFAULT_UCP // Army Jet Pilot
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_14"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0]";
+	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"",0]";
 };
 
 class US_DELTA_OPERATOR : US_ARMY_DEFAULT_OCP // 1st SFOD-D Operator
@@ -582,7 +582,7 @@ class US_DELTA_OPERATOR : US_ARMY_DEFAULT_OCP // 1st SFOD-D Operator
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
-	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"", 0];(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
+	preLoadout = "(_this select 0) setVariable [""ACE_GForceCoef"",0];(_this select 0) setVariable [""ACE_medical_medicClass"",1,true]";
 };
 
 class US_DELTA_SPOTTER : US_DELTA_OPERATOR // 1st SFOD-D Spotter
