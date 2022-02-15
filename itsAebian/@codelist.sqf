@@ -252,7 +252,7 @@ comment "AI will prepare the SCUD and will fire the missile to target";
 [vehicleName, getMarkerPos "target"]spawn rhs_fnc_ss21_AI_launch;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Detonate Tochka-U Nuke without launch vehicle. 100 is the radius you can change";
-[objectName,100] call rhs_fnc_ss21_nuke;
+[(getPos objectName),100] call rhs_fnc_ss21_nuke;
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 comment "Animate rhino // Down = 1 | Up = 0";
 vehicleName animateDoor ['rhino',1,true];

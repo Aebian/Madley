@@ -111,7 +111,7 @@ class US_MARINES_GND : US_MARINES_DEFAULT_FROGWD // Marines [Grenadier]
 	uniform[] = {"rhs_uniform_FROG01_wd"};
 	vest[] = {"rhsusf_spc_rifleman"};
 	backpack[] = {""};
-	primary[] = {"rhs_weap_hk416d10_m320", "rhsusf_acc_rotex5_tan", "rhsusf_acc_anpeq16a", "rhsusf_acc_eotech_552_d", "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red"};
+	primary[] = {"rhs_weap_hk416d10_m320", "rhsusf_acc_anpeq16a", "rhsusf_acc_eotech_552_d", "rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red"};
 	launcher[] = {""};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M196_Stanag_Tracer_Red",5, "rhs_mag_M441_HE",14, "rhsusf_mag_15Rnd_9x19_JHP",2 };
 	items[] += {"ACE_quikclot", 3,"ACE_fieldDressing",4,"ACE_packingBandage",4,"ACE_tourniquet",2,"rhs_mag_m18_green",1};

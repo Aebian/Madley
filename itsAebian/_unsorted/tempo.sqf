@@ -60,3 +60,32 @@ this addEventHandler ["Fired",{
 _ammo = _helo ammoOnPylon "pylon1";
 if (_ammo == 50) then {sleep 0.75};_helo setAmmoOnPylon ["pylon1", 250] && _helo setAmmoOnPylon ["pylon2", 250]
 }];
+
+
+
+
+
+
+
+
+[  
+ MedTabletNH,             
+ "Heal People",            
+ "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",   
+ "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", 
+ "_this distance _target < 2",        
+ "_caller distance _target < 2",        
+ {},               
+ {},               
+ {   
+  
+  MedTrigger = true; 
+ 
+},      
+ {},               
+ [],               
+ 1,               
+ 0,               
+ false,  
+ false              
+] remoteExec ["BIS_fnc_holdActionAdd", 0, MedTabletNH];  

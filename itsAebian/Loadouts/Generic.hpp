@@ -83,6 +83,29 @@ class CommonGenC : CommonCivilian // [this,"Loadout"] call Poppy_fnc_applyLoadou
 };
 
 
+class EXP_ARMY_SOLDIER : CommonBlufor // Experimental Army Soldier (no-Damage)
+{
+	uniform[] = {"U_I_E_CBRN_Suit_01_EAF_F"};
+	vest[] = {"V_PlateCarrierGL_wdl"};
+	backpack[] = {"B_CombinationUnitRespirator_01_F"};
+	primary[] = {"rhs_weap_rpk74m","rhs_acc_uuk","rhs_acc_perst1ik","rhs_acc_okp7_dovetail","rhs_45Rnd_545X39_7N22_polymer_AK"};
+	secondary[] = {"rhs_weap_savz61_folded","rhsgref_20rnd_765x17_vz61"};
+	launcher[] = {""};
+	magazines[] = {"rhsgref_20rnd_765x17_vz61",4,"rhs_45Rnd_545X39_7N22_polymer_AK",6};
+	items[] = {"ACE_EarPlugs",1,"rhs_mag_fakel",1};
+	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"G_AirPurifyingRespirator_01_F"};
+	gps[] = {"ItemGPS"};
+	headgear[] = {"rhs_altyn_novisor_bala"};
+	map[] = {"ItemMap"};
+	nvgs[] = {"NVGogglesB_blk_F"};
+	watch[] = {"ChemicalDetector_01_watch_F"};
+	preLoadout = "(_this select 0) allowDamage false;";
+
+};
+
+
 class Inferno_TL : CommonIndependet // Inferno Squad Team-Lead
 {
 	uniform[] = {"rhs_uniform_g3_blk"};

@@ -167,7 +167,7 @@ class US_AIRFORCE_STARGATE_MED_LEAD : CommonAmerica // Airforce Stargate Medic T
 	secondary[] = {"rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_15Rnd_9x19_JHP",3,"rhs_mag_30Rnd_556x45_Mk318_PMAG",10};
-	items[] = {"ACE_surgicalKit",1,"ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20,"ACE_bloodIV",10,"ACE_epinephrine",16,"ACE_morphine",16,"ACE_tourniquet",8,"ACE_splint",10,"rhs_mag_m18_green", 2 };
+	items[] = {"rhs_mag_m18_green",2,"ACE_surgicalKit",1,"ACE_fieldDressing",20,"ACE_elasticBandage",20,"ACE_quikclot",20,"ACE_packingBandage",20,"ACE_bloodIV",10,"ACE_epinephrine",16,"ACE_morphine",16,"ACE_tourniquet",8,"ACE_splint",10};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
