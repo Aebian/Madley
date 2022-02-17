@@ -14,11 +14,15 @@ EAST setFriend [WEST, 0.7];
 
 // execVM "itsAebian\us_reveal.sqf";
 
- curGrpW =  createGroup WEST; theCurator  = curGrpW createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
- theCurator setCuratorEditingAreaType true; theCurator addCuratorEditableObjects [entities "all",true];
+ curGrpW =  createGroup WEST; theCuratorW  = curGrpW createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
+ theCuratorW setCuratorEditingAreaType true; theCuratorW addCuratorEditableObjects [entities "all",true];
 
- curGrpE =  createGroup EAST; theCurator  = curGrpE createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
- theCurator setCuratorEditingAreaType true; theCurator addCuratorEditableObjects [entities "all",true];
+ curGrpE =  createGroup EAST; theCuratorE  = curGrpE createUnit ["ModuleCurator_F", player, [], 0, "NONE"];
+ theCuratorE setCuratorEditingAreaType true; theCuratorE addCuratorEditableObjects [entities "all",true];
+
+ curGrpI =  createGroup INDEPENDENT; theCuratorI  = curGrpI createUnit ["ModuleCurator_F", EXP_ARMY_SOLDIER, [], 0, "NONE"];
+ theCuratorI setCuratorEditingAreaType true; theCuratorI addCuratorEditableObjects [entities "all",true];
+
 
 [CellTab_01, CellHouse_01, 628400] execVM "itsAebian\CodeLock\NH_CodeLock.sqf";
 
