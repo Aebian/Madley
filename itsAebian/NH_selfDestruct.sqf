@@ -78,16 +78,6 @@ switch (_cond) do
 
 		switch (typeName _nukeObject) do
 		{
-			case "ARRAY":
-			{
-				_origin =  _nukeObject;
-			};
-
-			case "STRING":
-			{
-				_origin = (getMarkerPos _nukeObject);
-			};
-
 			case "OBJECT": 
 			{
 				_origin = (getPos _nukeObject);

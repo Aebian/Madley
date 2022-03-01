@@ -22,3 +22,4 @@ class CommonAmerica : CommonBlufor // [this,"Loadout"] call Poppy_fnc_applyLoado
 #include "America\USN.hpp"
 #include "America\USMC.hpp"
 #include "America\USAF.hpp"
+#include "America\SOCOM.hpp"
