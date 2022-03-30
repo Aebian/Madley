@@ -9,23 +9,23 @@ params ["_ammobox", "_gun"];
 
 if (!isServer) exitWith {};
 
-_yikes = 0;
+_healthStatus = 1;
 
 sleep 4;
 
-_gname = vehicleVarName _gun;	
-_antiairtube = createMarker [format ["%1%2", _gname], position _gun];
+_globalName = vehicleVarName _gun;	
+_antiairTube = createMarker [format ["%1%2", _globalName], position _gun];
 
-_antiairtube setMarkerShape "Icon";
-_antiairtube setMarkerType "b_antiair";
+_antiairTube setMarkerShape "Icon";
+_antiairTube setMarkerType "b_antiair";
 
-while { _yikes == 0 } do {
+while { _healthStatus == 1 } do {
 
 	if (!alive _gun) then {
 
-		deleteMarker _antiairtube;
+		deleteMarker _antiairTube;
 		sleep 4;
-		_yikes = 1;
+		_healthStatus = 0;
 	};
 };
 

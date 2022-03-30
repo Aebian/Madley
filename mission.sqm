@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=21701;
+		nextID=22161;
 	};
 	class Camera
 	{
-		pos[]={4787.6919,52.388565,2573.072};
-		dir[]={-0.92470574,-0.19278529,0.32844457};
-		up[]={-0.18169527,0.98123026,0.064536616};
-		aside[]={0.33472174,-5.7176658e-007,0.94237638};
+		pos[]={4630.2681,54.591564,2612.5503};
+		dir[]={0.46321464,-0.87157661,-0.16117097};
+		up[]={0.82313406,0.49030855,-0.28640115};
+		aside[]={-0.32864532,-1.2872624e-006,-0.9445563};
 	};
 };
 binarizationWanted=0;
@@ -48990,7 +48990,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Main Entrance Safety";
-					state=1;
 					class Entities
 					{
 						items=6;
@@ -56537,7 +56536,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Test Layer [controlCheckpoint Script]";
-			state=1;
 			class Entities
 			{
 				items=15;
@@ -56874,7 +56872,7 @@ class Mission
 						combatMode="RED";
 					};
 					id=1919;
-					atlOffset=51.599998;
+					atlOffset=2.8610229e-006;
 				};
 				class Item13
 				{
@@ -56911,7 +56909,7 @@ class Mission
 				};
 			};
 			id=1906;
-			atlOffset=-101.78383;
+			atlOffset=-69.698166;
 		};
 		class Item5
 		{
