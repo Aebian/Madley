@@ -89,3 +89,34 @@ if (_ammo == 50) then {sleep 0.75};_helo setAmmoOnPylon ["pylon1", 250] && _helo
  false,  
  false              
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, MedTabletNH];  
+
+
+
+if (local (_this select 0)) then {[(_this select 0), "", [], false] call bis_fnc_initVehicle;};
+
+[(_this select 0), "", [], false] call bis_fnc_initVehicle;
+[this, "", []] call BIS_fnc_initVehicle;
+
+
+
+
+
+
+
+(vehicle player) weaponsTurret [0] findIf {{(vehicle player) weaponsTurret [0] select 0 isKindOf [_x, configFile >> "CfgWeapons"]} forEach ["autocannon_Base_F","autocannon_35mm","rhs_weap_azp23","rhs_weap_2a42"]} !=-1
+
+["turret",[0]]
+
+
+
+{ (vehicle player) weaponsTurret [0] select 0 isKindOf [_x, configFile >> "CfgWeapons"]} forEach ["autocannon_Base_F","autocannon_35mm","rhs_weap_azp23","rhs_weap_2a42"];
+
+
+
+{ (vehicle player) weaponsTurret [0] select 0 isKindOf [_x, configFile >> "CfgWeapons"]} forEach ["autocannon_Base_F","autocannon_35mm","rhs_weap_azp23","rhs_weap_2a42"];
+
+
+
+
+!({(vehicle player) weaponsTurret [0] select 0 isKindOf [_x, configFile >> "CfgWeapons"]} forEach ["autocannon_Base_F","autocannon_35mm","rhs_weap_2a42","rhs_weap_azp23"])
+
