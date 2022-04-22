@@ -17,7 +17,27 @@ _globalName = vehicleVarName _gun;
 _antiairTube = createMarker [format ["%1%2", _globalName], position _gun];
 
 _antiairTube setMarkerShape "Icon";
-_antiairTube setMarkerType "b_antiair";
+_aside = side _gun;
+
+switch (_aside) do
+{
+	case WEST:
+	{
+		_antiairTube setMarkerType "b_antiair";
+	};
+	case EAST:
+	{
+		_antiairTube setMarkerType "o_antiair";
+	};
+	case INDEPENDENT:
+	{
+		_antiairTube setMarkerType "i_antiair";
+	};
+	default
+	{
+		_antiairTube setMarkerType "c_antiair";
+	};
+};
 
 while { _healthStatus == 1 } do {
 

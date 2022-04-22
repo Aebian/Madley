@@ -1,24 +1,48 @@
 //radarscript
-// _null = [this] execVM "itsAebian\global_radar.sqf"
+// [this, EAST, 8000] execVM "itsAebian\global_radar.sqf"
 
-params ["_radar"];
+params ["_radar","_side","_range"];
 
-	_myRadarRange = 4000;
+	_myRadarRange = _range;
 	_myGroundClutter = 30;
 	_radar_delay = 5;
 	_myPosRadarASLuncorrected = getPosASL _radar;
 	_myPosRadarASLHight = ( _myPosRadarASLuncorrected select 2 ) + 5 ;
 	_myPosRadarASL = [] + _myPosRadarASLuncorrected;
 	_myPosRadarASL set [2, _myPosRadarASLHight];
+
+	_rMarker = "";
+
+	switch (_side) do
+	{
+		case WEST:
+		{
+			_rMarker = "b_recon";
+		};
+		case EAST:
+		{
+			_rMarker = "o_recon";
+		};
+		case INDEPENDENT:
+		{
+			_rMarker = "i_recon";
+		};
+		default
+		{
+			_rMarker = "c_recon";
+		};
+
+	};
+
 	createMarker ["Radar_0", getPos _radar];
 		"Radar_0" setMarkerShape "ELLIPSE";
 		"Radar_0" setMarkerSize [_myRadarRange, _myRadarRange];
 		"Radar_0" setMarkerBrush "DIAGGRID";
 		"Radar_0" setMarkerColor "ColorGrey";
-		"Radar_0" setMarkerAlpha 0.5;
+		"Radar_0" setMarkerAlpha 0.4;
 	createMarker ["Radar_0_dot", getPos _radar];
 		"Radar_0_dot" setMarkerShape "icon";
-		"Radar_0_dot" setMarkerType "mil_dot";
+		"Radar_0_dot" setMarkerType _rMarker;
 		"Radar_0_dot" setMarkerText "Radarstation";
 while {alive _radar} do
 {
@@ -70,7 +94,7 @@ switch (_myside) do
 		_mymarkername setMarkerType "o_plane";
 		};
 	};
-	case "GUER":
+	case INDEPENDENT:
 	{
 		if (_myKindofAir isKindOf "Helicopter") then
 		{

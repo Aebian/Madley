@@ -16,7 +16,7 @@
                     then {
                         private _vel = velocity _veh;
                         private _dir = _veh weaponDirection _wep;
-                        _veh setVelocity (_vel vectorAdd (_dir vectorMultiply -2.7));
+                        _veh setVelocity (_vel vectorAdd (_dir vectorMultiply -2.5));
                     };
                 }];
     };
