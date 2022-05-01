@@ -6,8 +6,8 @@ class RU_VDV_GENERAL : CommonRussia // VDV [General]
 	primary[] = {"rhs_weap_an94","rhs_acc_1p63","rhs_45Rnd_545X39_7N22_polymer_AK"};
 	secondary[] = {"rhs_weap_6p53","rhs_18rnd_9x21mm_7N29"};
 	launcher[] = {""};
-	magazines[] = {"rhs_45Rnd_545X39_7N22_polymer_AK",1,"rhs_18rnd_9x21mm_7N29",2,"rhs_mag_nspn_green",1,"rhs_mag_nspn_red",1};
-	items[] += {"ACE_quikclot",2,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2};
+	magazines[] = {"rhs_45Rnd_545X39_7N22_polymer_AK",1,"rhs_18rnd_9x21mm_7N29",2,"rhs_mag_nspn_red",1};
+	items[] += {"ACE_quikclot",1,"ACE_fieldDressing",2,"ACE_packingBandage",2,"ACE_tourniquet",2};
 	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};

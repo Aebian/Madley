@@ -496,7 +496,7 @@ class US_ARMY_PLT : US_ARMY_DEFAULT_UCP // Army Pilot with HGU-65
 	secondary[] = {""};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_40Rnd_46x30_FMJ",3};
-	items[] += {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4,"rhs_mag_m18_purple",1};
+	items[] += {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",2,"rhs_mag_m18_purple",1};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
@@ -527,7 +527,7 @@ class US_ARMY_DOORGUNNER : US_ARMY_PLT // Army Helicopter Door Gunner with HGU-6
 {
 	primary[] = {"rhs_weap_mk18_KAC_wd","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552_wd","rhs_mag_30Rnd_556x45_M855A1_Stanag"};
 	magazines[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag",3 };
-	items[] = {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",4};
+	items[] = {"ACE_packingBandage",3,"ACE_quikclot",3,"ACE_tourniquet",2};
 	goggles[] = {"rhsusf_shemagh2_od"};
 	headgear[] = {"rhsusf_hgu56p_visor_mask","rhsusf_hgu56p_mask","rhsusf_hgu56p_mask_mo","rhsusf_hgu56p_mask_skull","rhsusf_hgu56p_visor_mask_mo","rhsusf_hgu56p_visor_mask_skull"};
 	nvgs[] = {"NVGogglesB_blk_F"};

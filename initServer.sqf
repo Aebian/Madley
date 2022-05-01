@@ -47,4 +47,5 @@ AP_CUSTOM_RAPPEL_POINTS = [
 	["RHS_Mi24_base", [[1.0,2.85,-0.3],[-1.0,2.85,-0.3],"fastrope0"]]	
 ];
 
+
  ["Madley loaded!"] remoteExecCall ["systemChat"];

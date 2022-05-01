@@ -120,3 +120,14 @@ if (local (_this select 0)) then {[(_this select 0), "", [], false] call bis_fnc
 
 !({(vehicle player) weaponsTurret [0] select 0 isKindOf [_x, configFile >> "CfgWeapons"]} forEach ["autocannon_Base_F","autocannon_35mm","rhs_weap_2a42","rhs_weap_azp23"])
 
+
+
+{_X enableSimulation true;} forEach [GunBack,GunFront];
+
+
+
+GunBack attachTo [USMC_Pavehawk,[0.0683594,1.58112,-5.3]];
+GunBack setVectorDirAndUp [[8.74228e-008,-1,7.64274e-015],[8.74228e-008,0,-1]];
+
+GunFront attachTo [USMC_Pavehawk,[-0.149902,4.9761,-5.3]];
+GunFront setVectorDirAndUp  [[0,1,0],[8.74228e-008,0,-1]];

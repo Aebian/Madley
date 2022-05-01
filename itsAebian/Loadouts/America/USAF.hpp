@@ -73,7 +73,7 @@ class US_AIRFORCE_JPLT : CommonAmerica // Airforce Jet Pilot
 	secondary[] = {"rhsusf_weap_glock17g4"};
 	launcher[] = {""};
 	magazines[] = {"rhsusf_mag_17Rnd_9x19_JHP",3};
-	items[] += {"ACE_packingBandage",6,"ACE_quikclot",6,"ACE_tourniquet",2,"rhs_mag_m18_purple",2};
+	items[] += {"ACE_packingBandage",4,"ACE_quikclot",4,"ACE_tourniquet",2,"rhs_mag_m18_purple",1};
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
 	compass[] = {"ItemCompass"};

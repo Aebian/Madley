@@ -82,26 +82,39 @@ class CommonGenC : CommonCivilian // [this,"Loadout"] call Poppy_fnc_applyLoadou
 	watch[] = {"ItemWatch"};
 };
 
+class EXP_VDV_SOLDIER : CommonOpfor // Experimental VDV Soldier (no-Damage)
+{
+	uniform[] = {"rhs_uniform_gorka_r_g_gloves"};
+	vest[] = {"rhs_6b3_AK_2"};
+	backpack[] = {"rhs_rk_sht_30_olive"};
+	primary[] = {"rhs_weap_rpk74m","rhs_acc_uuk","rhs_acc_perst1ik","rhs_acc_okp7_dovetail","rhs_45Rnd_545X39_7N22_polymer_AK"};
+	secondary[] = {"rhs_weap_savz61_folded","rhsgref_20rnd_765x17_vz61"};
+	launcher[] = {"rhs_weap_rpg18"};
+	magazines[] = {"rhsgref_20rnd_765x17_vz61",4,"rhs_45Rnd_545X39_7N22_polymer_AK",10};
+	items[] = {"ACE_EarPlugs",1,"rhs_mag_fakel",1,"rhs_mag_m7a3_cs",10,"rhssaf_mag_rshb_p98",3,"NVGogglesB_blk_F",1};
+	binoculars[] = {"rhs_pdu4"};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"rhs_balaclava"};
+	gps[] = {"O_UavTerminal"};
+	headgear[] = {"rhs_altyn_visordown"};
+	map[] = {"ItemMap"};
+	nvgs[] = {""};
+	watch[] = {"ChemicalDetector_01_watch_F"};
+	preLoadout = "(_this select 0) allowDamage false;";
 
-class EXP_ARMY_SOLDIER : CommonBlufor // Experimental Army Soldier (no-Damage)
+};
+
+class EXP_ARMY_SOLDIER : EXP_VDV_SOLDIER // Experimental Army Soldier (no-Damage)
 {
 	uniform[] = {"U_I_E_CBRN_Suit_01_EAF_F"};
 	vest[] = {"V_PlateCarrierGL_wdl"};
 	backpack[] = {"B_CombinationUnitRespirator_01_F"};
-	primary[] = {"rhs_weap_rpk74m","rhs_acc_uuk","rhs_acc_perst1ik","rhs_acc_okp7_dovetail","rhs_45Rnd_545X39_7N22_polymer_AK"};
-	secondary[] = {"rhs_weap_savz61_folded","rhsgref_20rnd_765x17_vz61"};
-	launcher[] = {""};
 	magazines[] = {"rhsgref_20rnd_765x17_vz61",4,"rhs_45Rnd_545X39_7N22_polymer_AK",6};
 	items[] = {"ACE_EarPlugs",1,"rhs_mag_fakel",1};
 	binoculars[] = {"rhsusf_bino_lerca_1200_tan"};
-	compass[] = {"ItemCompass"};
 	goggles[] = {"G_AirPurifyingRespirator_01_F"};
-	gps[] = {"ItemGPS"};
+	gps[] = {"O_UavTerminal"};
 	headgear[] = {"rhs_altyn_novisor_bala"};
-	map[] = {"ItemMap"};
-	nvgs[] = {"NVGogglesB_blk_F"};
-	watch[] = {"ChemicalDetector_01_watch_F"};
-	preLoadout = "(_this select 0) allowDamage false;";
 
 };
 
