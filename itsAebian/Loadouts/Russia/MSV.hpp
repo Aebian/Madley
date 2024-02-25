@@ -71,6 +71,13 @@ class RU_MSV_EMR_Rifleman_GP30 : RU_MSV_RFL_BASE // MSV [Rifleman] (Private)
 	magazines[] = {"rhs_30Rnd_545x39_7U1_AK",6,"rhs_VG40TB",6,"rhs_VOG25P",7};
 };
 
+class RU_MSV_EMR_Engineer : RU_MSV_RFL_BASE // MSV [Engineer]
+{
+	vest[] = {"rhs_6b45_grn"};
+	backpack[] = {"rhs_assault_umbts_engineer_empty"};
+	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"", 2, true]";
+};
+
 class RU_MSV_EMR_CREW : RU_MSV_RFL_BASE // MSV [Vehicle Crew]
 {
 	primary[] = {"rhs_weap_aks74un","rhs_acc_dtk","rhs_30Rnd_545x39_7U1_AK"};

@@ -302,14 +302,23 @@ class US_ARMY_VHC : US_ARMY_DEFAULT_UCP // Vehicle Crew
 	lrradios[] =  {"ACRE_PRC148","ACRE_PRC148"};
 	binoculars[] = {"lerca_1200_tan"};
 	compass[] = {"ItemCompass"};
-	goggles[] = {"rhsusf_shemagh2_gogg_od"};
+	goggles[] = {"rhsusf_shemagh2_gogg_tan"};
 	gps[] = {"ItemGPS"};
-	headgear[] = {"rhsusf_cvc_green_alt_helmet"};
+	headgear[] = {"rhsusf_cvc_alt_helmet","rhsusf_cvc_helmet"};
 	map[] = {"ItemMap"};
 	nvgs[] = {"rhsusf_ANPVS_15"};
 	watch[] = {"ACE_Altimeter"};
 	preLoadout = "(_this select 0) setVariable [""ACE_IsEngineer"",1,true];";
 };
+
+class US_ARMY_VHCO : US_ARMY_VHC // Vehicle Crew [OCP]
+{
+	uniform[] = {"rhs_uniform_cu_ocp"};
+	vest[] = {"rhsusf_spcs_ocp_crewman"};
+	headgear[] = {"rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet"};
+	goggles[] = {"rhsusf_shemagh2_gogg_od"};
+
+}; 
 
 // US Army Rangers // 
 

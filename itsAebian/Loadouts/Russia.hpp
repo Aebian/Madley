@@ -17,6 +17,7 @@ class CommonRussia : CommonOpfor // [this, "Loadout"] call Poppy_fnc_applyLoadou
 	nvgs[] = {""};
 	watch[] = {"ItemWatch"};
 	lrRadios[] = {""};
+	srRadios[] = {""};
 };
 
 #include "Russia\VDV.hpp"

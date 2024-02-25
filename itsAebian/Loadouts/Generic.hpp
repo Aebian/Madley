@@ -87,11 +87,12 @@ class EXP_VDV_SOLDIER : CommonOpfor // Experimental VDV Soldier (no-Damage)
 	uniform[] = {"rhs_uniform_gorka_r_g_gloves"};
 	vest[] = {"rhs_6b3_AK_2"};
 	backpack[] = {"rhs_rk_sht_30_olive"};
-	primary[] = {"rhs_weap_rpk74m","rhs_acc_uuk","rhs_acc_perst1ik","rhs_acc_okp7_dovetail","rhs_45Rnd_545X39_7N22_polymer_AK"};
+	primary[] = {"rhs_weap_rpk74m","rhs_acc_uuk","rhs_acc_perst1ik","rhs_acc_okp7_dovetail","rhs_60Rnd_545X39_7N10_AK"};
 	secondary[] = {"rhs_weap_savz61_folded","rhsgref_20rnd_765x17_vz61"};
 	launcher[] = {"rhs_weap_rpg18"};
-	magazines[] = {"rhsgref_20rnd_765x17_vz61",4,"rhs_45Rnd_545X39_7N22_polymer_AK",10};
-	items[] = {"ACE_EarPlugs",1,"rhs_mag_fakel",1,"rhs_mag_m7a3_cs",10,"rhssaf_mag_rshb_p98",3,"NVGogglesB_blk_F",1};
+	magazines[] = {"rhsgref_20rnd_765x17_vz61",6,"rhs_60Rnd_545X39_7N10_AK",8};
+	items[] = {"ACE_EarPlugs",1,"rhs_mag_fakel",1,"rhs_mag_plamyam",5,"rhs_charge_sb3kg_mag",1,"NVGogglesB_blk_F",1};
+	lrradios[] =  {"ACRE_PRC148"};
 	binoculars[] = {"rhs_pdu4"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_balaclava"};
@@ -237,3 +238,25 @@ class WEAPONS_DEALER_MG : WEAPONS_DEALER_RFL // Advanced Machine Gunner
 	binoculars[] = {""};
 	goggles[] = {"G_Tactical_Black"};
 };
+
+class PRIVATE_SECURITY : CommonIndependet // Security Guard (Suit)
+{
+	uniform[] = {"U_C_FormalSuit_01_black_F"};
+	vest[] = {""};
+	backpack[] = {""};
+	primary[] = {""};
+	secondary[] = {"rhs_weap_savz61_folded","rhsgref_20rnd_765x17_vz61"};
+	launcher[] = {""};
+	magazines[] = {"rhsgref_20rnd_765x17_vz61",3};
+	items[] += {"ACE_tourniquet",2};
+	binoculars[] = {""};
+	lrradios[] =  {"ACRE_PRC152"};
+	compass[] = {"ItemCompass"};
+	goggles[] = {"G_Aviator"};
+	gps[] = {""};
+	headgear[] = {""};
+	map[] = {"ItemMap"};
+	nvgs[] = {""};
+	watch[] = {"ItemWatch"};
+
+}
